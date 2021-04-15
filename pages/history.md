@@ -1,12 +1,12 @@
 ---
 layout: docs
 title: History
-permalink: /docs/history/
+permalink: /history/
 class: docs
 ---
 
 {:.thumbnail-right}
-![Screenshot of v0.1.0](/docs/images/history/v0.1.0.webp)
+![Screenshot of v0.1.0](/images/history/v0.1.0.webp)
 
 
 ### 2016: A simple GUI contribution
@@ -24,7 +24,7 @@ Let's refer to this one as **v0.1.0**.
 <br>
 
 {:.thumbnail-right}
-![Screenshot of v0.2.3](/docs/images/history/v0.2.3.webp)
+![Screenshot of v0.2.3](/images/history/v0.2.3.webp)
 
 
 ### v0.2.x: New repository, new name
@@ -42,7 +42,7 @@ still drags the legacy of being built around the BlackWidow Chroma keyboard.
 <br>
 
 {:.thumbnail-right}
-![Screenshot of v0.3.12](/docs/images/history/v0.3.12.webp)
+![Screenshot of v0.3.12](/images/history/v0.3.12.webp)
 
 
 ### v0.3.x: Multiple devices
@@ -63,7 +63,7 @@ has been packaged to run on many Linux distributions (thanks [@z3ntu](https://gi
 
 
 {:.thumbnail-right}
-![Screenshot of v0.4.0](/docs/images/history/v0.6.0.webp)
+![Screenshot of v0.4.0](/images/history/v0.6.0.webp)
 
 
 ### v0.4.0 - v0.6.0: New design

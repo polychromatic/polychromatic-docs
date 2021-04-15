@@ -1,0 +1,119 @@
+- title:
+  items:
+    - name: Back to Main Website
+      url: https://polychromatic.app
+
+- title: About the Project
+  items:
+    - name: FAQs
+      url: /faqs/
+
+    - name: Roadmap
+      url: /roadmap/
+
+    - name: License
+      url: /license/
+
+    - name: History
+      url: /history/
+
+- title: User Guide
+  items:
+    - name: Supported Devices
+      url: /device-support/
+
+    - name: Distros and Enviroments
+      url: /distros/
+
+    - name: Controller
+      url: /controller/
+      disabled: true
+
+    - name: Devices
+      url: /controller/devices/
+      disabled: true
+      indent: 1
+
+    - name: Effects
+      url: /controller/effects/
+      disabled: true
+      indent: 1
+
+    - name: Presets
+      url: /controller/presets/
+      disabled: true
+      indent: 1
+
+    - name: Triggers
+      url: /controller/events/
+      disabled: true
+      indent: 1
+
+    - name: Tray Applet
+      url: /tray-applet/
+      disabled: true
+
+    - name: Command Line
+      url: /cli/
+      disabled: true
+
+- title: Get Involved
+  items:
+    - name: Translations
+      url: /translations/
+
+    - name: Device Maps &amp Graphics
+      url: /devicemaps/
+      disabled: true ###
+
+    - name: Backend Integration
+      url: /backends/
+      disabled: true
+
+    - name: Sharing Custom Effects
+      url: /create-effects/
+      disabled: true
+
+- title: Internals
+  items:
+    - name: Architecture
+      url: /internals/
+      disabled: true
+
+    - name: Dependencies
+      url: /dependencies/
+
+    - name: Configuration
+      url: /config/
+      disabled: true ###
+
+    - name: Effects
+      url: /config/effects/
+      indent: 1
+      disabled: true ###
+
+    - name: Layered Effects
+      url: /config/effects/layered/
+      indent: 2
+      disabled: true ###
+
+    - name: Scripted Effects
+      url: /config/effects/scripted/
+      indent: 2
+      disabled: true ###
+
+    - name: Sequence Effects
+      url: /config/effects/sequence/
+      indent: 2
+      disabled: true ###
+
+    - name: Presets
+      url: /config/presets/
+      indent: 1
+      disabled: true
+
+#- title: Backends
+  #items:
+    #- name: OpenRazer
+      #url: /openrazer/
+      #disabled: true

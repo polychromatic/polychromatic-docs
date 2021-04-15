@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: License
-permalink: /docs/license/
+permalink: /license/
 class: docs
 ---
 

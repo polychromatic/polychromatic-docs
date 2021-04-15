@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Device Support
-permalink: /docs/device-support/
+permalink: /device-support/
 class: docs
 ---
 
@@ -11,7 +11,7 @@ Polychromatic acts as a frontend for these projects:
 
 | Project         | Devices    |
 | --------------- | ---------- |
-| ![](/assets/img/openrazer.svg) [OpenRazer] | Open source driver and daemon supporting 100+ Razer peripherals on GNU/Linux.
+| ![](/images/backends/openrazer.svg) [OpenRazer] | Open source driver and daemon supporting 100+ Razer peripherals on GNU/Linux.
 
 
 **Providing support for these features:**

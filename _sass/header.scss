@@ -1,0 +1,46 @@
+@import 'variables.scss';
+
+body > header {
+    border-bottom: 1px solid lime;
+    background-color: black;
+    background-image: url(/assets/img/header.jpg);
+    background-size: cover;
+    background-position: top left;
+    height: $header-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .wrapper {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.site-title {
+    text-decoration: none !important;
+
+    * {
+        vertical-align: middle;
+    }
+
+    span {
+        font-size: 2em;
+    }
+
+    &:hover {
+        img {
+            opacity: 0.75;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .site-title {
+        span {
+            display: none;
+        }
+    }
+}

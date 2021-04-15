@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Scripted Effects
-permalink: /docs/config/effects/scripted/
+permalink: /config/effects/scripted/
 class: docs
 ---
 

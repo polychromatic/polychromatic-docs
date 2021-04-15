@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: How to Translate
-permalink: /docs/translations/
+permalink: /translations/
 class: docs
 ---
 
@@ -65,18 +65,18 @@ in the Terminal for version control.
 
 1. Open `locale/polychromatic.pot` and click the **[Create New Translation]** button.
 
-    ![Screenshot of Poedit after opening pot file](/docs/images/poedit-1.png)
+    ![Screenshot of Poedit after opening pot file](/images/poedit-1.png)
 
 1. Choose your desired language.
 
-    ![Language selection screen](/docs/images/poedit-2.png)
+    ![Language selection screen](/images/poedit-2.png)
 
 1. Start translating!
 
     > **Tip:** Enable the sidebar (View → Show Sidebar) to find translator notes
     for some strings to assist in determining the context.
 
-    ![Example of translating to Spanish](/docs/images/poedit-3.png)
+    ![Example of translating to Spanish](/images/poedit-3.png)
 
 1. When finished, save the file to the `locales` directory.
 

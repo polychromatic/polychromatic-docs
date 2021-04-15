@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Layered Effects
-permalink: /docs/config/effects/layered/
+permalink: /config/effects/layered/
 class: docs
 ---
 
@@ -11,21 +11,21 @@ This format uses a layer-based system to specify different properties and colour
 that apply to specific LEDs. This is useful for creating dynamic effects
 for your applications and games.
 
-![Visualizing 3 layers on a keyboard](/assets/img/docs/effects-layer-concept.svg)
+![Visualizing 3 layers on a keyboard](/images/effects-layer-concept.svg)
 
 
 ## Layer Types
 
 {:.has-icons}
-| ID | Type                                                  | Purpose              |
-| -- | ----------------------------------------------------- | -------------------- |
-| 10 | ![](/assets/img/docs/effects/static.svg) Static       | LEDs are lit up with a specific colour.
-| 11 | ![](/assets/img/docs/effects/gradient.svg) Gradient   | LEDs are lit up with specific range of colours.
-| 12 | ![](/assets/img/docs/effects/pulsate.svg) Pulsing     | LEDs get brighter and dimmer at an internal.
-| 13 | ![](/assets/img/docs/effects/wave.svg) Wave           | Create a wave using colours of your choice.
-| 14 | ![](/assets/img/docs/effects/spectrum.svg) Spectrum   | Smoothly fade between colours of your choice.
-| 15 | ![](/assets/img/docs/effects/cycle.svg) Cycling       | Aruptly switch between colours of your choice.
-| 16 | ![](/assets/img/docs/effects/code.svg) Scripted Effect| The output of an existing scripted effect can be displayed.
+| ID | Type                                             | Purpose              |
+| -- | ------------------------------------------------ | -------------------- |
+| 10 | ![](/images/effects/static.svg) Static           | LEDs are lit up with a specific colour.
+| 11 | ![](/images/effects/gradient.svg) Gradient       | LEDs are lit up with specific range of colours.
+| 12 | ![](/images/effects/pulsate.svg) Pulsing         | LEDs get brighter and dimmer at an internal.
+| 13 | ![](/images/effects/wave.svg) Wave               | Create a wave using colours of your choice.
+| 14 | ![](/images/effects/spectrum.svg) Spectrum       | Smoothly fade between colours of your choice.
+| 15 | ![](/images/effects/cycling.svg) Cycling         | Aruptly switch between colours of your choice.
+| 16 | ![](/images/effects/code.svg) Scripted Effect    | The output of an existing scripted effect can be displayed.
 
 > Interactive effects like **Reactive** are not supported at the moment.
 
@@ -59,7 +59,7 @@ specified by the following data. The format works like this:
 Each layer has its own set of `properties`:
 
 
-### ![](/assets/img/docs/effects/static.svg) Static Layer
+### ![](/images/effects/static.svg) Static Layer
 
 | Property      | Data Type | Purpose                                       |
 | ------------- | --------- | --------------------------------------------- |
@@ -67,7 +67,7 @@ Each layer has its own set of `properties`:
 
 ---
 
-### ![](/assets/img/docs/effects/gradient.svg) Gradient Layer
+### ![](/images/effects/gradient.svg) Gradient Layer
 
 | Property      | Data Type | Purpose                                       |
 | ------------- | --------- | --------------------------------------------- |
@@ -84,7 +84,7 @@ Each layer has its own set of `properties`:
 
 ---
 
-### ![](/assets/img/docs/effects/pulsate.svg) Pulsing Layer
+### ![](/images/effects/pulsate.svg) Pulsing Layer
 
 | Property      | Data Type | Purpose                                       |
 | ------------- | --------- | --------------------------------------------- |
@@ -94,7 +94,7 @@ Each layer has its own set of `properties`:
 
 ---
 
-### ![](/assets/img/docs/effects/wave.svg) ![](/assets/img/docs/effects/spectrum.svg) Wave & Spectrum Layers
+### ![](/images/effects/wave.svg) ![](/images/effects/spectrum.svg) Wave & Spectrum Layers
 
 | Property      | Data Type | Purpose                                       |
 | ------------- | --------- | --------------------------------------------- |
@@ -103,7 +103,7 @@ Each layer has its own set of `properties`:
 
 ---
 
-### ![](/assets/img/docs/effects/code.svg) Script Layer
+### ![](/images/effects/code.svg) Script Layer
 
 | Property      | Data Type | Purpose                                       |
 | ------------- | --------- | --------------------------------------------- |

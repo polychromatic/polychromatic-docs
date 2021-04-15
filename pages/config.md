@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Configuration
-permalink: /docs/config/
+permalink: /config/
 class: docs
 ---
 
@@ -10,7 +10,7 @@ the XDG spec, which is usually `~/.config/polychromatic/` and `~/.cache/polychro
 
 Preferences can be adjusted via the Controller.
 
-{% include img-2x alt="Preferences is accessible via the Edit menu bar" src="/docs/images/preferences.png" %}
+{% include img-2x.html alt="Preferences is accessible via the Edit menu bar" src="/images/preferences.png" %}
 
 However, if the Controller is not installed, (or you know what you're doing),
 you may make changes directly based on the specifications below. Note that
@@ -35,10 +35,10 @@ changes take effect on the next launch and invalid data will be reinitalised.
 | colours.json          | Your saved colours list
 | [preferences.json]    | General configuration (see below)
 
-[effects/layered/]: /docs/config/effects/layered/
-[effects/scripted/]: /docs/config/effects/scripted/
-[effects/sequence/]: /docs/config/effects/sequence/
-[presets/]: /docs/config-presets/
+[effects/layered/]: /config/effects/layered/
+[effects/scripted/]: /config/effects/scripted/
+[effects/sequence/]: /config/effects/sequence/
+[presets/]: /config/presets/
 [preferences.json]: #preferencesjson
 
 **Obsolete Folders**

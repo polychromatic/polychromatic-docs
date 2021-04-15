@@ -1,0 +1,35 @@
+title: Polychromatic Docs
+author: Luke Horwell
+email: code@horwell.me
+description: >-
+  Documentation for Polychromatic, an RGB lighting management front-end
+  application for GNU/Linux. Powered by OpenRazer, but soon to be vendor agnostic.
+
+baseurl: ""
+url: "https://docs.polychromatic.app"
+source_code_url: "https://github.com/polychromatic/docs"
+
+# Build settings
+markdown: kramdown
+disable_disk_cache: true
+
+#~ plugins:
+#~  - jekyll-feed
+
+# Exclude from processing.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Common URLs
+openrazer_repo: "https://github.com/openrazer/openrazer/"
+openrazer_website: "https://openrazer.github.io/"
+polychromatic_org: "https://github.com/polychromatic/"
+polychromatic_repo: "https://github.com/polychromatic/polychromatic/"
+rss_feed: "https://github.com/polychromatic/polychromatic/releases.atom"
+twitter: "polychromic_app"

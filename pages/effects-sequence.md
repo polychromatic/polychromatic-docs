@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Sequence Effects
-permalink: /docs/config/effects/sequence/
+permalink: /config/effects/sequence/
 class: docs
 ---
 

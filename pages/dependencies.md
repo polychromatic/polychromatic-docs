@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Dependencies
-permalink: /docs/dependencies/
+permalink: /dependencies/
 class: docs
 ---
 
@@ -48,24 +48,24 @@ class: docs
 # v1.0.0
 
 > A brand new version based on PyQt5.
-> [See roadmap for current status](/docs/roadmap/).
+> [See roadmap for current status](/roadmap/).
 
-{% include partials/dependencies_table.html
+{% include dependencies_table.html
     distro_id = "arch"
     distro_name = "Arch"
 %}
 
-{% include partials/dependencies_table.html
+{% include dependencies_table.html
     distro_id = "debian"
     distro_name = "Debian/Ubuntu"
 %}
 
-{% include partials/dependencies_table.html
+{% include dependencies_table.html
     distro_id = "opensuse"
     distro_name = "openSUSE"
 %}
 
-{% include partials/dependencies_table.html
+{% include dependencies_table.html
     distro_id = "fedora"
     distro_name = "Fedora"
 %}

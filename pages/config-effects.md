@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Effect Internals
-permalink: /docs/config/effects/
+permalink: /config/effects/
 class: docs
 ---
 
@@ -19,15 +19,15 @@ Availablity of effects and parameters vary on the hardware's firmware.
 {:.has-icons}
 | Effect                                        | Parameters / Notes            |
 | --------------------------------------------- | ----------------------------- |
-| ![](/assets/img/docs/effects/none.svg) None   |
-| ![](/assets/img/docs/effects/spectrum.svg) Spectrum |
-| ![](/assets/img/docs/effects/wave.svg) Wave | Direction <1-2>
-| ![](/assets/img/docs/effects/reactive.svg) Reactive | Speed <1-4> and 1 colour
-| ![](/assets/img/docs/effects/ripple.svg) Ripple | Random or 1 colour | Software effect provided by daemon
-| ![](/assets/img/docs/effects/breath.svg) Breath | Random or 1, 2 or 3 colour(s)
-| ![](/assets/img/docs/effects/static.svg) Static | 1 colour
-| ![](/assets/img/docs/effects/pulsate.svg) Pulsate | 1 colour
-| ![](/assets/img/docs/effects/blinking.svg) Blinking | 1 colour
+| ![](/images/effects/none.svg) None            |
+| ![](/images/effects/spectrum.svg) Spectrum    |
+| ![](/images/effects/wave.svg) Wave            | Direction <1-2>
+| ![](/images/effects/reactive.svg) Reactive    | Speed <1-4> and 1 colour
+| ![](/images/effects/ripple.svg) Ripple        | Random or 1 colour | Software effect provided by daemon
+| ![](/images/effects/breath.svg) Breath        | Random or 1, 2 or 3 colour(s)
+| ![](/images/effects/static.svg) Static        | 1 colour
+| ![](/images/effects/pulsate.svg) Pulsate      | 1 colour
+| ![](/images/effects/blinking.svg) Blinking    | 1 colour
 
 Some Razer firmware retain hardware effects across power cycles and when plugged into
 other computers. Similarly, when software effects are used, the last frames may
@@ -51,11 +51,11 @@ should only be played on keyboards)
 
 There are three types:
 
-| ID | Type                                                      | Purpose                   |
-| -- | --------------------------------------------------------- | ------------------------- |
-| 1  | [![](/assets/fa/effects/layered.svg) Layered](layered/)    | Each layer describes how to display a specified range of LEDs
-| 2  | [![](/assets/fa/effects/scripted.svg) Scripted](scripted/) | Programmable effects written in Python
-| 3  | [![](/assets/fa/effects/sequence.svg) Sequence](sequence/) | Animated (or static) effect based on pixels and frames
+| ID | Type                                                         | Purpose                   |
+| -- | ------------------------------------------------------------ | ------------------------- |
+| 1  | [![](/images/effect_types/layered.svg) Layered](layered/)    | Each layer describes how to display a specified range of LEDs
+| 2  | [![](/images/effect_types/scripted.svg) Scripted](scripted/) | Programmable effects written in Python
+| 3  | [![](/images/effect_types/sequence.svg) Sequence](sequence/) | Animated (or static) effect based on pixels and frames
 
 
 > Users previously running v0.3.12 will have their "application profiles"
@@ -128,7 +128,7 @@ where a facility will allow you to upload/download effects created by other user
 
 Where available, the editor will show a hardware SVG from
 `/usr/share/polychromatic/mapping/` that closely matches the hardware
-layout or choose one manually. See [Add Device Maps & Graphics](/docs/devicemaps/)
+layout or choose one manually. See [Add Device Maps & Graphics](/devicemaps/)
 for details on to structure the SVG when creating new graphics.
 
 Alternately, a basic matrix grid can be used for any device.

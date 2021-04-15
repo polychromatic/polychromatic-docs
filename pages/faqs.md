@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: FAQs
-permalink: /docs/faqs/
+permalink: /faqs/
 class: docs
 ---
 
@@ -145,22 +145,17 @@ future update.
 
 ### Can I create my own effects?
 
-Not yet, but Polychromatic will add new and improve existing functionality
-[in the upcoming v1.0.0 update](/docs/roadmap/).
+[The upcoming v1.0.0 update](/roadmap/) features new and improved effects.
+Consider testing the latest development builds if you have a non-BlackWidow
+keyboard.
 
 For now, the current version `(v0.3.12)` can set static colours for keyboards
 based on the Razer BlackWidow layout. Ideal for mapping out keys for games or applications.
-These will be automatically _upgraded_ when v1.0.0 is released.
-
-Other users have patched the graphic to work with these devices in the interim:
-
-* [Blade Stealth Late 2016](https://github.com/polychromatic/polychromatic/pull/144)
-* [BlackWidow Elite](https://github.com/polychromatic/polychromatic/pull/200)
 
 
 ### Can I create my own profiles?
 
-Not yet, but Polychromatic will add profile ("presets") functionality [in the upcoming v1.0.0 update](/docs/roadmap/).
+Not yet, but Polychromatic will add profile ("presets") functionality [in the upcoming v1.0.0 update](/roadmap/).
 
 Confusingly, the current version `(v0.3.12)` refers to a custom static key mappings as
 "application profile", but these are not tied to an application.
@@ -168,15 +163,15 @@ Confusingly, the current version `(v0.3.12)` refers to a custom static key mappi
 
 ### When will the next version be released?
 
-Check out [the roadmap](/docs/roadmap/) to see what new and improved features
-that are on the way. A beta `(v0.6.0)` will be released once the "application profiles"
+Check out [the roadmap](/roadmap/) to see what new and improved features
+that are on the way. A beta `(v0.6.1)` will be released once the "application profiles"
 replacement, Presets and Triggers are added, so there is no loss of functionality.
 Although, you can always [check out the branch](https://github.com/polychromatic/polychromatic/branches) earlier.
 
 As with any open source project, progress can be slow at times. It's been 2 years since the
 release of `v0.3.12`, with [not just one](https://github.com/polychromatic/polychromatic/releases/tag/v0.4.0),
 or [two](https://github.com/polychromatic/polychromatic/releases/tag/v0.5.0), but **three** refactors internally!
-Things are nicely shaping into place, as the Controller is now based on PyQt5 and drops WebKitGTK.
+Things are nicely shaping into place, as the Controller is now based on PyQt5, dropping WebKitGTK.
 
 Rest assured, the software is definitely not dead, but there will be no minor updates for `v0.3.12`
 as the software development happened linearly.

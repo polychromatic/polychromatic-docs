@@ -1,7 +1,7 @@
 ---
 layout: roadmap
 title: Roadmap
-permalink: /docs/roadmap/
+permalink: /roadmap/
 class: docs
 
 roadmap:
@@ -12,7 +12,7 @@ roadmap:
       pending:
         - The tray applet can be tempermental on some DEs, this will be addressed in next version.
 
-    - name: v1.0.0
+    - name: 'v1.0.0 (dev: v0.6.0)'
       checked: progress
       completed:
         - New command line utility
@@ -52,6 +52,3 @@ roadmap:
 
 {:.grey}
 The roadmap is subject to change at any time.
-
-{:.grey}
-v1.0.0 is internally versioned as v0.6.0 until it's released.

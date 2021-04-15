@@ -1,11 +1,11 @@
 ---
 layout: docs
 title: Documentation
-permalink: /docs/
+permalink: /
 class: docs
 ---
 
-![](/assets/img/docs/home.jpg)
+![](/images/home.jpg)
 
 ### ← To get started, pick a topic on the left.
 

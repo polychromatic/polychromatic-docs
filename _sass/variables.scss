@@ -1,0 +1,29 @@
+/* Colours */
+$primary: #00FF00;
+$secondary: #008000;
+
+$fg-colour: white;
+$text-disabled: darken($fg-colour, 33%);
+$bg-colour: #161616;
+$bg-secondary: #000;
+$pre-colour: #232323;
+$sidebar-heading: #969696;
+$table-colour: #282828;
+$table-colour-alt: #191919;
+$table-colour-head: #3C3C3C;
+
+/* Fonts */
+$primary-font: 'Play', 'Ubuntu', 'DejaVu Sans', 'Open Sans', sans-serif;
+
+/* Screen Sizes */
+$screen-sm: 540px;
+$screen-md: 720px;
+$screen-lg: 960px;
+$screen-xl: 1140px;
+
+/* Transitions */
+$btn-speed: 0.25s;
+$page-speed: 0.3s;
+
+/* Dimensions */
+$header-height: 100px;

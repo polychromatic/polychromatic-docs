@@ -1,0 +1,28 @@
+@import 'variables.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+.fade-in {
+    animation: fade-in $page-speed forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .fade-in {
+        animation: none;
+    }
+}

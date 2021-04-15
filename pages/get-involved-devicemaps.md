@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Device Maps & Graphics
-permalink: /docs/devicemaps/
+permalink: /devicemaps/
 class: docs
 ---
 
@@ -10,7 +10,7 @@ class: docs
 All devices that support individually addressable LEDs can be mapped to a grid.
 These can also be visually mapped to a crafted graphic as well.
 
-![Grid to device graphic](/docs/images/grid-to-graphic.webp)
+![Grid to device graphic](/images/grid-to-graphic.webp)
 
 ## Contents
 
@@ -62,7 +62,7 @@ to the end of the list.
   * Leave `null` if not applicable.
 
 > If you don't know the `cols` or `rows` for the device, click **Device Info**
-> from the Controller's [Devices](/docs/controller/devices/) tab.
+> from the Controller's [Devices](/controller/devices/) tab.
 
 ---
 
@@ -108,10 +108,10 @@ the user if they prefer. If unsure on how to set attributes, see the next sectio
 > In **Inkscape**, open the **XML Editor** (Edit → XML Editor)
 
 Have the co-ordinates of each LED ready. To find these out, open the Controller
-to the [Devices](/docs/controller/devices/) tab, click **Device Info** and choose **Inspect Matrix**.
+to the [Devices](/controller/devices/) tab, click **Device Info** and choose **Inspect Matrix**.
 Look at the physical hardware to confirm the LED's position.
 
-![Inspecting the matrix of a keyboard](/docs/images/inspect-matrix.webp)
+![Inspecting the matrix of a keyboard](/images/inspect-matrix.webp)
 
 Assign each node of an LED:
 
@@ -123,7 +123,7 @@ Assign each node of an LED:
 
 This is an example for the <kbd>P</kbd> key on the BlackWidow graphic:
 
-![XML Editor for the P key opened in Inkscape](/docs/images/inkscape-xml.webp)
+![XML Editor for the P key opened in Inkscape](/images/inkscape-xml.webp)
 
 > **There can only be one ID!**
 > If there are multiple nodes that represent a specific LED, place those nodes
@@ -138,11 +138,11 @@ A `path` node can be exempted if its stroke should not be painted. To do this, s
 a `nostroke` attribute with a value of `true`. For example, the <kbd>Tab</kbd> key
 has a symbol that is only a fill colour, with no stroke style:
 
-![XML Editor for the Tab key opened in Inkscape](/docs/images/inkscape-xml2.webp)
+![XML Editor for the Tab key opened in Inkscape](/images/inkscape-xml2.webp)
 
 With and without the attribute:
 
-![Screenshot of the editor and outline issue](/docs/images/editor-outline-compare.webp)
+![Screenshot of the editor and outline issue](/images/editor-outline-compare.webp)
 
 ---
 
@@ -158,7 +158,7 @@ operating system as keystrokes.
 For example, `30` is the scan code for the <kbd>Q</kbd> key on a standard QWERTY keyboard.
 This is how the physical keys map out on the top-left area of a BlackWidow Chroma keyboard:
 
-![Example of a BlackWidow Keyboard's Scan Codes](/docs/images/scan-code.webp)
+![Example of a BlackWidow Keyboard's Scan Codes](/images/scan-code.webp)
 
 > A **key code** is similar, but these describe the actual character/function
 > of that key, like <kbd>A</kbd> or <kbd>CTRL</kbd>. This varies depending on

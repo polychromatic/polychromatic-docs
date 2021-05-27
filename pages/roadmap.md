@@ -21,14 +21,17 @@ roadmap:
         - Refactor Controller (first pass, 2018)
         - Refactor Controller (second pass, 2019)
         - Port Controller to PyQt5 (third refactor, 2020)
-        - Implement Devices tab
+        - Implement new Devices tab
         - Implement Preferences
+        - Implement new Effects tab ("application profiles" replacement)
       in_progress:
-        - Implement Effects tab ("application profiles" replacement)
-      pending:
+        - Improve build system
         - Implement Presets tab ("profiles")
+      pending:
         - Implement Triggers tab (a new feature to activate presets based on events, such as session login)
-        - Beta Release - Cross-distro, device testing and finalizing documentation
+        - Implement scripted effects
+        - Implement layer-based effects
+        - Beta Release - Cross-distro, device testing and documentation publishing
 
     - name: v1.1.0
       checked: false
@@ -36,6 +39,7 @@ roadmap:
         null
       pending:
         - Browse/share effects designed by other Polychromatic users.
+        - Optional hardware survey
 
     - name: Future Ambitions
       checked: false

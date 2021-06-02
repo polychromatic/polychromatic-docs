@@ -13,7 +13,10 @@ layout: default
             <div class="circle {% if version.checked == true %}checked{% endif %} {% if version.checked == 'progress' %}progress{% endif %}"></div>
         </div>
         <div class="col">
-            <h3>{{ version.name }}</h3>
+            <h3 class="name">{{ version.name }}</h3>
+            {% if version.desc %}
+                <p class="desc">{{ version.desc }}</p>
+            {% endif %}
             <ul class="completed">
                 {% for item in version.completed %}
                 <li>

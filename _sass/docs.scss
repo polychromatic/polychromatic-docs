@@ -196,9 +196,14 @@ blockquote {
         }
     }
 
-    h3 {
+    .name {
         margin: 0 0 0.5em;
         padding: 0.25em 0;
+    }
+
+    .desc {
+        color: grey;
+        max-width: 600px;
     }
 
     ul {

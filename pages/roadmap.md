@@ -5,37 +5,58 @@ permalink: /roadmap/
 class: docs
 
 roadmap:
-    - name: v0.3.12 ("Stable")
+    - name: v0.3.12 - v0.6.0 - Reimagining the project
+      desc: It's been a slow journey, but the application had a redesign
+            both visually and internally so it's easier to maintain for the growing
+            number of devices and features.
       checked: true
-      completed:
-        - Development series finished. Working on next major version...
-      pending:
-        - The tray applet can be tempermental on some DEs, this will be addressed in next version.
-
-    - name: 'v1.0.0 (dev: v0.6.0)'
-      checked: progress
       completed:
         - New command line utility
         - New website and documentation
-        - Rewrite tray applet to fix its shortcomings
-        - Refactor Controller (first pass, 2018)
-        - Refactor Controller (second pass, 2019)
-        - Port Controller to PyQt5 (third refactor, 2020)
-        - Implement new Devices tab
-        - Implement Preferences
-        - Implement new Effects tab ("application profiles" replacement)
-      in_progress:
-        - Improve build system
-        - Implement Presets tab ("profiles")
-      pending:
-        - Implement Triggers tab (a new feature to activate presets based on events, such as session login)
-        - Implement scripted effects
-        - Implement layer-based effects
-        - Beta Release - Cross-distro, device testing and documentation publishing
+        - Rewrite tray applet
+        - Refactor Controller (Pass 1, 2018)
+        - Refactor Controller (Pass 2, 2019)
+        - Port Controller to PyQt5 (Pass 3, 2020)
+        - New Preferences
+        - New Devices tab
+        - New Effects tab ("application profiles" replacement)
+        - New effect format (with support for animation)
+        - New troubleshooter for OpenRazer
 
-    - name: v1.1.0
+    - name: v0.6.1 - A stable beta
+      desc: v0.3.12 is no longer stable, but the latest development hasn't
+            had all its new features finished either. So... time to consolidate
+            progress and make a new release!
+      checked: progress
+      completed:
+        null
+      in_progress:
+        - Polish little things for a new stable release
+      pending:
+        - Quality assurance testing across distros with progress so far
+
+    - name: v1.0.0 - The big one
+      desc: This release will expand custom (software) effects, introduce presets
+            for multiple devices and events for automating your lighting.
       checked: false
       completed:
+        null
+      in_progress:
+        null
+      pending:
+        - Improve build system
+        - Improve translation system
+        - 'New feature: Presets'
+        - 'New feature: Triggers'
+        - 'New Effect Type: Scripted'
+        - 'New Effect Type: Layered'
+
+    - name: v1.1.0
+      desc:
+      checked: false
+      completed:
+        null
+      in_progress:
         null
       pending:
         - Browse/share effects designed by other Polychromatic users.

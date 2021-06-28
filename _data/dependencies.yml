@@ -25,12 +25,12 @@ packages:
         fedora: python3-setproctitle
 
     # imagemagick
-    - required_by: all
-      packages:
-        arch: imagemagick
-        debian: imagemagick
-        opensuse: imagemagick
-        fedora: ImageMagick
+    #- required_by: all
+      #packages:
+        #arch: imagemagick
+        #debian: imagemagick
+        #opensuse: imagemagick
+        #fedora: ImageMagick
 
     # Python: Requests
     - required_by: controller

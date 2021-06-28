@@ -47,7 +47,7 @@ $roadmap-line: #00FF00;
 
 blockquote {
     background: $pre-colour;
-    border-left: 4px solid lighten($pre-colour, 25%);
+    border-left: 4px solid $secondary;
     color: lighten($pre-colour, 50%);
     margin: 15px 0;
 
@@ -58,6 +58,10 @@ blockquote {
         + p {
             padding-top: 0;
         }
+    }
+
+    strong {
+        color: $secondary;
     }
 
     &.pkg-cmd {

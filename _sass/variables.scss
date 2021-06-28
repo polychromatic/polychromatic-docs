@@ -6,7 +6,7 @@ $fg-colour: white;
 $text-disabled: darken($fg-colour, 33%);
 $bg-colour: #161616;
 $bg-secondary: #000;
-$pre-colour: #232323;
+$pre-colour: $bg-secondary;
 $sidebar-heading: #969696;
 $table-colour: #282828;
 $table-colour-alt: #191919;

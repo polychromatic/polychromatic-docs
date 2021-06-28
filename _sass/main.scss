@@ -12,11 +12,12 @@ body {
 
 main {
     margin-top: $header-height;
+    background: linear-gradient(to right, $bg-secondary 49%, $bg-colour 61%);
 }
 
 p {
     margin: 1em 0;
-    line-height: 24px;
+    line-height: 20px;
 }
 
 ::selection {
@@ -33,5 +34,5 @@ p {
 }
 
 article {
-    margin: auto 0 4em 0;
+    margin: auto 0;
 }

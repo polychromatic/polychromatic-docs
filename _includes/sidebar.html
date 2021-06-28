@@ -1,10 +1,11 @@
 {% for category in site.data.sidebar %}
 
-    <div class="category-heading">{{ category.title }}</div>
+    <div class="sidebar-heading">{{ category.title }}</div>
 
     {% for item in category.items %}
         {% if subpage.category == parent.id %}
-        <a href="{{ item.url | relative_url }}" class="category nav-docs {% if item.indent %}indent-{{ item.indent}}{% endif %} {% if item.url == page.permalink %}active{% endif %} {% if item.disabled == true %}disabled{% endif %}" {% if item.disabled == true %}style="display:none" disabled{% endif %}>
+        <a href="{{ item.url | relative_url }}" class="sidebar-item nav-docs {% if item.indent %}indent-{{ item.indent}}{% endif %} {% if item.url == page.permalink %}active{% endif %} {% if item.disabled == true %}disabled{% endif %}" {% if item.disabled == true %}style="opacity:0.5" disabled{% endif %}>
+            {% if item.icon %}{% include icons/{{ item.icon }}.svg %}{% endif %}
             {{ item.name }}
         </a>
         {% endif %}
@@ -12,4 +13,4 @@
 
 {% endfor %}
 
-<a id="back-to-top" class="category" href="#">Back to top</a>
+<a id="back-to-top" class="sidebar-item" href="#">Back to top</a>

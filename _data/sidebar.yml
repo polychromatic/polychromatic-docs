@@ -1,36 +1,45 @@
-- title: About the Project
+- title: Project
   items:
     - name: FAQs
       url: /faqs/
+      icon: question-circle
 
     - name: Roadmap
       url: /roadmap/
+      icon: road
 
     - name: License
       url: /license/
+      icon: file-alt
 
     - name: History
       url: /history/
+      icon: clock
 
 - title: User Guide
   items:
     - name: Supported Devices
       url: /device-support/
+      icon: devices
 
     - name: Distros and Enviroments
       url: /distros/
+      icon: tux
 
     - name: Controller
       url: /controller/
+      icon: controller
       disabled: true
 
     - name: Devices
       url: /controller/devices/
+      icon: keyboard
       disabled: true
       indent: 1
 
     - name: Effects
       url: /controller/effects/
+      icon: effects
       disabled: true
       indent: 1
 
@@ -46,20 +55,24 @@
 
     - name: Tray Applet
       url: /tray-applet/
+      icon: applet
       disabled: true
 
     - name: Command Line
       url: /cli/
+      icon: terminal
       disabled: true
 
 - title: Get Involved
   items:
     - name: Translations
       url: /translations/
+      icon: comments
 
     - name: Device Maps &amp Graphics
       url: /devicemaps/
       disabled: true ###
+      icon: matrix
 
     - name: Backend Integration
       url: /backends/
@@ -77,13 +90,16 @@
 
     - name: Dependencies
       url: /dependencies/
+      icon: box
 
     - name: Configuration
       url: /config/
       disabled: true ###
+      icon: wrench
 
     - name: Effects
       url: /config/effects/
+      icon: effects
       indent: 1
       disabled: true ###
 
@@ -99,6 +115,7 @@
 
     - name: Sequence Effects
       url: /config/effects/sequence/
+      icon: sequence
       indent: 2
       disabled: true ###
 

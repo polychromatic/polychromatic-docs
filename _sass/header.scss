@@ -1,11 +1,12 @@
 @import 'variables.scss';
 
-body > header {
-    border-bottom: 1px solid lime;
-    background-color: black;
-    background-image: url(/assets/img/header.jpg);
-    background-size: cover;
-    background-position: top left;
+.site-header {
+    background: rgba(0,0,0,0.75);
+    background-image: url(/assets/img/header.svg);
+    background-size: contain;
+    background-position: -350px center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 1px 4px #000;
     height: $header-height;
     position: fixed;
     top: 0;
@@ -13,14 +14,20 @@ body > header {
     right: 0;
     z-index: 1000;
 
-    .wrapper {
-        padding-top: 25px;
-        padding-bottom: 25px;
+    .site-inner {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
+}
+
+.site-header-content {
+    display: flex;
+    height: $header-height - 35px;
 }
 
 .site-title {
     text-decoration: none !important;
+    margin: auto auto auto 0;
 
     * {
         vertical-align: middle;

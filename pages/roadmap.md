@@ -16,14 +16,13 @@ roadmap:
         - New command line utility
         - New website and documentation
         - Rewrite tray applet
-        - Refactor Controller (Pass 1, 2018)
-        - Refactor Controller (Pass 2, 2019)
-        - Port Controller to PyQt5 (Pass 3, 2020)
+        - Port Controller to PyQt5
         - New Preferences
         - New Devices tab
-        - New Effects tab ("application profiles" replacement)
-        - New effect format (with support for animation)
+        - New Effects tab (replaces "application profiles")
+        - New effect format (with animation support)
         - New troubleshooter for OpenRazer
+        - Improved device support and inspection
         - Polished and quality assured
 
     - name: v1.0.0 - The big one
@@ -52,6 +51,7 @@ roadmap:
       pending:
         - Browse/share effects designed by other Polychromatic users.
         - Optional hardware survey
+        - Offline help
 
     - name: Future Ambitions
       checked: false

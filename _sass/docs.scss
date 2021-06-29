@@ -218,18 +218,24 @@ blockquote {
 
 /* JavaScript-assisted classes for table */
 .yes {
+    font-size: 0;
+    text-align: center;
+
+    &::before {
+        background-image: url(/assets/img/checkmark.svg);
+        background-size: 24px;
+        display: block;
+        margin: auto;
+        height: 24px;
+        width: 24px;
+    }
+}
+
+.yes {
     color: lime;
 
     &::before {
         content: "✓ ";
-    }
-}
-
-.no {
-    color: red;
-
-    &::before {
-        content: "✗ ";
     }
 }
 

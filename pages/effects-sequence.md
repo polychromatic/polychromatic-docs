@@ -7,16 +7,14 @@ class: docs
 
 ## The Concept
 
-This format uses a frame system to light up LEDs like drawing a raster image.
-These effects can be static or be made up of multiple frames to create an animation.
+This format uses a frame system to light up LEDs like pixel art.
+The effect can be static with a single frame or be made up of multiple frames
+to create an animation.
 
+<!--
 Images, videos and GIF files can be imported to be converted into blocky
 pixels. The playback speed and whether the effect loops can be adjusted too.
-
-> You may wonder if it's possible to play back a 30 FPS video, but it's
-> likely you'll run into bottlenecks or worse, put strain on the hardware's
-> LED controller.
-
+-->
 
 ## Additional Metadata
 
@@ -44,11 +42,13 @@ specified by the following data:
 
 | Key           | Data Type | Purpose                                       |
 | ------------- | --------- | --------------------------------------------- |
-| `frames`      | list      | A dictionary for each frame mapping the LED matrix
-|               |           | The key is `x`, followed by keys of the `y`.
-|               |           | The value is stored as a hex string. Following JSON rules, the number is stored as a string.
+| `frames`      | list      | A dictionary for each frame mapping the LED matrix. See example above. <br> The key is `x`, followed by child keys of the `y` containing the hex colour string.
 | `fps`         | int       | Approximately how many frames to render per second. This isn't precise due to influences by processing speed, such as the LED's firmware or overheads.
-| `loop`        | bool      | Repeat the effect after the last frame?
+| `loop`        | bool      | Replay the effect after the last frame
 
-Prior to running the effect, the application will validate to fill in blanks
-where the device has too few rows/columns to the original.
+> **Frames per second:** Polychromatic has a soft limit of **80 FPS** when editing using the editor.
+> The limit is not enforced when playing the effect, meaning the file can store a higher value.
+>
+> It is unknown what the actual limits are, as they may
+> vary depending on USB bandwidth, power requirements, LED firmware and CPU load.
+> You are entirely responsible for wear and tear on your LED controller.

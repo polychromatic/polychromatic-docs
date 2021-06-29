@@ -1,7 +1,7 @@
 {% assign distro_id = include.distro_id %}
 {% assign distro_name = include.distro_name %}
 
-<h3>
+<h3 id="{{ distro_name | strip_html | downcase }}">
     <img src="/images/distros/{{ distro_id }}.svg" alt=""/>
     {{ distro_name }}
 </h3>

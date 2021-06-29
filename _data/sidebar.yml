@@ -22,9 +22,13 @@
       url: /device-support/
       icon: devices
 
-    - name: Distros and Enviroments
+    - name: Supported Distros
       url: /distros/
       icon: tux
+
+    - name: Dependencies
+      url: /dependencies/
+      icon: box
 
     - name: Controller
       url: /controller/
@@ -43,15 +47,15 @@
       disabled: true
       indent: 1
 
-    - name: Presets
-      url: /controller/presets/
-      disabled: true
-      indent: 1
+    #- name: Presets
+      #url: /controller/presets/
+      #disabled: true
+      #indent: 1
 
-    - name: Triggers
-      url: /controller/events/
-      disabled: true
-      indent: 1
+    #- name: Triggers
+      #url: /controller/events/
+      #disabled: true
+      #indent: 1
 
     - name: Tray Applet
       url: /tray-applet/
@@ -71,61 +75,45 @@
 
     - name: Device Maps &amp Graphics
       url: /devicemaps/
-      disabled: true ###
       icon: matrix
 
     - name: Backend Integration
       url: /backends/
       disabled: true
 
-    - name: Sharing Custom Effects
-      url: /create-effects/
-      disabled: true
+    #- name: Sharing Custom Effects
+      #url: /create-effects/
+      #disabled: true
 
 - title: Internals
   items:
     - name: Architecture
       url: /internals/
+      icon: code
       disabled: true
-
-    - name: Dependencies
-      url: /dependencies/
-      icon: box
 
     - name: Configuration
       url: /config/
-      disabled: true ###
       icon: wrench
 
     - name: Effects
       url: /config/effects/
       icon: effects
       indent: 1
-      disabled: true ###
 
-    - name: Layered Effects
-      url: /config/effects/layered/
-      indent: 2
-      disabled: true ###
+    #- name: Layered
+      #url: /config/effects/layered/
+      #indent: 2
 
-    - name: Scripted Effects
-      url: /config/effects/scripted/
-      indent: 2
-      disabled: true ###
+    #- name: Scripted
+      #url: /config/effects/scripted/
+      #indent: 2
 
-    - name: Sequence Effects
+    - name: Sequence
       url: /config/effects/sequence/
       icon: sequence
       indent: 2
-      disabled: true ###
 
-    - name: Presets
-      url: /config/presets/
-      indent: 1
-      disabled: true
-
-#- title: Backends
-  #items:
-    #- name: OpenRazer
-      #url: /openrazer/
-      #disabled: true
+    #- name: Presets
+      #url: /config/presets/
+      #indent: 1

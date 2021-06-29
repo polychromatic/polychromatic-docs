@@ -34,13 +34,13 @@ an existing language.
 Before starting, make sure there isn't [any open pull request](https://github.com/polychromatic/polychromatic/pulls)
 for your language already.
 
-This guide will use [Poedit] for performing the translation and uses `git`
+> This guide will use [Poedit] for performing the translation and uses `git`
 in the Terminal for version control.
 
 
 ### Preparing the repository
 
-1. [Fork the `polychromatic` repository](https://github.com/polychromatic/polychromatic/fork) on GitHub.
+1. [Fork the polychromatic repository](https://github.com/polychromatic/polychromatic/fork) on GitHub.
 
 1. Clone the repository to your computer.
 
@@ -111,7 +111,7 @@ in the Terminal for version control.
        ./polychromatic-tray-applet --locale <locale>
        ./polychromatic-cli --locale <locale>
 
-    Note that only the user interface is translated. Diagnosis output in
+    > **Note:** Only the user interface is translated. Verbose/debugging output in
     the Terminal remains in English.
 
 
@@ -124,12 +124,12 @@ in the Terminal for version control.
        git commit -m "Add translation for <locale>"
        git push origin master
 
-    Please do not stage/commit the `.pot` or `.po` files for other languages
+    > **Note:** Please do not stage/commit the `.pot` or `.po` files for other languages
     if they were modified.
 
 1. Open a pull request on GitHub.
 
-       https://github.com/<Your GitHub Username>/polychromatic/compare
+       https://github.com/YOUR_GITHUB_USERNAME/polychromatic/compare
 
 
 ### Updating existing translations
@@ -146,7 +146,7 @@ in the Terminal for version control.
 
 2. Open [Poedit] and translate! When finished, commit the modified PO file as usual.
 
-    Please do not stage/commit the `.pot` or other `.po` files if they are
+    > **Note:** Please do not stage/commit the `.pot` or other `.po` files if they are
     modified.
 
 

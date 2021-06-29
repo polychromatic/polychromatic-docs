@@ -25,7 +25,7 @@ v0.3.12, this switched from WebKitGTK.
 ### Is Windows or macOS supported?
 
 Not right now, but this an ambition in the distant future.
-For OpenRazer users, see below for alternates.
+OpenRazer users, see below for alternates.
 
 
 ### Are other LED peripherals supported, such as Logitech or Corsair?
@@ -74,13 +74,15 @@ but is still in early development.
 * <https://github.com/z3ntu/openrazer-shim>
 * <https://github.com/openrazer/openrazer/issues/623>
 
+There are other projects that use OpenRazer's efforts.
+
 > When using third party projects providing support for other operating systems,
 > please do not create issues on the OpenRazer repository.
 
 **Windows**
 
 [openrazer-win32](https://github.com/CalcProgrammer1/openrazer-win32)
-is an unofficial wrapper that brings OpenRazer's efforts on Windows. [OpenRGB](https://openrgb.org/)
+is an unofficial wrapper that produces an OpenRazer DLL for Windows. [OpenRGB](https://openrgb.org/)
 is a program implementing this library.
 
 * <https://gitlab.com/CalcProgrammer1/OpenRGB/>
@@ -173,7 +175,10 @@ With v0.6.1, you can create your own static frames or animated sequences!
 For complex requirements, this is somewhat limiting, and so
 [the upcoming v1.0.0 future update](/roadmap/) will introduce new tools for effect creation.
 
-Custom effects can be created for any supported device.
+Custom effects can be created for any supported device, such as lighting
+specific keys when using various applications and games.
+
+Effects set with the application will be re-applied to the device at login.
 
 
 ### Can I create my own profiles?
@@ -184,13 +189,13 @@ Not yet, but Polychromatic will add profile ("presets") functionality [in the up
 
 ### When will the next version be released?
 
-> v0.6.1 is here!
+> [v0.6.1 is here!](https://github.com/polychromatic/polychromatic/releases/tag/v0.6.1)
 
 Check out [the roadmap](/roadmap/) to see what new and improved features
-that next. If you like to be cutting edge, consider the **edge** builds which
-comes with a "experimental" label.
+that next. If you like to be cutting edge, try the **edge** builds which
+come with an "experimental" label.
 
-As with any open source project, progress can be slow at times. It's been 2 years since the
+As with any open source project, progress can be slow at times. It's been 3 years since the
 release of v0.3.12, with [not just one](https://github.com/polychromatic/polychromatic/releases/tag/v0.4.0),
 or [two](https://github.com/polychromatic/polychromatic/releases/tag/v0.5.0), but **three** refactors internally!
 We're back on track, with the Controller using a desktop toolkit (PyQt5) instead

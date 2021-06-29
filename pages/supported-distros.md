@@ -7,22 +7,22 @@ class: docs
 
 ## Official Packages
 
-This software is natively provided on these distributions.
+This software is packaged for these distributions.
 
 {:.has-icons}
-| Distro                                            | Maintainer    |
-|---------------------------------------------------|---------------|
-![](/images/distros/ubuntu.svg) [Ubuntu]`*`         | [lah7]
-![](/images/distros/debian.svg) [Debian]            | [lah7]
-![](/images/distros/arch.svg) [Arch / Manjaro]      | [z3ntu]
-![](/images/distros/fedora.svg) [Fedora]            | [z3ntu]
-![](/images/distros/opensuse.svg) [openSUSE]        | [z3ntu]
-![](/images/distros/mageia.svg) [Mageia]            | [z3ntu]
-![](/images/distros/solus.svg) [Solus]              | [z3ntu]
+| Distro                                        | Stable | Testing | Edge | Maintainer    |
+| --------------------------------------------- | ------ | ------- | ---- | ------------- |
+![](/images/distros/ubuntu.svg) [Ubuntu]`*`     | Yes    | Yes     | Yes  | [lah7]
+![](/images/distros/debian.svg) [Debian]        | Yes    | Yes     | Yes  | [lah7]
+![](/images/distros/arch.svg) [Arch / Manjaro]  | Yes    |         | Yes  | [z3ntu]
+![](/images/distros/fedora.svg) [Fedora]        | Yes    |         |      | [z3ntu]
+![](/images/distros/opensuse.svg) [openSUSE]    | Yes    |         |      | [z3ntu]
+![](/images/distros/mageia.svg) [Mageia]        | Yes    |         |      | [z3ntu]
+![](/images/distros/solus.svg) [Solus]          | Yes    |         |      | [z3ntu]
 
 `*` Ubuntu includes flavours and derivatives, such as Linux Mint, elementaryOS, Pop!_OS and Zorin OS
 
-[Ubuntu]: https://polychromatic.apphttps://polychromatic.app/download/ubuntu/
+[Ubuntu]: https://polychromatic.app/download/ubuntu/
 [Debian]: https://polychromatic.app/download/debian/
 [Arch / Manjaro]: https://polychromatic.app/download/arch/
 [Fedora]: https://polychromatic.app/download/fedora/

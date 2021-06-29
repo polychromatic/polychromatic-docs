@@ -9,19 +9,17 @@ class: docs
 
 Polychromatic acts as a frontend for these projects:
 
-| Project         | Devices    |
-| --------------- | ---------- |
-| ![](/images/backends/openrazer.svg) [OpenRazer] | Open source driver and daemon supporting 100+ Razer peripherals on GNU/Linux.
+* [OpenRazer] - open source driver and daemon supporting 100+ Razer peripherals on GNU/Linux.
 
 
 **Providing support for these features:**
 
+* Hardware effects
 * Brightness
-* Hardware Effects
-* Create custom frames
+* Custom frames
 * Read firmware data (e.g. serial, version)
-* DPI and Polling Rate
-* Different zones
+* DPI and polling rate
+* Multiple lighting zones
 
 
 ### Future Ambitions
@@ -32,24 +30,51 @@ In future, the project would like to integrate support for:
 * [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) (SDK Client)
 
 
-## Reporting Issues
+## Something not working?
 
-If the application is unable to work with your device, it's important to know
-whether the issue is specific to this application (frontend) or the backend.
+If your device isn't being recognised, it's important to know
+whether the issue is specific to Polychromatic (frontend) or the backend.
 
-Before reporting issues, please debug the action with the backend directly and
-raise the issue on that project if the problem continues. For example, with [OpenRazer],
-you can use [d-feet] or [QDBusViewer] to debug driver calls (via D-Bus) or use the Python
-library to directly communicate with the daemon if you keep seeing **Backend Error**
-messages.
+### OpenRazer
 
-[OpenRazer] being a driver can sometimes be improperly installed. Consult their
-[Troubleshooting Guide](https://github.com/openrazer/openrazer/wiki/Troubleshooting) for things to try.
+Try the **Troubleshooter** provided by Polychromatic (accessible via the **menu bar → Tools → OpenRazer**).
+This identities most common problems. Alternately, take a look at [OpenRazer's
+Troubleshooting Guide](https://github.com/openrazer/openrazer/wiki/Troubleshooting).
 
-> In a future update, Polychromatic will include a troubleshooter that checks for common problems.
+If your device isn't listed as supported, [search for an issue on their repository](https://github.com/openrazer/openrazer/issues)
+and create one if the device doesn't exist. If you feel like hacking the code,
+look at commits from [previous hardware support as examples](https://github.com/openrazer/openrazer/search?q=Add+support+for&type=commits)
+and see if you can get your device working by replicating the data needed for a similar device.
 
-Otherwise, for UI and behaviour issues, raise the issue here
-[on Polychromatic's repository](https://github.com/polychromatic/polychromatic/issues).
+
+### Reporting device-specific issues
+
+While this project would love everything to "just work" for you, inevitably,
+bugs slip through as the developer doesn't have the
+hardware to verify.
+
+Before reporting an issue:
+
+* **Make sure you are using the latest (development) version of Polychromatic.**
+    * Polychromatic calls these "edge" builds.
+    * The software can be ran from the Git repository directly.
+* **Make sure you are using the latest version of the backend.**
+    * Some projects may call these "daily", "git" or "master" builds.
+
+**OpenRazer**
+
+Please try debugging the action with the backend directly and
+[raise the issue on OpenRazer](https://github.com/openrazer/openrazer/issues)
+if the problem continues. [OpenRazer] provides multiple ways to interact with the driver:
+
+* Use [d-feet] or [QDBusViewer] to debug driver calls (via D-Bus)
+* Try the Python library to communicate with the daemon.
+* Test an alternate frontend application or project.
+
+**Polychromatic**
+
+For UI issues, incorrect/missing device implementation and behaviour problems,
+search and raise the issue here [on Polychromatic's repository](https://github.com/polychromatic/polychromatic/issues?q=is%3Aissue).
 
 
 

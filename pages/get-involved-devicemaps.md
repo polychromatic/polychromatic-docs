@@ -23,11 +23,11 @@ These can also be visually mapped to a crafted graphic as well.
 
 ## Preparing the Repository
 
-1. [Fork the `polychromatic` repository](https://github.com/polychromatic/polychromatic/fork) on GitHub.
+1. [Fork the polychromatic repository](https://github.com/polychromatic/polychromatic/fork) on GitHub.
 
 2. Clone the repository to your computer.
 
-       git clone https://github.com/<your username>/polychromatic.git
+       git clone https://github.com/YOUR_GITHUB_USERNAME/polychromatic.git
 
 3. To run the application via the repository later, install `sassc`.
 
@@ -51,15 +51,14 @@ to the end of the list.
 },
 ```
 
-* The dictionary key `({)` is the label shown in the interface.
-  * This isn't translated, so it may be localized if applicable, e.g. "Razer Blade - Deutsche"
-* `filename` points to the [SVG in the directory](#device-svg).
-* `cols` is a 1-based count of the columns (X axis)
-* `rows` is a 1-based count of the rows (Y axis)
-* `locale` only applies to keyboards to indicate key mapping.
-  * Leave `null` if not applicable.
-* `scancode` points to another [JSON file that maps scan codes to the matrix](#scan-code-json)
-  * Leave `null` if not applicable.
+| Key               | Data Type | Description
+| ----------------- | ----- | ------------------------ |
+| `<root>`          | str | The name of the device. This isn't translated, so it may be localized if applicable, e.g. "Razer Blade - Deutsche"
+| `filename`        | str | Points to the [SVG file in the directory](#device-svg)
+| `cols`            | int | 1-based number of columns (X axis)
+| `rows`            | int | 1-based number of rows (Y axis)
+| `locale`          | str / `null` | Only applies to keyboards to indicate key layout. Leave `null` if not applicable.
+| `scancode`        | str / `null` | Points to another [JSON file that maps scan codes to the matrix](#scan-code-json). Leave `null` if not applicable.
 
 > If you don't know the `cols` or `rows` for the device, click **Device Info**
 > from the Controller's [Devices](/controller/devices/) tab.
@@ -80,8 +79,8 @@ in the editor.
 > operation. When saving, please use [Plain SVG](https://wiki.inkscape.org/wiki/index.php/PlainSVG).
 
 First, you'll want to perform the usual drawing/editing of the device.
-If there is already an identical graphic in `data/devicemaps/`, feel free to use
-one as a starting point.
+If there is already an identical graphic in `data/devicemaps/`, feel free to copy
+that one as a starting point.
 
 Otherwise, it may help to embed a picture of the device and create
 paths for the base unit and its individual LEDs.
@@ -98,8 +97,9 @@ between `1.5px-2px` is recommended.
 For text objects (like keys for a keyboard), use the **[Play font](https://github.com/polychromatic/polychromatic/raw/master/data/qt/fonts/Play_regular.ttf)** for consistency.
 If you wish to use a different font, convert the text to path to ensure it can be seen across different operating systems.
 
-Set the `class` attribute of these objects to `label`. These can be hidden by
-the user if they prefer. If unsure on how to set attributes, see the next section.
+Set the `class` attribute of these key labels to `label`. This is so the user
+can hide them if they prefer. If you're unsure on how to set attributes for
+an SVG object, see the next section.
 
 ---
 
@@ -118,8 +118,7 @@ Assign each node of an LED:
 | Attribute | Value
 | --------- | ------------
 | `class`   | `LED`
-| `id`      | The co-ordinate in this format: `x0-y0`
-|           | e.g. `x11-y2` for `(11,2)`
+| `id`      | The co-ordinate in this format: `x0-y0` <br> For example, `x11-y2` for `(11,2)`
 
 This is an example for the <kbd>P</kbd> key on the BlackWidow graphic:
 

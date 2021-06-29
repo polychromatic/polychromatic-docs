@@ -70,6 +70,16 @@ pre {
 }
 
 code {
-    color: lime;
+    color: grey;
     font-size: 1.1em;
+
+    /* Diff Highlighting - Insert */
+    .gi {
+        color: lime;
+    }
+
+    /* Diff Highlighting - Delete */
+    .gd {
+        color: red;
+    }
 }

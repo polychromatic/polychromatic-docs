@@ -74,9 +74,9 @@ a UI redesign drawn on sheets of e-paper.
 It turns out, however, building a "hybrid desktop web app" was holding up progress.
 Simple things took ages to design and look good. After a couple of rewrites,
 it still didn't feel like it could be a scalable application with clean code.
-It's still a weird hybrid of web technologies mixed with Python after all!
+It was still a weird hybrid of web technologies mixed with Python after all!
 
-The third rewrite was a port to PyQt5, a well documented cross-platform UI framework
+The third rewrite ported to PyQt5, a well documented cross-platform UI framework
 that lets us focus on the logic and new features.
 
 <br>

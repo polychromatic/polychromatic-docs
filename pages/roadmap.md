@@ -5,10 +5,12 @@ permalink: /roadmap/
 class: docs
 
 roadmap:
-    - name: v0.3.12 - v0.6.0 - Reimagining the project
+    - name: v0.6.0 - Lots of overhauls
       desc: It's been a slow journey, but the application had a redesign
             both visually and internally so it's easier to maintain for the growing
             number of devices and features.
+            <br><br>
+            v0.6.1 marks the release of consolidated and polished progress since v0.3.12.
       checked: true
       completed:
         - New command line utility
@@ -22,23 +24,12 @@ roadmap:
         - New Effects tab ("application profiles" replacement)
         - New effect format (with support for animation)
         - New troubleshooter for OpenRazer
-
-    - name: v0.6.1 - A stable beta
-      desc: v0.3.12 is no longer stable, but the latest development hasn't
-            had all its new features finished either. So... time to consolidate
-            progress and make a new release!
-      checked: progress
-      completed:
-        null
-      in_progress:
-        - Polish little things for a new stable release
-      pending:
-        - Quality assurance testing across distros with progress so far
+        - Polished and quality assured
 
     - name: v1.0.0 - The big one
       desc: This release will expand custom (software) effects, introduce presets
-            for multiple devices and events for automating your lighting.
-      checked: false
+            for multiple devices and add events for automating your lighting.
+      checked: progress
       completed:
         null
       in_progress:
@@ -52,7 +43,7 @@ roadmap:
         - 'New Effect Type: Layered'
 
     - name: v1.1.0
-      desc:
+      desc: This release will focus on online functionality.
       checked: false
       completed:
         null

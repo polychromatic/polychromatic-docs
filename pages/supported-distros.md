@@ -56,8 +56,8 @@ If there's a dependency or packaging problem, please raise the issue on their re
 ## Tray Applet vs Desktop Environments
 
 The toolkit GTK powering some desktop environments consider "system tray" to
-be obsolete. As a result, the tray applet may work straight out of the box and
-will need additional steps.
+be obsolete. As a result, the tray applet may not work straight out of the box
+and will need additional steps.
 
 | Environment   | Distro Family | Notes                                           |
 | ------------- | ------------- | ----------------------------------------------- |

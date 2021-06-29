@@ -18,32 +18,24 @@ Polychromatic acts as a frontend for these projects:
 
 * Brightness
 * Hardware Effects
-* Create custom LED layout `(limited to keyboards in v0.3.12)`
-* Read firmware data
-* Set DPI and Polling Rate
-
-**The upcoming v1.0.0 update will improve:**
-
-* Support for all custom LED layouts (mice, keypads, etc)
-* Software effects
-* Devices with multiple zones
+* Create custom frames
+* Read firmware data (e.g. serial, version)
+* DPI and Polling Rate
+* Different zones
 
 
-## Future Ambitions
+### Future Ambitions
 
-The project would like to integrate support for these in future:
+In future, the project would like to integrate support for:
 
 * [phue (Philips Hue)](https://github.com/polychromatic/polychromatic/issues/296)
-* [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB)
+* [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) (SDK Client)
 
----
 
 ## Reporting Issues
 
 If the application is unable to work with your device, it's important to know
 whether the issue is specific to this application (frontend) or the backend.
-
-> Some issues may be because of v0.3.12. Try the [newer branch](https://github.com/polychromatic/polychromatic/branches).
 
 Before reporting issues, please debug the action with the backend directly and
 raise the issue on that project if the problem continues. For example, with [OpenRazer],

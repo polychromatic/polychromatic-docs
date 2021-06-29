@@ -5,14 +5,6 @@ permalink: /translations/
 class: docs
 ---
 
-> **Heads up! v1.0.0 is in alpha!**
->
-> The next generation of the software is still in development. This just means
-> that strings are not finalized, but feel free to get a head start!
->
-> Existing locales will need updating as there are new strings.
->
-
 ## Overview
 
 Polychromatic uses gettext to localize the application to different languages.

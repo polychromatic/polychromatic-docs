@@ -83,7 +83,7 @@ in the Terminal for version control.
     under `[Desktop Actions]` sections. Append the locale before the `=` sign
     inside square brackets `[]` and translate, like so:
 
-    ```
+    ```ini
     GenericName=Device Manager for RGB Lighting
     GenericName[es]=Administrador de dispositivos para iluminación RGB
 

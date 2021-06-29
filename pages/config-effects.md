@@ -86,7 +86,7 @@ on the type of effect.
 
 Every effect starts with this common data:
 
-```
+```json
 {
     "name": "Example Effect",
     "name[fr_FR]": "Exemple d'effet",

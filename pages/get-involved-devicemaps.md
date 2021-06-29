@@ -41,7 +41,7 @@ The data is stored in `data/devicemaps/`
 This contains all the mappings the user can choose from. Append your device
 to the end of the list.
 
-```
+```json
 "Razer BlackWidow (M1-M5) - British": {
     "filename": "blackwidow_m_keys_en_GB.svg",
     "cols": 22,
@@ -169,7 +169,7 @@ This is how the physical keys map out on the top-left area of a BlackWidow Chrom
 In `maps.json`, you can specify an existing (or create a new) JSON file that
 matches the scan code to the position on the LED matrix.
 
-```
+```json
 "1": [1, 0],
 
 "59": [3, 0],

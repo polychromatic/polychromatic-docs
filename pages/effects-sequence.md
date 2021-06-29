@@ -21,7 +21,7 @@ pixels. The playback speed and whether the effect loops can be adjusted too.
 In addition to the [common metadata](../#common-metadata), this effect is
 specified by the following data:
 
-```
+```json
 {
     "fps": 10,
     "loop": true,

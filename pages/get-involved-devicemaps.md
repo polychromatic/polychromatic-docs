@@ -95,11 +95,14 @@ between `1.5px-2px` is recommended.
 **Text Labels**
 
 For text objects (like keys for a keyboard), use the **[Play font](https://github.com/polychromatic/polychromatic/raw/master/data/qt/fonts/Play_regular.ttf)** for consistency.
-If you wish to use a different font, convert the text to path to ensure it can be seen across different operating systems.
+If you wish to use a different font that matches your keyboard, convert the text to path to ensure it can be seen across different operating systems.
 
-Set the `class` attribute of these key labels to `label`. This is so the user
-can hide them if they prefer. If you're unsure on how to set attributes for
-an SVG object, see the next section.
+Installing the Play font is not required, but make sure any new text nodes have
+"Play" set for the font as opposed to the default sans serif.
+
+Set the `class` attribute of any objects acting as key labels to `label`.
+This is so the user can hide them if they prefer. If you're unsure on how to
+set attributes for an SVG object, see the next section.
 
 ---
 
@@ -131,11 +134,17 @@ This is an example for the <kbd>P</kbd> key on the BlackWidow graphic:
 When a key is illuminated in the editor, the `fill` and `stroke` of the node
 (and any children) will be coloured too:
 
-    path, text g, rect, circle
+    path, text, rect, circle
 
-A `path` node can be exempted if its stroke should not be painted. To do this, specify
-a `nostroke` attribute with a value of `true`. For example, the <kbd>Tab</kbd> key
-has a symbol that is only a fill colour, with no stroke style:
+To exempt an object from having its colours changed, add an extra attribute:
+
+| Attribute     | Value         | Response
+| ------------- | ------------- | ------------------------------------------- |
+| `nostroke`    | `true`        | Changes `fill` to black or white to match text labels. `stroke` is cleared.
+| `nochange`    | `true`        | Nothing happens to `fill` or `stroke`
+
+Here's an example with the <kbd>Tab</kbd> key.
+There's a symbol that should only be a fill colour, with no stroke:
 
 ![XML Editor for the Tab key opened in Inkscape](/images/inkscape-xml2.webp)
 

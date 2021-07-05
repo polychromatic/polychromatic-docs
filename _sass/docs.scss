@@ -46,9 +46,9 @@ $roadmap-line: #00FF00;
 }
 
 blockquote {
-    background: $pre-colour;
+    background: $bg-secondary;
     border-left: 4px solid $secondary;
-    color: lighten($pre-colour, 50%);
+    color: lighten($bg-secondary, 50%);
     margin: 15px 0;
 
     p {

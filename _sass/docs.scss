@@ -16,7 +16,7 @@ $roadmap-line: #00FF00;
     }
 
     h2, h3, h4 {
-        margin-top: -125px;
+        margin-top: -135px;
         padding-top: 135px;
 
         img {
@@ -28,8 +28,10 @@ $roadmap-line: #00FF00;
     }
 
     hr {
-        border-top: 2px solid $table-colour-head;
-        margin: 30px 0;
+        background: linear-gradient(to right, $bg-secondary, $bg-secondary, rgba(0,0,0,0));
+        border: none;
+        padding: 1em 0;
+        margin: 2em -35px;
     }
 
     table img {

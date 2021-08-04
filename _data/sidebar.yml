@@ -69,6 +69,10 @@
       icon: terminal
       disabled: true
 
+    - name: Tips & Tricks
+      url: /tips/
+      icon: lightbulb
+
 - title: Get Involved
   items:
     - name: Translations

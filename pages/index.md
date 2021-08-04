@@ -1,12 +1,12 @@
 ---
 layout: docs
-title: Documentation
+title: Documentation Index
 permalink: /
 class: docs
 ---
 
-![](/images/home.jpg)
+## Welcome!
 
-### ← To get started, pick a topic on the left.
+{% include suggested.html %}
 
-New documentation will be on its way after the v1.0.0 release.
+To return to the main site, click **Discover** in the top-left.

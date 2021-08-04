@@ -2,6 +2,6 @@
 layout: default
 ---
 
-<h1 class="page-title">{{ page.title | escape }}</h1>
+<h1 class="page-title">{% if page.permalink != "/" %}{{ page.title | escape }}{% endif %}</h1>
 
 {{ content }}

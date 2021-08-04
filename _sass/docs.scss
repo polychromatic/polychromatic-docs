@@ -241,3 +241,47 @@ kbd {
     border-radius: 2px;
     padding: 2px 4px;
 }
+
+/* Suggested */
+.suggested-topics {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.suggested-topic {
+    background: $bg-secondary;
+    border: 1px solid $border-colour;
+    margin: 0.5em;
+    padding: 1em 1.5em;
+    width: 45%;
+    transition: border-color $btn-speed;
+
+    .topic-name {
+        display: flex;
+        font-size: 1.2em;
+        margin: 0.5em 0;
+        transition: color $btn-speed;
+    }
+
+    .topic-desc {
+        color: $grey-colour;
+        margin: 0.5em 0;
+        transition: color $btn-speed;
+    }
+
+    svg {
+        height: 1em;
+        margin: auto 0;
+        margin-right: 0.25em;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $primary;
+        text-decoration: none;
+
+        .topic-desc {
+            color: $secondary;
+        }
+    }
+}

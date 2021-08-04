@@ -1,0 +1,15 @@
+<div class="suggested-topics">
+    {% for topic in site.data.suggested %}
+
+        <a class="suggested-topic" href="{{ topic.url }}">
+            <div class="topic-name">
+                {% include icons/{{topic.icon}}.svg %}
+                {{ topic.title }}
+            </div>
+            <div class="topic-desc">
+                {{ topic.desc }}
+            </div>
+        </a>
+
+    {% endfor %}
+</div>

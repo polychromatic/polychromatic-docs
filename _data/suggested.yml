@@ -1,0 +1,29 @@
+- title: FAQs
+  desc: What is this software?
+  url: /faqs/
+  icon: question-circle
+
+- title: History
+  desc: Find out how it all started
+  url: /history/
+  icon: clock
+
+- title: OpenRazer
+  desc: Learn more about this backend
+  url: /openrazer/
+  icon: openrazer
+
+- title: Distros & Environments
+  desc: With details on restoring the tray applet
+  url: /distros/
+  icon: applet
+
+- title: Translations
+  desc: Learn how to translate this application
+  url: /translations/
+  icon: comments
+
+- title: Roadmap
+  desc: "What's in the pipeline?"
+  url: /roadmap/
+  icon: road

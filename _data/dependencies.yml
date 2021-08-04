@@ -53,13 +53,13 @@ packages:
       packages:
         arch: qt5-svg
         debian: python3-pyqt5.qtsvg
-        opensuse: libqt5-qtsvg
+        opensuse: libQt5Svg5
         fedora: qt5-qtsvg
 
     # PyQt5: WebEngine
     - required_by: controller
       packages:
-        arch: python-pyqtwebengine
+        arch: python-pyqt5-webengine
         debian: python3-pyqt5.qtwebengine
         opensuse: libqt5-qtwebengine
         fedora: python3-qt5-webengine

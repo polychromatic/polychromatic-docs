@@ -7,198 +7,153 @@ class: docs
 
 ### What is Polychromatic?
 
-Polychromatic is becoming a vendor agnostic frontend to control various kinds
-of RGB peripherals from different brands. This suite of software provides a
-GUI, a tray applet and command line interface.
+Polychromatic is becoming a vendor agnostic frontend to manage various kinds
+of RGB peripherals from different brands. Originally, [we started out as the first
+frontend for OpenRazer.](/history/)
 
-<!-- , as well as handling custom
-effects, presets and automating them with trigger events. -->
+**Objectives:**
 
-Currently, the only supported backend is [OpenRazer].
+- Focus on design and software quality
+- Easy and simple to use
+- Deliver an RGB experience agnostic to any ecosystem
+- Integrate useful features typically marketed with RGB peripherals
 
-[OpenRazer]: https://openrazer.github.io
+---
 
-The application is written in Python/PyQt5. If you're upgrading from the older
-v0.3.12, this switched from WebKitGTK.
+### Besides Razer, are other brands supported, like Logitech and Corsair?
 
+Potentially! Right now, only [OpenRazer](/openrazer/) is supported. Our vision is to add
+support for open source projects like [phue], [OpenRGB] and [libratbag].
+There is no ETA on working on this, so it will be quite some time before this happens.
+
+[phue]: https://github.com/polychromatic/polychromatic/issues/296
+[OpenRGB]: https://github.com/polychromatic/polychromatic/issues/340
+[libratbag]: https://github.com/polychromatic/polychromatic/issues/339
+
+If you're a developer, you can add integration in the form of a backend module for this program.
+The backend should ideally provide Python bindings for third party software
+to connect/bind to. However...
+
+> **Breaking Changes Ahead!**
+> * There will be some significant changes to the backend code between v0.7.0 and its succeeding version.
+> * This is not yet documented.
+
+If you're not a coder, but keen to see support, keep an eye on the project as
+we will need to assemble a group of testers when the time is right.
+The lead developer of this application only has Razer RGB hardware.
+
+---
 
 ### Is Windows or macOS supported?
 
-Not right now, but this an ambition in the distant future.
-OpenRazer users, see below for alternates.
+Not right now, but it is an objective to port to these platforms in the distant future.
+The software is currently focused on developing features before carrying the weight
+of supporting other operating systems.
 
-
-### Are other LED peripherals supported, such as Logitech or Corsair?
-
-Potentially! Right now, only [OpenRazer] is supported. If you're a developer,
-you can [add integration](/backends/) in the form of a backend module for this program.
-Polychromatic can integrate with existing Python libraries.
-
-The project would like to support these in future:
-
-* [phue [Philips Hue] (#296)](https://github.com/polychromatic/polychromatic/issues/296)
-* [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB#openrgb-sdk) (SDK Client)
-
-Previously, this was not possible in legacy `(< v0.6.0)` versions of this software, due to
-the codebase heavily resolving around the OpenRazer daemon.
-
+Plus, we need cross-platform backends. OpenRazer, for example, is technically tied to the
+Linux kernel, although there is some progress to bring it to other platforms.
+[Read more on OpenRazer.](/openrazer/)
 
 ---
-
-## OpenRazer Questions
-
-### What is OpenRazer?
-
-[OpenRazer] is a driver and daemon which analyzed the protocols used to speak
-to Razer peripherals and control their lighting and hardware effects. An
-API is exposed for scripts and applications to control the devices at a higher level.
-
-The project aims to support the hardware's features (e.g. DPI and lighting).
-The daemon is written in Python, with a DKMS driver to enable device-specific
-features like handling special keys.
-
-**This project is an unofficial implementation and is not supported or created by Razer Inc.**
-
-[OpenRazer]: https://openrazer.github.io
-
-
-### Does OpenRazer support Windows or macOS?
-
-Officially, no. One of the OpenRazer team members is experimenting by
-rewriting [OpenRazer] to handle everything in userspace, eliminating
-the dependency on DKMS drivers for GNU/Linux. This rewrite uses [hidapi](https://github.com/signal11/hidapi)
-but is still in early development.
-
-* <https://github.com/z3ntu/razer_test>
-* <https://github.com/z3ntu/python-openrazer>
-* <https://github.com/z3ntu/openrazer-shim>
-* <https://github.com/openrazer/openrazer/issues/623>
-
-There are other projects that use OpenRazer's efforts.
-
-> When using third party projects providing support for other operating systems,
-> please do not create issues on the OpenRazer repository.
-
-**Windows**
-
-[openrazer-win32](https://github.com/CalcProgrammer1/openrazer-win32)
-is an unofficial wrapper that produces an OpenRazer DLL for Windows. [OpenRGB](https://openrgb.org/)
-is a program implementing this library.
-
-* <https://gitlab.com/CalcProgrammer1/OpenRGB/>
-
-**macOS**
-
-There is an Electron-based project which ports devices individually from OpenRazer.
-
-* <https://github.com/1kc/razer-macos>
-
-
-### Are macros supported for keyboards **with** dedicated macro keys?
-
-Yes, the OpenRazer daemon provides on-the-fly macro recording for Razer
-keyboards (such as BlackWidow Chroma) that have dedicated macro keys (M1-M5).
-Keystrokes can be recorded and stored in the daemon until it is stopped.
-
-> **Note:** The key combination is slightly different to Razer's official drivers.
-
-1. Press <kbd>FN</kbd> + <kbd>F9</kbd>.
-  * The macro LED will start blinking.
-2. Press the key that will save this macro.
-  * E.g. <kbd>M1</kbd>. The macro LED will turn solid.
-3. Type your keystrokes.
-4. Press <kbd>FN</kbd> + <kbd>F9</kbd> to finish.
-
-If the macro LED rapidly blinks on step 1, you may need to restart the daemon.
-
-Playback will play the keystrokes one-after-the-other, which is incredibly fast.
-Time delays are not supported right now.
-
-
-### Are macros supported for keyboards **without** dedicated macro keys?
-
-Officially, no. With a patch, yes. To make on-the-fly recording work for ANY key,
-locate this file and remove these lines:
-
-[/usr/lib/python3/**/openrazer_daemon/misc/key_event_management.py](https://github.com/openrazer/openrazer/blob/bd71e769d9239fc4ffac69c04cf3cc88b12d7bda/daemon/openrazer_daemon/misc/key_event_management.py#L488-L495)
-
-```diff
-                    if self._current_macro_bind_key is None:
--                        # Restrict macro bind keys to M1-M5
--                        if key_name not in ('M1', 'M2', 'M3', 'M4', 'M5'):
--                            self._logger.warning("Macros are only for M1-M5 for now.")
--                            self._recording_macro = False
--                            self._parent.setMacroMode(False)
--                        else:
-                            self._current_macro_bind_key = key_name
-                            self._parent.setMacroEffect(0x00)
-```
-
-This 'hack' is just for reference. This does not
-work with gamepads as they behave like a Chroma keyboard (default device behaviour).
-
-
-### What is macro support like in Polychromatic?
-
-The application only informs you about OpenRazer's on-the-fly macro recording
-feature. See [Can I remap keys?] below.
-
-
-### Can I configure keys on a gamepad?
-
-Sadly no, not right now. A third party application is required. See [Can I remap keys?] below.
-
----
-
-## Feature Questions
 
 ### Can I remap keys?
 
 Not yet. This is a future ambition. In the meantime, other users have reported using these utilities:
 
-* [key-mapper](https://github.com/sezanzeb/key-mapper) _(Python 3, GTK)_
+* [key-mapper](https://github.com/sezanzeb/key-mapper) _(Python 3, GTK)_ - **Recommended**
 * [Keyboarding Master](https://sites.google.com/site/keyboardingmaster/) _(Java, GUI)_
 * [Pystromo](https://github.com/byrongibson/Pystromo) _(Python 2)_
-* [boppreh/keyboard] _(Python 3)_
-* [boppreh/mouse] _(Python 3)_
 
 Polychromatic intends to use [boppreh/keyboard] and [boppreh/mouse] projects in future.
+
+Key remapping (or "key rebinding") is actually a generic feature. Try the tools above
+or look up how to do this with Xorg.
 
 [boppreh/keyboard]: https://github.com/boppreh/keyboard
 [boppreh/mouse]: https://github.com/boppreh/mouse
 [Can I remap keys?]: #can-i-remap-keys
 
+Things get complicated for Razer hardware with a "Hypershift" button, as this
+functionality isn't supported in OpenRazer. It's currently unknown if the
+settings are stored in hardware or requires software. Some investigation
+is required for an agnostic software solution.
+
+---
 
 ### Can I create my own effects?
 
-With v0.6.1, you can create your own static frames or animated sequences!
-For complex requirements, this is somewhat limiting, and so
-[the upcoming v1.0.0 future update](/roadmap/) will introduce new tools for effect creation.
+Yes! Currently this is in the form of frames and pixels.
 
-Custom effects can be created for any supported device, such as lighting
-specific keys when using various applications and games.
+While the editor makes it possible to hand craft your own wave of colours, or pulsate
+specific LEDs, this is somewhat limiting for complex and interactivity requirements.
+[The upcoming v1.0.0 update](/roadmap/) aims to introduce new tools.
 
-Effects set with the application will be re-applied to the device at login.
+Effects can be created for any device supporting individually addressable LEDs (matrix).
+Create effects to light up specific keys for your applications and games,
+or just for ambience.
 
+A background process runs your effect, sending the frames to
+the hardware (or just once if it's static). Upon reboot, the application will
+restart playback.
+
+---
 
 ### Can I create my own profiles?
 
 Not yet, but Polychromatic will add profile ("presets") functionality [in the upcoming v1.0.0 update](/roadmap/).
 
+---
 
+### This software looks alien!
+
+The dark and green design is an evolution from when the project started, aiming to
+deliver a distinct look & feel across all operating systems. Sadly,
+not all Linux distributions integrate Qt applications very well.
+
+If our styling isn't your taste, you'll be pleased to know you can turn on **"Use system theme"**
+from the preferences.
+
+---
+
+### The tray applet is running, but I don't see it!
+
+It's probable that your desktop environment considers the "system tray" or indicator
+area obsolete. We don't so. [Take a look the "Supported Distros" page](/distros/#tray-applet-vs-desktop-environments)
+on how to restore functionality.
+
+Alternately, run the program from a Terminal to see what's up:
+
+    polychromatic-tray-applet -v
+
+---
 
 ### When will the next version be released?
 
-> [v0.6.1 is here!](https://github.com/polychromatic/polychromatic/releases/tag/v0.6.1)
+> [v0.7.0 is here! See the release notes](https://github.com/polychromatic/polychromatic/releases/tag/v0.7.0)
 
 Check out [the roadmap](/roadmap/) to see what new and improved features
-that next. If you like to be cutting edge, try the **edge** builds which
-come with an "experimental" label.
+are in the pipeline. If you want to be the first, try the cutting **"edge"** builds
+(if available for your distribution).
 
-As with any open source project, progress can be slow at times. It's been 3 years since the
+As with any open source project, progress can be slow at times. It was 3 years since the
 release of v0.3.12, with [not just one](https://github.com/polychromatic/polychromatic/releases/tag/v0.4.0),
 or [two](https://github.com/polychromatic/polychromatic/releases/tag/v0.5.0), but **three** refactors internally!
 We're back on track, with the Controller using a desktop toolkit (PyQt5) instead
 of being based on hybrid web technologies.
 
-Future releases will be out as soon as humanly possible!
+No ETAs. Future releases will be out as soon as humanly possible!
+
+> **"You can't rush art."**
+>
+> -- Geri the Cleaner
+
+---
+
+### How can I send some ka-ching?
+
+The community has asked.
+While the developer enjoys building this software in his free time, a
+little "thank you" money sparks excitment and humble feelings.
+Be sure to leave a message, and thank you for your generosity!
+
+Currently, only PayPal is available: <https://paypal.me/LukeHorwell>

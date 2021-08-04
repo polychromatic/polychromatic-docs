@@ -12,6 +12,8 @@ Polychromatic has two concepts of effects:
 * **[Hardware](#hardware-effects)** - provided by the firmware or backend. These usually persist across power cycles.
 * **[Software](#software-effects)** - powered by Polychromatic and require the backend to be running.
 
+---
+
 ## Hardware Effects
 
 ### OpenRazer
@@ -36,6 +38,8 @@ other computers. Similarly, when software effects are used, the last frames may
 be retained across power cycles. However, newer hardware may default to an effect
 until OpenRazer and/or Polychromatic has started.
 
+OpenRazer 3.0 introduced persistence. This can be turned off within Polychromatic
+via _Tools → OpenRazer → Configure_.
 
 ---
 
@@ -47,7 +51,7 @@ storing "software effects". Polychromatic stores them as JSON files in
 and exported for use in other applications. -->
 
 Writing effects in this software will work on any supported backend where the
-device is compatible with individually addressable LEDs (matrix). <!-- and can be
+device is capable of individually addressable LEDs (matrix). <!-- and can be
 set to work within specifications  (for example, a scripted effect that
 should only be played on keyboards) -->
 
@@ -61,7 +65,7 @@ There are three types:
 | 3  | [![](/images/effect_types/sequence.svg) Sequence](sequence/) | Animated (or static) effect based on pixels and frames
 -->
 
-> Polychromatic supports an effect type known as [Sequence](sequence/).
+> Polychromatic v0.7.0  effects are known as [Sequence](sequence/).
 >
 > Users previously running v0.3.12 will have their "application profiles"
 > converted to this new format.
@@ -142,8 +146,8 @@ where a facility will allow you to upload/download effects created by other user
 ## Map Graphics
 
 The editor will show a graphic to help visually map your effect to the hardware
-where available. If your device doesn't have one, see [Device Maps & Graphics](/devicemaps/)
-for details on how to create the SVG.
+where available. If your device doesn't have one, the grid will be used.
+See [Device Maps & Graphics](/devicemaps/) for details on how to create the SVG.
 
 > A device's matrix can be directly tested via the Controller. Choose the device
 from the **Devices** tab, click **Device Info** and then **Test Matrix**.

@@ -13,7 +13,7 @@ The source language is **English (UK)** in both the UI and code.
 These instructions are aimed for contributors looking to add a new or update
 an existing language.
 
-## Contents
+**Contents**
 
 * [Preparing the repository](#preparing-the-repository)
 * [Performing a new translation](#performing-a-new-translation)
@@ -21,6 +21,7 @@ an existing language.
 * [Committing your changes](#committing-your-changes)
 * [Updating existing translations](#updating-existing-translations)
 
+---
 
 ## Requirements
 
@@ -28,17 +29,14 @@ an existing language.
 * A [GitHub](https://github.com) account
 * A Git client, such as the `git` command
 
+> Before starting, make sure there isn't [any open pull request](https://github.com/polychromatic/polychromatic/pulls)
+for your language already. If so, consider leaving a review.
 
-## Steps
+> This guide will use [Poedit] to write translations and `git` for version control.
 
-Before starting, make sure there isn't [any open pull request](https://github.com/polychromatic/polychromatic/pulls)
-for your language already.
+---
 
-> This guide will use [Poedit] for performing the translation and uses `git`
-in the Terminal for version control.
-
-
-### Preparing the repository
+## Preparing the repository
 
 1. [Fork the polychromatic repository](https://github.com/polychromatic/polychromatic/fork) on GitHub.
 
@@ -52,8 +50,9 @@ in the Terminal for version control.
 
        ./scripts/create-locales.sh
 
+---
 
-### Performing a new translation
+## Performing a new translation
 
 1. Open `locale/polychromatic.pot` and click the **[Create New Translation]** button.
 
@@ -95,7 +94,9 @@ in the Terminal for version control.
     Name[es]=Configurar dispositivos
 ```
 
-### Testing a translation
+---
+
+## Testing a translation
 
 1. Build the locales:
 
@@ -114,8 +115,9 @@ in the Terminal for version control.
     > **Note:** Only the user interface is translated. Verbose/debugging output in
     the Terminal remains in English.
 
+---
 
-### Committing your changes
+## Committing your changes
 
 1. Inside the root of the repository, commit the files using Git and push to your fork (`origin`)
 
@@ -131,8 +133,9 @@ in the Terminal for version control.
 
        https://github.com/YOUR_GITHUB_USERNAME/polychromatic/compare
 
+---
 
-### Updating existing translations
+## Updating existing translations
 
 1. Pull the latest source code to your copy of the repository. Note that any
    uncommitted changes will be lost.

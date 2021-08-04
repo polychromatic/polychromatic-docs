@@ -16,6 +16,8 @@ Images, videos and GIF files can be imported to be converted into blocky
 pixels. The playback speed and whether the effect loops can be adjusted too.
 -->
 
+---
+
 ## Additional Metadata
 
 In addition to the [common metadata](../#common-metadata), this effect is
@@ -46,9 +48,15 @@ specified by the following data:
 | `fps`         | int       | Approximately how many frames to render per second. This isn't precise due to influences by processing speed, such as the LED's firmware or overheads.
 | `loop`        | bool      | Replay the effect after the last frame
 
-> **Frames per second:** Polychromatic has a soft limit of **80 FPS** when editing using the editor.
-> The limit is not enforced when playing the effect, meaning the file can store a higher value.
->
-> It is unknown what the actual limits are, as they may
-> vary depending on USB bandwidth, power requirements, LED firmware and CPU load.
-> You are entirely responsible for wear and tear on your LED controller.
+---
+
+## Frames per second
+
+Polychromatic has a soft limit of **80 FPS** when using the editor.
+The limit is not enforced when playing the effect, meaning the file could
+store a higher value.
+
+It is unknown what the actual limits are, or if high rates will damage your LED controller.
+Other influences include USB bandwidth, power requirements, LED firmware and CPU load.
+You are entirely responsible for wear and tear on your LED controller by
+exceeding this number.

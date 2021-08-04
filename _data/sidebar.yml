@@ -1,4 +1,4 @@
-- title: Project
+- title: About the Project
   items:
     - name: FAQs
       url: /faqs/
@@ -16,13 +16,15 @@
       url: /history/
       icon: clock
 
+- title: Backends
+  items:
+    - name: OpenRazer
+      url: /openrazer/
+      icon: openrazer
+
 - title: User Guide
   items:
-    - name: Supported Devices
-      url: /device-support/
-      icon: devices
-
-    - name: Supported Distros
+    - name: Distros & Environments
       url: /distros/
       icon: tux
 
@@ -87,10 +89,10 @@
 
 - title: Internals
   items:
-    - name: Architecture
-      url: /internals/
-      icon: code
-      disabled: true
+    #- name: Architecture
+      #url: /internals/
+      #icon: code
+      #disabled: true
 
     - name: Configuration
       url: /config/

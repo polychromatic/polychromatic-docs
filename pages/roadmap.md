@@ -5,12 +5,10 @@ permalink: /roadmap/
 class: docs
 
 roadmap:
-    - name: v0.6.0 - Lots of overhauls
-      desc: It's been a slow journey, but the application had a redesign
-            both visually and internally so it's easier to maintain for the growing
-            number of devices and features.
-            <br><br>
-            v0.6.1 marks the release of consolidated and polished progress since v0.3.12.
+    - name: v0.7.0 - Lots of overhauls
+      desc: The application got a redesign both visually and internally so it's
+            easier to maintain for the growing number of devices and features.
+            This consolidates and polishes all progress since v0.3.12.
       checked: true
       completed:
         - New command line utility
@@ -34,6 +32,7 @@ roadmap:
       in_progress:
         null
       pending:
+        - Rework backend module
         - Improve build system
         - Improve translation system
         - 'New feature: Presets'

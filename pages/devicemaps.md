@@ -7,21 +7,22 @@ class: docs
 
 ## Overview
 
-All devices that support individually addressable LEDs can be mapped to a grid.
+All devices that support individually addressable LEDs map to a grid by default.
 These can also be visually mapped to a crafted graphic as well.
 
 ![Grid to device graphic](/images/grid-to-graphic.webp)
 
-## Contents
+**Contents**
 
-* [Preparing the Repository](#preparing-the-repository)
-* **Sections to Edit**
-  * [maps.json](#mapsjson)
-  * [Device SVG](#device-svg)
-  * [Scan Code JSON](#scan-code-json) (keyboards/keypads only)
+* [Preparing the repository](#preparing-the-repository)
+* [Add to map index](#mapsjson)
+* [Creating the device SVG](#device-svg)
+* [Creating the scan code JSON](#scan-code-json) (keyboards/keypads only)
 * [Testing the changes](#testing-the-changes)
 
-## Preparing the Repository
+---
+
+## Preparing the repository
 
 1. [Fork the polychromatic repository](https://github.com/polychromatic/polychromatic/fork) on GitHub.
 
@@ -29,20 +30,20 @@ These can also be visually mapped to a crafted graphic as well.
 
        git clone https://github.com/YOUR_GITHUB_USERNAME/polychromatic.git
 
-3. To run the application via the repository later, install `sassc`.
+3. To run the application via the repository later, install `sassc` and `intltool`.
 
+---
 
-## Sections to Edit
+## Add to map index
 
-The data is stored in `data/devicemaps/`
+The following file contains all the mappings the user can choose from:
 
-### maps.json
+    data/devicemaps/maps.json
 
-This contains all the mappings the user can choose from. Append your device
-to the end of the list.
+Append your device to the end of this list.
 
 ```json
-"Razer BlackWidow (M1-M5) - British": {
+"Razer BlackWidow Chroma (British)": {
     "filename": "blackwidow_m_keys_en_GB.svg",
     "cols": 22,
     "rows": 6,
@@ -53,8 +54,8 @@ to the end of the list.
 
 | Key               | Data Type | Description
 | ----------------- | ----- | ------------------------ |
-| `<root>`          | str | The name of the device. This isn't translated, so it may be localized if applicable, e.g. "Razer Blade - Deutsche"
-| `filename`        | str | Points to the [SVG file in the directory](#device-svg)
+| `<root>`          | str | The name of the device. As this isn't translated, use the localized name if applicable.<br>For example, "Razer Blade 2018 (Deutsch)" for a German keyboard layout.
+| `filename`        | str | Base name of the [SVG file to be created](#device-svg)
 | `cols`            | int | 1-based number of columns (X axis)
 | `rows`            | int | 1-based number of rows (Y axis)
 | `locale`          | str / `null` | Only applies to keyboards to indicate key layout. Leave `null` if not applicable.
@@ -65,18 +66,17 @@ to the end of the list.
 
 ---
 
-### Device SVG
+## Creating the Device SVG
 
-This is a vector graphic that looks similar to the actual hardware. It contains
-additional metadata so Polychromatic knows where the LEDs are when editing
-in the editor.
+This is a vector graphic that looks similar to the actual hardware, but it contains
+additional metadata so Polychromatic knows where the LEDs are.
 
-#### Step 1: Creating the shapes and paths
+### Creating the Device SVG: Shapes and paths
 
 > You'll need an SVG editor, such as [Inkscape](https://inkscape.org/).
 >
 > Inkscape adds additional metadata that serves no purpose for the application's
-> operation. When saving, please use [Plain SVG](https://wiki.inkscape.org/wiki/index.php/PlainSVG).
+> operation. When saving for the final time, please [save as Plain SVG](https://wiki.inkscape.org/wiki/index.php/PlainSVG).
 
 First, you'll want to perform the usual drawing/editing of the device.
 If there is already an identical graphic in `data/devicemaps/`, feel free to copy
@@ -86,27 +86,15 @@ Otherwise, it may help to embed a picture of the device and create
 paths for the base unit and its individual LEDs.
 
 > If you do embed an image to assist, don't forget to remove it SVG when you're
-done. Contributions with embedded raster images will **not** be accepted.
+done. Contributions with embedded raster images will not be accepted.
 
 Polychromatic will be changing an object's `fill` and `stroke` colour in the editor.
 Make sure the shape/path has a sufficient stroke style (border). A stroke width
 between `1.5px-2px` is recommended.
 
-**Text Labels**
-
-For text objects (like keys for a keyboard), use the **[Play font](https://github.com/polychromatic/polychromatic/raw/master/data/qt/fonts/Play_regular.ttf)** for consistency.
-If you wish to use a different font that matches your keyboard, convert the text to path to ensure it can be seen across different operating systems.
-
-Installing the Play font is not required, but make sure any new text nodes have
-"Play" set for the font as opposed to the default sans serif.
-
-Set the `class` attribute of any objects acting as key labels to `label`.
-This is so the user can hide them if they prefer. If you're unsure on how to
-set attributes for an SVG object, see the next section.
-
 ---
 
-#### Step 2: Add IDs and class attributes
+### Creating the Device SVG: IDs and class attributes
 
 > In **Inkscape**, open the **XML Editor** (Edit → XML Editor)
 
@@ -140,8 +128,8 @@ To exempt an object from having its colours changed, add an extra attribute:
 
 | Attribute     | Value         | Response
 | ------------- | ------------- | ------------------------------------------- |
-| `nostroke`    | `true`        | Changes `fill` to black or white to match text labels. `stroke` is cleared.
-| `nochange`    | `true`        | Nothing happens to `fill` or `stroke`
+| `nostroke`    | `true`        | Changes `fill` to black or white and clears `stroke`. Add this for key labels.
+| `nochange`    | `true`        | Do nothing to `fill` or `stroke`
 
 Here's an example with the <kbd>Tab</kbd> key.
 There's a symbol that should only be a fill colour, with no stroke:
@@ -154,26 +142,52 @@ With and without the attribute:
 
 ---
 
+### Creating the Device SVG: Text Labels
 
-### Scan Code JSON
+If an LED has a label (like keyboard/keypad keys), set that object's
+`class` attribute to `label`.
 
-A **scan code** is an integer that describes the physical key. This typically only
-applies to keyboards and keypads with physical inputs that are recognised by the
-operating system as keystrokes.
+![XML Editor for the ESC key label](/images/inkscape-xml3.webp)
 
-> This will be used in a future update to provide interactivity.
+This allows the user to turn on/off key labels.
 
-For example, `30` is the scan code for the <kbd>Q</kbd> key on a standard QWERTY keyboard.
-This is how the physical keys map out on the top-left area of a BlackWidow Chroma keyboard:
+![Key labels on/off](/images/key-labels-toggle.webp)
+
+Key labels can be represented using the **[Play font](https://github.com/polychromatic/polychromatic/raw/master/data/qt/fonts/Play_regular.ttf)** for consistency.
+If you use a different font to match your keyboard's design, convert the text to path
+to ensure it can be seen across different operating systems. Copyrighted non-free
+fonts should be avoided.
+
+Installing the Play font is not required, but it can help see things in Inkscape
+as they will in Polychromatic's editor.
+Make sure any new text nodes have "Play" set for the font as opposed to the default sans serif.
+
+---
+
+
+## Creating the scan code JSON
+
+> This only applies to keyboards and keypads.
+
+A **scan code** is an integer describing the physical key. Polychromatic uses this
+to determine where the LED is physically located. This typically for a device
+with physical inputs that are recognised by the operating system as keystrokes.
+
+> **Future stuff!** This will be used in a future update to provide interactivity.
+
+As an example, this graphic below shows how physical keys map out to the top-left
+region of a BlackWidow Chroma keyboard. <kbd>16</kbd> is the scan code for <kbd>Q</kbd>.
 
 ![Example of a BlackWidow Keyboard's Scan Codes](/images/scan-code.webp)
 
-> A **key code** is similar, but these describe the actual character/function
-> of that key, like <kbd>A</kbd> or <kbd>CTRL</kbd>. This varies depending on
-> the keyboard layout for your locale.
+> **Not to be confused with key codes!**
 >
-> For instance, scan code `35` translates to <kbd>Y</kbd> for English (QWERTY)
-> keyboards, but is <kbd>Z</kbd> on German (QWERTZ) keyboards.
+> Key codes are similar, but instead describe the character/function
+> of that key, like <kbd>A</kbd> or <kbd>LEFT CTRL</kbd>.
+>
+> For instance, scan code `21` translates to <kbd>Y</kbd> for English (QWERTY)
+> keyboards, but would be <kbd>Z</kbd> on German (QWERTZ) keyboards. For the
+> purposes of mapping LED positions, only scan codes are necessary.
 
 In `maps.json`, you can specify an existing (or create a new) JSON file that
 matches the scan code to the position on the LED matrix.
@@ -213,7 +227,7 @@ LED matrix.
 
 ---
 
-### Testing the changes
+## Testing the changes
 
 Once the files have been created/updated, it's time to test the changes!
 
@@ -223,7 +237,8 @@ Run `polychromatic-controller-dev` from the repository and try:
 * Changing the colours of all LEDs (turn on "live preview" in Preferences)
 * Double check the colours on-screen match the physical hardware.
 
+> If you created a scan code file, consider one final check. As these are
+for future use, there is no way to test within the application right now.
+
 When everything's in working order, commit your changes and hop on over to
 GitHub to create a pull request!
-
-> Scan codes are for future use and cannot be tested at this time.

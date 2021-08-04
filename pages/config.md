@@ -11,16 +11,16 @@ the XDG spec, which is usually these locations:
     ~/.config/polychromatic/
     ~/.cache/polychromatic/
 
-Preferences are usually changed via the Controller.
+Preferences can be changed via the Controller's **Edit → Preferences**.
 
 {% include img-2x.html alt="Preferences is accessible via the Edit menu bar" src="/images/preferences.png" %}
 
-Or, edit the JSON files based on the specifications below. Note that
+You can manually edit the JSON files based on the specifications below. Note that
 changes take effect on the next launch and invalid syntax will cause the file to
-be recreated (adding `.bak` to the file name)
+be reinitialised (appending `.bak` to the file name)
 
-> **Careful!** Changes to JSON files directly while the application is running may
-> cause changes to be overwritten in some circumstances.
+> It is usually necessary to restart the application (or editor windows)
+> for new preferences to take effect.
 
 ---
 
@@ -28,12 +28,12 @@ be recreated (adding `.bak` to the file name)
 
 | Folder/File           | Purpose                                              |
 | --------------------- | ---------------------------------------------------- |
-| backends/             | Backends may use this to store runtime or persistant data
-| custom_icons/         | Copies of imported images to set for effects, presets or tray icon
-| [effects/]            | Custom software effects
-| states/               | Internal data noting a device's current effect <!-- or preset -->
+| backends/             | Backends may use this to store runtime or persistent data
+| custom_icons/         | Copies of imported images for effects, presets or tray icons
+| [effects/]            | Storage for custom software effects
+| states/               | Internal data noting a device's current software status
 | colours.json          | Your saved colours list
-| [preferences.json]    | General configuration (see below)
+| [preferences.json]    | Application configuration
 
 <!--
 | [presets/]            | Stores pre-determined device settings. Other apps may call these "profiles"
@@ -50,8 +50,8 @@ can be safely deleted.
 
 | Folder/File   | Purpose                                                      |
 | ------------- | ------------------------------------------------------------ |
-| backups/      | Copies of old effects
-| profiles/     | Data for v0.3.12's older keyboard graphic mappings.
+| backups/      | Copies of old effects (v0.3.12)
+| profiles/     | Storage for keyboard graphic mappings (v0.3.12)
 
 ---
 
@@ -72,7 +72,7 @@ can be safely deleted.
 | `editor`      | `show_saved_colour_shades` | bool | Generate light/dark variants of each of your saved colours in the dock.
 | `editor`      | `suppress_confirm_dialog` | bool | Don't prompt confirmation for actions such as deleting a layer/frame.
 | `editor`      | `system_cursors`  | bool      | Don't use custom cursors in the editor.
-| `tray`        | `autostart`       | bool      | Should the tray applet start when the user logs in?
+| `tray`        | `autostart`       | bool      | Start tray applet when the user logs in?
 | `tray`        | `autostart_delay` | int       | How long (in seconds) to wait before autostarting. This helps some desktop environments that suffer from a race condition which causes the applet to display incorrectly or show no devices.
 | `tray`        | `mode`            | int       | `0` - Use Default <br> `1` - AppIndicator3 (GTK) <br> `2` - GTK Status Icon (Legacy)
 | `tray`        | `icon`            | str       | Relative path from data directory, `custom_icons` **or** an absolute path to the tray icon.

@@ -5,7 +5,7 @@ permalink: /roadmap/
 class: docs
 
 roadmap:
-    - name: v0.7.0 - Lots of overhauls
+    - name: v0.7.0 - Design Update
       desc: The application got a redesign both visually and internally so it's
             easier to maintain for the growing number of devices and features.
             This consolidates and polishes all progress since v0.3.12.

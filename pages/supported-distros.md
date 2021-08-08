@@ -8,15 +8,14 @@ class: docs
 ## Official Packages
 
 {:.has-icons}
-| Distro                                        | Stable | Testing | Edge | Provider      |
-| --------------------------------------------- | ------ | ------- | ---- | ------------- |
-![](/images/distros/ubuntu.svg) [Ubuntu]`*`     | Yes    | Yes     | Yes  | [Launchpad]
-![](/images/distros/debian.svg) [Debian]        | Yes    | Yes     | Yes  | [Launchpad]
-![](/images/distros/arch.svg) [Arch]            | Yes    |         | Yes  | [AUR]&nbsp;[(-git)]
-![](/images/distros/fedora.svg) [Fedora]        | Yes    |         |      | [openSUSE Build Service]
-![](/images/distros/opensuse.svg) [openSUSE]    | Yes    |         |      | [openSUSE Build Service]
-![](/images/distros/mageia.svg) [Mageia]        | Yes    |         |      | [openSUSE Build Service]
-![](/images/distros/solus.svg) [Solus]          | Yes    |         |      | [openSUSE Build Service]
+| Distro                                                                                    | Stable | Testing | Edge | Provider      |
+| ----------------------------------------------------------------------------------------- | ------ | ------- | ---- | ------------- |
+[![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) `*`    | Yes    | Yes     | Yes  | [Launchpad]
+[![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/)        | Yes    | Yes     | Yes  | [Launchpad]
+[![](/images/distros/arch.svg) Arch](https://polychromatic.app/download/arch/)              | Yes    |         | Yes  | [AUR]&nbsp;[(-git)]
+[![](/images/distros/fedora.svg) Fedora](https://polychromatic.app/download/fedora/)        | Yes    |         |      | [openSUSE Build Service]
+[![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes    |         |      | [openSUSE Build Service]
+[![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes    |         |      | [openSUSE Build Service]
 
 `*` _Ubuntu includes flavours and derivatives, such as Linux Mint, elementaryOS, Pop!_OS and Zorin OS_
 
@@ -25,14 +24,6 @@ class: docs
 * Cutting **"Edge"** packages have all the latest code, which may be incomplete
   or buggy at times.
 
-[Ubuntu]: https://polychromatic.app/download/ubuntu/
-[Debian]: https://polychromatic.app/download/debian/
-[Arch]: https://polychromatic.app/download/arch/
-[Fedora]: https://polychromatic.app/download/fedora/
-[openSUSE]: https://polychromatic.app/download/opensuse/
-[Mageia]: https://polychromatic.app/download/mageia/
-[Solus]: https://polychromatic.app/download/solus/
-
 [Launchpad]: https://launchpad.net/~polychromatic
 [AUR]: https://aur.archlinux.org/packages/polychromatic/
 [(-git)]: https://aur.archlinux.org/packages/polychromatic-git/
@@ -40,28 +31,29 @@ class: docs
 
 ---
 
-## Universal Package Formats
-
-Sorry! Polychromatic does **not** offer AppImages, Flatpaks or Snaps at the moment.
-
----
 
 ## Community Supported
 
+{:.has-icons}
 Distro                  | Repository                | Maintainer
 ------------------------|---------------------------|-----------------------|
-[Gentoo]                | [vifino/vifino-overlay]   | [vifino]
-[Red Hat]              | [moozhub/yum-repo-mooz]   | [moozhub]
+[![](/images/distros/solus.svg) Solus](https://polychromatic.app/download/solus/)  | [Solus x86_64] | Troy Harvey
+[![](/images/distros/gentoo.svg) Gentoo](https://polychromatic.app/download/gentoo/)  | [vifino/vifino-overlay] | [vifino]
+[![](/images/distros/redhat.svg) Red Hat](https://polychromatic.app/download/redhat/) | [moozhub/yum-repo-mooz] | [moozhub]
 
-[Gentoo]: https://polychromatic.app/download/gentoo/
-[Red Hat]: https://polychromatic.app/download/redhat/
-
+[Solus x86_64]: https://solus.pkgs.org/rolling/solus-unstable-x86_64/polychromatic-0.3.12-16-1-x86_64.eopkg.html
 [vifino]: https://github.com/vifno
 [moozhub]: https://github.com/moozhub
 [vifino/vifino-overlay]: https://github.com/vifino/vifino-overlay/tree/master/app-misc/
 [moozhub/yum-repo-mooz]: https://github.com/moozhub/yum-repo-mooz
 
 If there's a dependency or packaging problem, raise an issue on their repository.
+
+---
+
+## Universal Package Formats
+
+Sorry! Polychromatic does **not** offer AppImages, Flatpaks or Snaps at the moment.
 
 ---
 

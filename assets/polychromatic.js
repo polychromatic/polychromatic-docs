@@ -7,7 +7,6 @@ function _do_smooth_scroll() {
 }
 
 function page_loaded() {
-
     // If page contains Yes/No in tables, add the fancy decorations.
     var td = document.querySelectorAll("td");
     if (td.length > 0) {
@@ -15,6 +14,12 @@ function page_loaded() {
             if (td[i].textContent.startsWith("Yes") === true)
                 td[i].classList.add("yes");
         }
+    }
+
+    // Scroll to selected item in sidebar
+    var selected = document.querySelector(".sidebar-item.active");
+    if (selected) {
+        document.querySelector(".sidebar").scrollTop = selected.offsetTop - 100;
     }
 }
 

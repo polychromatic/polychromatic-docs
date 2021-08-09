@@ -66,12 +66,22 @@
     padding: 0.5em 0;
 }
 
+/* Desktop */
 @media (min-width: $screen-md + 1px) {
     #sidebar-mobile-toggle {
         display: none;
     }
+
+    .sidebar {
+        position: sticky;
+        top: $header-height;
+        height: calc(100vh - #{$header-height});
+        overflow-y: scroll;
+        z-index: 2;
+    }
 }
 
+/* Mobile */
 @media (max-width: $screen-md) {
     main {
         background: transparent;

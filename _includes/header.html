@@ -1,13 +1,12 @@
 <header class="site-header" role="banner">
 
-  {% include site-switcher.html %}
+    {% include site-switcher.html %}
 
-  <div class="site-header-content wrapper">
-    {% assign default_paths = site.pages | map: "path" %}
-    {% assign page_paths = site.header_pages | default: default_paths %}
-    <a class="site-title" href="/">
-        <img src="/assets/img/logo.svg" alt="Polychromatic Logo"/>
-        <span>polychromatic docs</span>
-    </a>
+    <div class="site-header-content wrapper">
+        <a class="site-title" href="/">
+            <img src="/assets/img/logo.svg" alt="Polychromatic Logo"/>
+            <span>polychromatic docs</span>
+        </a>
+    </div>
 
 </header>

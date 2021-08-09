@@ -71,3 +71,81 @@
     @extend .sidebar-item;
     padding: 0.5em 0;
 }
+
+@media (min-width: $screen-md + 1px) {
+    #sidebar-mobile-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: $screen-md) {
+    main {
+        background: transparent;
+    }
+
+    #sidebar-mobile-toggle {
+        display: flex;
+
+        svg {
+            margin: auto;
+            margin-right: 1em;
+
+            path {
+                fill: $primary;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            cursor: pointer;
+
+            svg path {
+                fill: $secondary;
+            }
+        }
+    }
+
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: $header-height;
+        bottom: 0;
+        width: 50vw;
+        z-index: 20;
+        transition: transform $page-speed,
+                    opacity $page-speed,
+                    visibility $page-speed;
+        transform: translate(-50vw);
+        opacity: 0;
+        visibility: hidden;
+        overflow-y: scroll;
+    }
+
+    #sidebar-mobile-cover {
+        background: rgba(0,0,0,0.5);
+        backdrop-filter: blur(0.2em);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: $header-height;
+        bottom: 0;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $page-speed,
+                    visibility $page-speed;
+    }
+
+    #sidebar-mobile:checked {
+        & ~ .sidebar {
+            transform: translate(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        & + #sidebar-mobile-cover {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

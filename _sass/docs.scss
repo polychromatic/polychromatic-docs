@@ -296,3 +296,17 @@ kbd {
         margin: 2em auto;
     }
 }
+
+#back-to-top-wrapper {
+    display: flex;
+    position: sticky;
+    bottom: 1em;
+}
+
+#back-to-top {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(0.2em);
+    margin: 1em 0;
+    margin-left: auto;
+    z-index: 20;
+}

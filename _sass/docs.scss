@@ -310,3 +310,47 @@ kbd {
     margin-left: auto;
     z-index: 20;
 }
+
+/* Flash headers via hash */
+h1:target
+h2:target,
+h3:target {
+    animation: this-heading-text 1s ease-in-out forwards;
+
+    &::before {
+        animation: this-heading-arrow 3s ease-in-out forwards;
+        content: "»";
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 0.25em;
+        transform-origin: center;
+    }
+}
+
+@keyframes this-heading-text {
+    0% {
+        color: $secondary;
+    }
+    30%, 50% {
+        color: white;
+    }
+    100% {
+        color: $primary;
+    }
+}
+
+@keyframes this-heading-arrow {
+    0% {
+        transform: scale(2);
+        opacity: 0;
+    }
+    50%, 80% {
+        transform: scale(1);
+        opacity: 1;
+        margin-right: 0.25em;
+    }
+    100% {
+        opacity: 0;
+        margin-right: -0.5em;
+    }
+}

@@ -86,7 +86,7 @@ Yes! Currently this is in the form of frames and pixels.
 
 While the editor makes it possible to hand craft your own wave of colours, or pulsate
 specific LEDs, this is somewhat limiting for complex and interactivity requirements.
-[The upcoming v1.0.0 update](/roadmap/) aims to introduce new tools.
+[v1.0.0](/roadmap/) aims to introduce new tools.
 
 Effects can be created for any device supporting individually addressable LEDs (matrix).
 Create effects to light up specific keys for your applications and games,
@@ -100,7 +100,7 @@ restart playback.
 
 ### Can I create my own profiles?
 
-Not yet, but Polychromatic will add profile ("presets") functionality [in the upcoming v1.0.0 update](/roadmap/).
+Not yet, but Polychromatic will add profile ("presets") functionality [in the v1.0.0 update](/roadmap/).
 
 ---
 

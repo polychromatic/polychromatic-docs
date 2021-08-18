@@ -35,18 +35,15 @@
     - name: Controller
       url: /controller/
       icon: controller
-      disabled: true
 
     - name: Devices
       url: /controller/devices/
       icon: keyboard
-      disabled: true
       indent: 1
 
     - name: Effects
       url: /controller/effects/
       icon: effects
-      disabled: true
       indent: 1
 
     #- name: Presets
@@ -62,12 +59,10 @@
     - name: Tray Applet
       url: /tray-applet/
       icon: applet
-      disabled: true
 
     - name: Command Line
       url: /cli/
       icon: terminal
-      disabled: true
 
     - name: Tips & Tricks
       url: /tips/

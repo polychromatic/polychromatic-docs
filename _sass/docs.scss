@@ -224,6 +224,15 @@ $roadmap-line: #00FF00;
     }
 }
 
+.caption {
+    /* For <p> tags */
+    text-align: center;
+    margin-top: -2em;
+    margin-bottom: 2.5em;
+    font-size: 0.9em;
+    opacity: 0.66;
+}
+
 .thumbnail-right {
     float: right;
     margin-left: 15px;

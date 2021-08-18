@@ -56,10 +56,6 @@
       #disabled: true
       #indent: 1
 
-    - name: Tray Applet
-      url: /tray-applet/
-      icon: applet
-
     - name: Command Line
       url: /cli/
       icon: terminal

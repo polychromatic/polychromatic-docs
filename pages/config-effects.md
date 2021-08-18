@@ -7,43 +7,16 @@ class: docs
 
 ## The Concept
 
-Polychromatic has two concepts of effects:
+Polychromatic considers effects to be either:
 
-* **[Hardware](#hardware-effects)** - provided by the firmware or backend. These usually persist across power cycles.
-* **[Software](#software-effects)** - powered by Polychromatic and require the backend to be running.
+* **Hardware** - Provided by the firmware or daemon. Usually persists between power cycles.
+* **Software** - Powered by Polychromatic. Requires the device's driver/daemon to be running.
 
----
-
-## Hardware Effects
-
-### OpenRazer
-
-Availablity of effects and parameters vary on the hardware's firmware.
-
-{:.has-icons}
-| Effect                                        | Parameters / Notes            |
-| --------------------------------------------- | ----------------------------- |
-| ![](/images/effects/none.svg) None            |
-| ![](/images/effects/spectrum.svg) Spectrum    |
-| ![](/images/effects/wave.svg) Wave            | Direction <1-2>
-| ![](/images/effects/reactive.svg) Reactive    | Speed <1-4> and 1 colour
-| ![](/images/effects/ripple.svg) Ripple        | Random or 1 colour | Technically a software effect provided by daemon
-| ![](/images/effects/breath.svg) Breath        | Random or 1, 2 or 3 colour(s)
-| ![](/images/effects/static.svg) Static        | 1 colour
-| ![](/images/effects/pulsate.svg) Pulsate      | 1 colour
-| ![](/images/effects/blinking.svg) Blinking    | 1 colour
-
-Some Razer firmware retain hardware effects across power cycles and when plugged into
-other computers. Similarly, when software effects are used, the last frames may
-be retained across power cycles. However, newer hardware may default to an effect
-until OpenRazer and/or Polychromatic has started.
-
-OpenRazer 3.0 introduced persistence. This can be turned off within Polychromatic
-via _Tools → OpenRazer → Configure_.
+This page will detail the software kind. For hardware effects, see [Devices](/controller/devices/).
 
 ---
 
-## Software Effects
+## Summary
 
 Like with any RGB application, Polychromatic works with its own format for
 storing "software effects". Polychromatic stores them as JSON files in
@@ -51,7 +24,7 @@ storing "software effects". Polychromatic stores them as JSON files in
 and exported for use in other applications. -->
 
 Writing effects in this software will work on any supported backend where the
-device is capable of individually addressable LEDs (matrix). <!-- and can be
+device is capable of individually addressable LEDs. <!-- and can be
 set to work within specifications  (for example, a scripted effect that
 should only be played on keyboards) -->
 
@@ -70,20 +43,17 @@ There are three types:
 > Users previously running v0.3.12 will have their "application profiles"
 > converted to this new format.
 
-### Edit Effects
+To edit effects, use the [Controller](/controller/effects/) application, or
+manually according to the spec. The Controller does not need to be installed to run them.
 
-Create and edit existing effects using the [Controller](/controller/) application.
-The Controller does not need to be installed to run them.
-
-### Playback
-
-`polychromatic-helper` runs as a process per device.
+For playback, `polychromatic-helper` runs as a process per device.
 To avoid two processes controlling the device at the same time,
 lock files are placed in the **run directory** (based on the XDG spec, which is
 usually `/run/user/$PID/polychromatic`).
 
+---
 
-### Common Metadata
+## Common Metadata
 
 All effects use JSON files to describe the effect and additional data depending
 on the type of effect.

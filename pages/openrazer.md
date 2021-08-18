@@ -178,12 +178,16 @@ OpenRazer has the ability to create fake devices that simulate their existence.
 This makes it very useful for testing, for demonstration purposes or to get a
 feel if you had the real hardware sitting in front of you.
 
-First, [install OpenRazer](https://openrazer.github.io/#download) as usual.
+1. [Install OpenRazer](https://openrazer.github.io/#download) as usual.
 
-Next, [download a copy](https://github.com/openrazer/openrazer/archive/refs/heads/master.zip)
+1. Stop the daemon if it's running.
+
+       openrazer-daemon -s
+
+1. Next, [download a copy](https://github.com/openrazer/openrazer/archive/refs/heads/master.zip)
 of the repository, and run this script:
 
-    ./scripts/setup_fake_devices.sh
+       ./scripts/setup_fake_devices.sh
 
 This will show a list of devices to choose from.
 If the window does not appear, install `zenity` and try again.
@@ -197,3 +201,11 @@ until the fake environment is stopped and the daemon is restarted.
 [OpenRazer]: https://openrazer.github.io
 [d-feet]: https://wiki.gnome.org/Apps/DFeet
 [QDBusViewer]: https://doc.qt.io/qt-5/qdbusviewer.html
+
+---
+
+### Where's the technical documentation?
+
+Refer to the wiki on OpenRazer's repository:
+
+* <https://github.com/openrazer/openrazer/wiki>

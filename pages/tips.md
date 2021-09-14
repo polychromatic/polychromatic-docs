@@ -65,6 +65,38 @@ Here's an example of turning down the lights every day at 6 PM:
 
 ---
 
+### Automatically set effect for Steam/Proton games
+
+Wouldn't it be nice to click "Play" and your key mapping (effect) is applied
+to your hardware? With the power of scripting, yes!
+
+First, you'll need to create a "wrapper" script, create this in your **Text Editor**
+and place it somewhere.
+```bash
+#!/bin/bash
+polychromatic-cli -e "$1"
+shift 1
+exec "$@"
+```
+
+Right click the file, choose **Properties** and under **Permissions**, check a
+box to similar to "Mark as executable".
+
+Over in Steam, set the launch options for the game, usually by right clicking and
+selecting properties.
+
+    /path/to/script.sh "Effect Name Here" %command%
+
+The script is agnostic and works for any application/game, even non-Steam ones.
+This uses the CLI interface to apply your custom effect (`-e`) with the name as
+your first parameter, and the rest of the parameters launch the game/application.
+Steam populates the `%command%`.
+
+In a future update, we'll implement an alternate approach so a wrapper script
+wouldn't be needed for the same outcome.
+
+---
+
 ### Exchanging effects
 
 Polychromatic hasn't implemented an import/export facility yet, but that doesn't

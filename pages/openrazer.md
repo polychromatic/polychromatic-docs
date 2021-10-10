@@ -140,8 +140,8 @@ it is normal for Razer `(1532)` USB devices to appear as unrecognised.
 
 ### I'm getting an error when setting an option!
 
-While Polychromatic would love everything to "just work", inevitably,
-bugs slip through as developers doesn't have real hardware to verify.
+While we'd love everything to "just work", inevitably, bugs slip through as
+we don't have all the hardware to verify.
 
 Before reporting an issue:
 

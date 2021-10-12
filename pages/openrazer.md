@@ -36,8 +36,9 @@ but is still in early development.
 
 There are other projects that use OpenRazer's efforts.
 
-> When using third party projects providing support for other operating systems,
-> please do not create issues on the OpenRazer repository.
+> **Use at your own risk:** These third party projects use code/knowledge from OpenRazer,
+> but have nothing to do with the project itself. Please do not create issues on the OpenRazer repository
+> for other operating systems or projects.
 
 **Windows**
 
@@ -55,12 +56,12 @@ There is an Electron-based project which ports devices individually from OpenRaz
 
 ---
 
-### Are macros supported for keyboards **with** dedicated macro keys?
+### Can I use on-the-fly macro recording?
 
-Yes, the OpenRazer daemon provides on-the-fly macro recording for Razer
-keyboards (such as BlackWidow Chroma) that have dedicated macro keys (M1-M5).
-Keystrokes can be recorded and stored in the daemon until it is stopped,
-meaning they are not saved across sessions, but quite useful for one-off repetitive tasks!
+Yes, the OpenRazer daemon supports this for Razer keyboards (like the BlackWidow Chroma)
+that have dedicated macro keys (M1-M5). Keystrokes can be recorded and stored in
+the daemon until it is stopped, meaning they are **not saved** across sessions,
+but it's useful for one-off repetitive tasks!
 
 > **Note:** The key combination is slightly different to Razer's official drivers.
 
@@ -77,40 +78,37 @@ Restart the daemon and try again.
 Playback will play the keystrokes one-after-the-other, which is incredibly fast.
 Most applications are OK with this, but some games may not. Time delays are not supported right now.
 
----
-
-### Are macros supported for keyboards **without** dedicated macro keys?
-
-Officially, no. With a patch, yes. To make on-the-fly recording work for ANY key,
-locate this file and remove these lines:
-
-[/usr/lib/python3/**/openrazer_daemon/misc/key_event_management.py](https://github.com/openrazer/openrazer/blob/bd71e769d9239fc4ffac69c04cf3cc88b12d7bda/daemon/openrazer_daemon/misc/key_event_management.py#L488-L495)
-
-```diff
-                    if self._current_macro_bind_key is None:
--                        # Restrict macro bind keys to M1-M5
--                        if key_name not in ('M1', 'M2', 'M3', 'M4', 'M5'):
--                            self._logger.warning("Macros are only for M1-M5 for now.")
--                            self._recording_macro = False
--                            self._parent.setMacroMode(False)
--                        else:
-                            self._current_macro_bind_key = key_name
-                            self._parent.setMacroEffect(0x00)
-```
-
-This 'hack' is just for reference. This does not
-work with gamepads as they behave like a Chroma keyboard (default device behaviour).
-
-See also: [Can I remap keys? (FAQs)](/faqs/#can-i-remap-keys)
+> Keyboards **without** dedicated macro keys cannot use this feature.
+> The macro light will continue flashing.
+>
+> Typically, they are supposed to be the FN + [0-9] number row, however the
+> daemon swallows the FN key. Some investigation is needed on that.
+>
+> There is a "hack" to [delete these lines](https://github.com/openrazer/openrazer/blob/bd71e769d9239fc4ffac69c04cf3cc88b12d7bda/daemon/openrazer_daemon/misc/key_event_management.py#L488-L493) and bind macros to any key.
 
 ---
 
-### My device is not listed, what do I do?
+### My device is showing up as unrecognised!
+
+Try the troubleshooter provided by Polychromatic (via **Tools → OpenRazer** in the Controller).
+This identities most common problems. Alternately, take a look at [OpenRazer's
+Troubleshooting Guide](https://github.com/openrazer/openrazer/wiki/Troubleshooting).
+
+If your device is not supported in the version of OpenRazer you have installed,
+it is normal for Razer `[1532]` USB devices to appear as unrecognised.
+
+---
+
+### My device isn't listed as supported, what do I do?
+
+If your device isn't listed on the [Supported Devices](https://polychromatic.app/devices/) page,
+there's some work to do in OpenRazer.
 
 [Search for an issue on the OpenRazer repository](https://github.com/openrazer/openrazer/issues)
+as well as any [open pull requests](https://github.com/openrazer/openrazer/pulls)
 and create one if it doesn't exist, following the issue template. You may need access to
-a Windows PC (or virtual machine) so others can identify the protocol for your
-device and expected features to support.
+a Windows PC (or virtual machine) to take screenshots and generate "pcaps". Capturing packets
+helps to identify the USB protocol suitable for your device and the features expected to work.
 
 If you feel like hacking, look at commits from
 [previous hardware support as examples](https://github.com/openrazer/openrazer/search?q=Add+support+for&type=commits)
@@ -120,55 +118,63 @@ and see if you can get the device working yourself by replicating the changes ne
 
 ### I'm setting an option but nothing happens!
 
-Check the kernel log in case OpenRazer sent data to the hardware that your
-device does not understand.
-
 If things were working earlier, try restarting the daemon and Polychromatic.
 
----
+Otherwise, check the kernel log in case the driver sent data to the hardware
+that wasn't understood:
 
-### My device is showing up as unrecognised!
+    dmesg
 
-Try the troubleshooter provided by Polychromatic (accessible via **Tools → OpenRazer** in the Controller).
-This identities most common problems. Alternately, take a look at [OpenRazer's
-Troubleshooting Guide](https://github.com/openrazer/openrazer/wiki/Troubleshooting).
+The message may look similar to this:
 
-If your device is not supported in the version of OpenRazer you have installed,
-it is normal for Razer `(1532)` USB devices to appear as unrecognised.
+>
+    razer driver: Device data transfer failed.
+    razer driver: Invalid USB response.
+    razerkbd: Invalid Report Length.
+
+Alternately, restart the daemon in verbose mode and watch for any abnormal behaviour:
+
+    openrazer-daemon -Fv
 
 ---
 
 ### I'm getting an error when setting an option!
 
-While we'd love everything to "just work", inevitably, bugs slip through as
-we don't have all the hardware to verify.
+> Whoops, you might have stepped on a bug! Some investigation required.
 
-Before reporting an issue:
-
-* **Make sure you are using the latest (development) version of Polychromatic.**
-    * Polychromatic calls these "edge" builds.
-    * [The software can be downloaded and run from the Git repository directly.](https://polychromatic.app/download/manual/)
-* **Make sure you are using the latest version of OpenRazer.**
-    * Ubuntu users can use `ppa:openrazer/daily` for instance.
-    * Other distros may need to build the package from the repository.
+First, try the latest development versions of both
+[Polychromatic](https://github.com/polychromatic/polychromatic/#hacking--contributing)
+and OpenRazer, in case the bug has been fixed already. Consider restarting
+the computer for good measure (to load new driver modules, restart daemon, etc)
 
 The details (traceback) should give a clue on which project has the bug.
 
-Try debugging the action with the backend directly and
-[raise the issue on OpenRazer](https://github.com/openrazer/openrazer/issues)
-if the problem happens at a driver/daemon level.
-There are multiple ways to do this:
+If necessary, test the operation with other tools to isolate whether the bug is
+specific to this software, or OpenRazer.
 
 * Use [d-feet] or [QDBusViewer] to debug driver calls (via D-Bus)
 * Try the Python library to communicate with the daemon.
-* Test an alternate frontend application or project.
+* Test an alternate frontend.
 
-> **Is it a Polychromatic issue?**
->
-> For UI issues, incorrect/missing device features (that are supported by OpenRazer)
-> and behaviour problems, search and raise the issue
-> [on Polychromatic's repository](https://github.com/polychromatic/polychromatic/issues?q=is%3Aissue)
-> instead.
+Does it fail outside of Polychromatic? [It's one to raise on OpenRazer](https://github.com/openrazer/openrazer/issues),
+otherwise please create one [on our repository](https://github.com/polychromatic/polychromatic/issues?q=is%3Aissue).
+
+---
+
+### My device is missing a feature!
+
+> Are you thinking of key mapping, or macros? [It's on our roadmap](/roadmap/).
+> For now, [check out the alternates](/faqs/#can-i-remap-keys).
+
+Devices with Hypershift are not supported in OpenRazer, so we don't have anything
+to present for configuration.
+
+Apart from Ripple, OpenRazer works with hardware effects. A handful of hardware may
+not have the firmware to playback certain ones like spectrum, wave or breathing.
+Lots of aspects of Razer Synapse 3 are software-based.
+
+For other issues with broken UI or incorrect behaviour for specific devices, please raise
+them [on our repository](https://github.com/polychromatic/polychromatic/issues?q=is%3Aissue).
 
 ---
 
@@ -184,8 +190,8 @@ feel if you had the real hardware sitting in front of you.
 
        openrazer-daemon -s
 
-1. Next, [download a copy](https://github.com/openrazer/openrazer/archive/refs/heads/master.zip)
-of the repository, and run this script:
+1. Next, [download a copy of OpenRazer's repository](https://github.com/openrazer/openrazer/archive/refs/heads/master.zip),
+and run this script:
 
        ./scripts/setup_fake_devices.sh
 

@@ -178,6 +178,22 @@ them [on our repository](https://github.com/polychromatic/polychromatic/issues?q
 
 ---
 
+### Does this project integrate with Razer Chroma ecosystem?
+
+No. OpenRazer does not integrate with Razer Chroma software, also known as
+"Razer SDK REST", "Razer Chroma REST API" or "Powered by Razer Chroma".
+
+So, even though games may have Razer Chroma support, nothing will happen as there is no
+internal server. There's the possibility that Linux-native games do not have the library, since the
+SDK is designed for Windows/macOS. Proton/Wine remains unknown.
+
+A search on GitHub shows some implementations of the server:
+
+* <https://github.com/captin411/python-chroma-rest-server>
+* <https://github.com/jessemillar/razer-chroma-http-wrapper>
+
+---
+
 ### How can I test imaginary devices?
 
 OpenRazer has the ability to create fake devices that simulate their existence.

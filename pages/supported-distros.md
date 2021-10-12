@@ -41,7 +41,7 @@ specific interfaces. Install the `polychromatic` metapackage for the complete so
 {:.has-icons}
 Distro                  | Repository                | Maintainer
 ------------------------|---------------------------|-----------------------|
-[![](/images/distros/solus.svg) Solus](https://polychromatic.app/download/solus/)  | [Solus x86_64] | Troy Harvey
+[![](/images/distros/solus.svg) Solus](https://polychromatic.app/download/solus/)  | [Solus x86_64] | (Multiple)
 [![](/images/distros/gentoo.svg) Gentoo](https://polychromatic.app/download/gentoo/)  | [vifino/vifino-overlay] | [vifino]
 [![](/images/distros/redhat.svg) Red Hat](https://polychromatic.app/download/redhat/) | [moozhub/yum-repo-mooz] | [moozhub]
 

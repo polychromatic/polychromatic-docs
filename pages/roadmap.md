@@ -23,14 +23,13 @@ roadmap:
         - Improved device support and inspection
         - Polished and quality assured
 
-    - name: v0.7.1
+    - name: v0.8.0
       desc:
       checked: progress
       completed:
         null
       in_progress:
-        - Rework backend module
-        - Fix minor bugs
+        - Rework backend module and code optimisations
       pending:
         - Port tray applet to QSystemTrayIcon
         - Improve build system

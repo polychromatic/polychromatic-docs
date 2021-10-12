@@ -8,21 +8,25 @@ class: docs
 ## Official Packages
 
 {:.has-icons}
-| Distro                                                                                    | Stable | Testing | Edge | Provider      |
-| ----------------------------------------------------------------------------------------- | ------ | ------- | ---- | ------------- |
-[![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) `*`    | Yes    | Yes     | Yes  | [Launchpad]
-[![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/)        | Yes    | Yes     | Yes  | [Launchpad]
-[![](/images/distros/arch.svg) Arch](https://polychromatic.app/download/arch/)              | Yes    |         | Yes  | [AUR]&nbsp;[(-git)]
-[![](/images/distros/fedora.svg) Fedora](https://polychromatic.app/download/fedora/)        | Yes    |         |      | [openSUSE Build Service]
-[![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes    |         |      | [openSUSE Build Service]
-[![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes    |         |      | [openSUSE Build Service]
 
-`*` _Ubuntu includes flavours and derivatives, such as Linux Mint, elementaryOS, Pop!_OS and Zorin OS_
+| Distro                                                                                    | Stable | Testing | Edge | Split? | Provider      |
+| ----------------------------------------------------------------------------------------- | ------ | ------- | ---- | ------ | ------------- |
+[![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) `*`    | Yes    | Yes     | Yes  | Yes    | [Launchpad]
+[![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/)        | Yes    | Yes     | Yes  | Yes    | [Launchpad]
+[![](/images/distros/arch.svg) Arch](https://polychromatic.app/download/arch/)              | Yes    |         | Yes  |        | [AUR]&nbsp;[(-git)]
+[![](/images/distros/fedora.svg) Fedora](https://polychromatic.app/download/fedora/)        | Yes    |         |      |        | [openSUSE Build Service]
+[![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes    |         |      |        | [openSUSE Build Service]
+[![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes    |         |      |        | [openSUSE Build Service]
+
+`*` _Ubuntu includes flavours and derivatives, like Linux Mint, elementaryOS, Pop!_OS and Zorin OS_
 
 * **Stable** packages are for a tried & tested experience (at the time of release).
 * **Testing** packages are for pre-release testing.
 * Cutting **"Edge"** packages have all the latest code, which may be incomplete
   or buggy at times.
+
+Some distributions are packaged as split packages, allowing optional installation of
+specific interfaces. Install the `polychromatic` metapackage for the complete software.
 
 [Launchpad]: https://launchpad.net/~polychromatic
 [AUR]: https://aur.archlinux.org/packages/polychromatic/

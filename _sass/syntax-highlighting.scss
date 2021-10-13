@@ -67,3 +67,19 @@
         color: darkgrey;
     }
 }
+
+.language-shell {
+    .nb {
+        color: white;
+    }
+
+    /* Comment */
+    .c {
+        color: darken($grey-colour, 33%);
+    }
+
+    /* Parameter starting with dash */
+    .nt {
+        color: white;
+    }
+}

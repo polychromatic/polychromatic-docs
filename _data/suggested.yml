@@ -13,10 +13,10 @@
   url: /openrazer/
   icon: openrazer
 
-- title: Distros & Environments
-  desc: With details on restoring the tray applet
+- title: Packages
+  desc: With details about a missing tray applet
   url: /distros/
-  icon: applet
+  icon: tux
 
 - title: Translations
   desc: Learn how to translate this application

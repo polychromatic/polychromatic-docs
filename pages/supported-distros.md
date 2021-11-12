@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Distros and Environments
+title: Packages for Linux Distributions
 permalink: /distros/
 class: docs
 ---

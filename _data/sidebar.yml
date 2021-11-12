@@ -22,9 +22,9 @@
       url: /openrazer/
       icon: openrazer
 
-- title: User Guide
+- title: Installation
   items:
-    - name: Distros & Environments
+    - name: Distribution Packages
       url: /distros/
       icon: tux
 
@@ -32,6 +32,8 @@
       url: /dependencies/
       icon: box
 
+- title: User Guide
+  items:
     - name: Controller
       url: /controller/
       icon: controller

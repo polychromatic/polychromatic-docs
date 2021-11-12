@@ -5,8 +5,8 @@ permalink: /config/
 class: docs
 ---
 
-Polychromatic's save data is stored in JSON format. The location is based on
-the XDG spec, which is usually these locations:
+Polychromatic's uses JSON to store its data. The location is based on
+the XDG spec, which is usually:
 
     ~/.config/polychromatic/
     ~/.cache/polychromatic/
@@ -19,8 +19,8 @@ You can manually edit the JSON files based on the specifications below. Note tha
 changes take effect on the next launch and invalid syntax will cause the file to
 be reinitialised (appending `.bak` to the file name)
 
-> It is usually necessary to restart the application (or editor windows)
-> for new preferences to take effect.
+It is usually necessary to restart the application (or editor windows)
+for new preferences to take effect.
 
 ---
 
@@ -76,3 +76,14 @@ can be safely deleted.
 | `tray`        | `autostart_delay` | int       | How long (in seconds) to wait before autostarting. This helps some desktop environments that suffer from a race condition which causes the applet to display incorrectly or show no devices.
 | `tray`        | `mode`            | int       | `0` - Use Default <br> `1` - AppIndicator3 (GTK) <br> `2` - GTK Status Icon (Legacy)
 | `tray`        | `icon`            | str       | Relative path from data directory, `custom_icons` **or** an absolute path to the tray icon.
+
+---
+
+### Software Updates
+
+When major changes happen to the application that affects save data, the next run
+under the new version will automatically update its configuration.
+Old versions will be copied to a separate file or folder.
+
+As a result, downgrading the software isn't supported without first restoring the old
+save data manually.

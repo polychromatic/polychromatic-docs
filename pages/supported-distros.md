@@ -7,9 +7,12 @@ class: docs
 
 ## Official Packages
 
+We package officially for the following distros. Updates can be expected
+shortly after a new release.
+
 {:.has-icons}
 
-| Distro                                                                                    | Stable | Testing | Edge | Split? | Provider      |
+| Distro                                                                                    | Stable | Testing | Edge | Split?`**` | Provider      |
 | ----------------------------------------------------------------------------------------- | ------ | ------- | ---- | ------ | ------------- |
 [![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) `*`    | Yes    | Yes     | Yes  | Yes    | [Launchpad]
 [![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/)        | Yes    | Yes     | Yes  | Yes    | [Launchpad]
@@ -18,15 +21,9 @@ class: docs
 [![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes    |         |      |        | [openSUSE Build Service]
 [![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes    |         |      |        | [openSUSE Build Service]
 
-`*` _Ubuntu includes flavours and derivatives, like Linux Mint, elementaryOS, Pop!_OS and Zorin OS_
-
-* **Stable** packages are for a tried & tested experience (at the time of release).
-* **Testing** packages are for pre-release testing.
-* Cutting **"Edge"** packages have all the latest code, which may be incomplete
-  or buggy at times.
-
-Some distributions are packaged as split packages, allowing optional installation of
-specific interfaces. Install the `polychromatic` metapackage for the complete software.
+> `*` Ubuntu includes flavours and derivatives, like Linux Mint, elementaryOS, Pop!_OS and Zorin OS.
+>
+> `**` Split packaging allows installation of specific features.
 
 [Launchpad]: https://launchpad.net/~polychromatic
 [AUR]: https://aur.archlinux.org/packages/polychromatic/
@@ -37,6 +34,9 @@ specific interfaces. Install the `polychromatic` metapackage for the complete so
 
 
 ## Community Supported
+
+We don't look after these packages and no direct communication with the maintainers.
+Update times may vary.
 
 {:.has-icons}
 Distro                  | Repository                | Maintainer
@@ -51,7 +51,7 @@ Distro                  | Repository                | Maintainer
 [vifino/vifino-overlay]: https://github.com/vifino/vifino-overlay/tree/master/app-misc/
 [moozhub/yum-repo-mooz]: https://github.com/moozhub/yum-repo-mooz
 
-If there's a dependency or packaging problem, raise an issue on their repository.
+If there's a dependency or packaging problem, raise an issue on their repository or bug tracker.
 
 ---
 

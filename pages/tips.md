@@ -43,25 +43,18 @@ haven't changed to another effect.
 
 ---
 
-### Apply options at login, or cron schedule
+### Apply options at login
 
 > This is something that will be improved in a future version!
 
 The [polychromatic-cli](/cli/) application offers the power to change your
-lighting through scripts. Add the command to your desktop's start-up application
-list to set your desired state as soon as you login.
+lighting through scripts. By using your desktop's "start-up applications" list, you
+can add commands to set your lighting to the desired state as soon as you login.
 
-You may wish to use user cron jobs to automate changes throughout the day.
-Make sure it's a **user** cron job as this won't work under root.
+For example, set the brightness to 25% and static green effect:
 
-    env EDITOR=nano crontab -e
-
-[crontab.guru](https://crontab.guru/) is a useful site for cron syntax.
-Here's an example of turning down the lights every day at 6 PM:
-
-```
-0 18 * * * /usr/bin/polychromatic-cli -o brightness -p 25
-```
+    /usr/bin/polychromatic-cli -o brightness -p 25
+    /usr/bin/polychromatic-cli -o static -c 00FF00
 
 ---
 

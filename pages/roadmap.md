@@ -29,14 +29,12 @@ roadmap:
       completed:
         null
       in_progress:
-        - Rework backend module and code optimisations
+        - Rework backend and internals
       pending:
         - Port tray applet to QSystemTrayIcon
-        - Improve build system
-        - Improve translation system
 
-    - name: v1.0.0
-      desc: This release will expand custom (software) effects, introduce presets
+    - name: v0.9.0
+      desc: This release will expand custom software effects, introduce presets
             for multiple devices and add events for automating your lighting.
       checked: false
       completed:
@@ -44,13 +42,15 @@ roadmap:
       in_progress:
         null
       pending:
-        - 'New feature: Presets'
-        - 'New feature: Triggers'
-        - 'New Effect Type: Scripted'
-        - 'New Effect Type: Layered'
+        - Introduce Presets
+        - Introduce Triggers
+        - New Scripted Effects
+        - New Layered Effects
 
-    - name: v1.1.0
-      desc: This release will focus on online functionality.
+    - name: v1.0.0
+      desc: This release will focus on polish things up, and introduce online
+            functionality. This version could become as v0.10.0, as v1.0.0 is
+            intended to indicate full stability.
       checked: false
       completed:
         null
@@ -61,7 +61,7 @@ roadmap:
         - Optional hardware survey
         - Offline help
 
-    - name: v1.2.0
+    - name: v1.1.0
       desc: This release will focus on interactive functions.
       checked: false
       completed:
@@ -75,8 +75,7 @@ roadmap:
       completed:
         null
       pending:
-        - Add backend support for Philips Hue.
-        - Add backend support for OpenRGB.
+        - Support OpenRGB, phue, ckb-next and libratbag devices.
         - Port application to Windows and macOS.
 
 ---

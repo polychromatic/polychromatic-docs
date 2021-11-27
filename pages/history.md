@@ -89,7 +89,7 @@ to be agnostic and work with any vendor. Writing an application to polish the
 RGB experience for Razer peripherals might as well be compatible with other brands,
 so we avoid the "vendor lock in" problem.
 
-Stay tuned as the next generation of the software is nearing completion. Bring
+Stay tuned as the next generation of the software is on its way. Bring
 on the custom effects, presets and automation!
 
 What about key rebinding and macros? Once the lighting is polished, let's

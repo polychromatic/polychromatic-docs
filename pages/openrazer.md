@@ -140,12 +140,13 @@ Alternately, restart the daemon in verbose mode and watch for any abnormal behav
 
 ### I'm getting an error when setting an option!
 
-> Whoops, you might have stepped on a bug! Some investigation required.
+> **OpenRazer users:** We're aware some devices may have implementation issues.
+>
+> See <https://github.com/openrazer/openrazer/pull/1673>
 
 First, try the latest development versions of both
 [Polychromatic](https://github.com/polychromatic/polychromatic/#hacking--contributing)
-and OpenRazer, in case the bug has been fixed already. Consider restarting
-the computer for good measure (to load new driver modules, restart daemon, etc)
+and OpenRazer, in case the bug has been fixed already.
 
 The details (traceback) should give a clue on which project has the bug.
 
@@ -154,7 +155,7 @@ specific to this software, or OpenRazer.
 
 * Use [d-feet] or [QDBusViewer] to debug driver calls (via D-Bus)
 * Try the Python library to communicate with the daemon.
-* Test an alternate frontend.
+* Try an alternate frontend project.
 
 Does it fail outside of Polychromatic? [It's one to raise on OpenRazer](https://github.com/openrazer/openrazer/issues),
 otherwise please create one [on our repository](https://github.com/polychromatic/polychromatic/issues?q=is%3Aissue).
@@ -226,7 +227,7 @@ until the fake environment is stopped and the daemon is restarted.
 
 ---
 
-### Where's the technical documentation?
+### Where can I find OpenRazer's technical documentation?
 
 Refer to the wiki on OpenRazer's repository:
 

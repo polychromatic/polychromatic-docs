@@ -7,20 +7,19 @@
 
     {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+    <main class="wrapper" aria-label="Content">
         <article class="page">
-            <div class="row">
+            <div class="sidebar-container">
                 <input id="sidebar-mobile" type="checkbox" style="display:none"/>
                 <label id="sidebar-mobile-cover" for="sidebar-mobile"></label>
-                <div class="sidebar col-3">
+                <div class="sidebar">
                     {% include sidebar.html %}
                 </div>
+            </div>
 
-                <div class="col col-md-9 topic fade-in" id="swup">
-
+            <div class="topic fade-in">
+                <div class="topic-content" id="swup">
                     {{ content }}
-
                 </div>
             </div>
         </article>
@@ -34,8 +33,6 @@
       </div>
 
     </main>
-
-    {% include footer.html %}
 
     <script src="/assets/polychromatic.js"></script>
 

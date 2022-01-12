@@ -1,10 +1,12 @@
 @import 'variables.scss';
 
 .sidebar {
-    min-height: calc(100vh - 192px) !important;
-    max-width: 275px;
+    width: 300px;
     background: black;
-    padding: 1em;
+    padding: 30px;
+    padding-right: 0;
+    margin-left: -30px;
+    padding-bottom: 60px;
 }
 
 .sidebar-heading {
@@ -87,6 +89,10 @@
         background: transparent;
     }
 
+    .topic-content {
+        padding: 15px 0;
+    }
+
     #sidebar-mobile-toggle {
         display: flex;
 
@@ -115,6 +121,8 @@
         top: $header-height;
         bottom: 0;
         width: 50vw;
+        padding: 15px;
+        margin: 0;
         z-index: 20;
         transition: transform $page-speed,
                     opacity $page-speed,

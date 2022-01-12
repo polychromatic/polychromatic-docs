@@ -7,6 +7,7 @@
     <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     <meta name="keywords" content="{% if page.keywords %}{{ page.keywords | escape }}{% else %}{{ site.keywords | escape }}{% endif %}">
     <meta name="author" content="{{ site.author }}">
+    <meta name="copyright" content="© 2016-{{ site.time | date:'%Y' }} Luke Horwell and Contributors">
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title | escape }} |{% endif %} {{ site.title | escape }}">
     <meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">

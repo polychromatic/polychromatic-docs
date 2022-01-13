@@ -2,19 +2,7 @@
 
 html {
     scroll-behavior: smooth;
-}
-
-.fade-in {
-    animation: fade-in $page-speed forwards;
-}
-
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    overflow-x: hidden;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -25,4 +13,16 @@ html {
     .fade-in {
         animation: none;
     }
+}
+
+.transition-fade {
+    transition: opacity $page-speed,
+                transform $page-speed;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+html.is-animating .transition-fade {
+    opacity: 0;
+    transform: translateX(2em);
 }

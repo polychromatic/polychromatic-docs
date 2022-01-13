@@ -9,6 +9,8 @@ const swup = new Swup(options);
 swup.on("transitionStart", page_exit);
 swup.on("contentReplaced", page_enter);
 
+var sidebar_items = document.querySelectorAll(".sidebar-item");
+
 function smooth_scroll_to_top() {
     window.scroll({
         top: 0,
@@ -40,6 +42,10 @@ function apply_markdown_tweaks() {
 }
 
 function sidebar_update_position() {
+    // Make sure the correct item is selected
+    var active_sidebar_id = document.getElementById("current-page-id").value;
+    set_active_sidebar(document.getElementById(active_sidebar_id));
+
     // Scroll to selected item in sidebar
     var selected = document.querySelector(".sidebar-item.active");
     if (selected) {
@@ -51,22 +57,25 @@ function sidebar_update_position() {
     }
 }
 
+function set_active_sidebar(element) {
+    sidebar_items.forEach((item) => {
+        item.classList.remove("active");
+    });
+    if (element)
+        element.classList.add("active");
+}
 
-function on_initial_page_load() {
+function initial_page_load() {
     apply_markdown_tweaks();
     sidebar_update_position();
 
     // Set up sidebar items to change active state
-    var sidebar_items = document.querySelectorAll(".sidebar-item");
-    for (i = 0; i < sidebar_items.length; i++) {
-        sidebar_items[i].onclick = function(e) {
-            for (i = 0; i < sidebar_items.length; i++) {
-                sidebar_items[i].classList.remove("active");
-            }
-            e.target.classList.add("active");
+    sidebar_items.forEach((item) => {
+        item.onclick = function(e) {
+            set_active_sidebar(e.target);
         }
-    }
+    });
 }
 
 // On initial page load
-on_initial_page_load();
+initial_page_load();

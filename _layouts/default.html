@@ -17,14 +17,15 @@
                 </div>
             </div>
 
-            <div class="topic fade-in">
+            <div class="topic transition-fade">
                 <div class="topic-content" id="swup">
+                    <input id="current-page-id" type="hidden" value="sidebar-{{ page.permalink | md5 | slice:0,8 }}"/>
+
                     {{ content }}
+
                 </div>
             </div>
         </article>
-
-        <input id="current-page-class" value="{{ page.class }}" style="display:none; appearance:none"/>
 
         <div id="back-to-top-wrapper">
             <a id="back-to-top" class="btn" href="#">Back to top</a>

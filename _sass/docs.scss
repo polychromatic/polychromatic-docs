@@ -128,6 +128,9 @@ $roadmap-line: #00FF00;
     }
 
     .name {
+        color: $primary;
+        font-weight: 500;
+        font-size: 1.2em;
         margin: 0 0 0.5em;
         padding: 0.25em 0;
     }

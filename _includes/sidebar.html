@@ -12,3 +12,13 @@
     {% endfor %}
 
 {% endfor %}
+
+<div class="sidebar-heading">Version</div>
+<div class="sidebar-text">
+    {% include icons/code.svg %}
+    <span>Software: {{ site.data.version.software }}</span>
+</div>
+<div class="sidebar-text">
+    {% include icons/clock.svg %}
+    <span>Last Updated: {{ site.time | date:'%Y-%m-%d' }}</span>
+</div>

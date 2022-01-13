@@ -15,6 +15,7 @@ disable_disk_cache: true
 
 plugins:
   - jekyll-sitemap
+  - jekyll-loading-lazy
 
 # Exclude from processing.
 exclude:

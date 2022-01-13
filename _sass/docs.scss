@@ -380,3 +380,34 @@ h3:target {
         margin-right: -0.5em;
     }
 }
+
+/* Permalink links */
+h1, h2, h3, h4 {
+    &:hover {
+        .permalink {
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.permalink {
+    position: absolute;
+    left: 0.3em;
+    opacity: 0;
+    transition: opacity $btn-speed;
+
+    img {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+@media (max-width: $screen-md) {
+    .permalink {
+        left: -0.9em;
+    }
+}

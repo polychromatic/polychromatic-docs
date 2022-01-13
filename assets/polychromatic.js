@@ -23,6 +23,7 @@ function page_enter() {
     // When navigation changes to another topic. New content replaced.
     apply_markdown_tweaks();
     sidebar_update_position();
+    setup_permalinks();
 }
 
 function page_exit() {
@@ -68,12 +69,20 @@ function set_active_sidebar(element) {
 function initial_page_load() {
     apply_markdown_tweaks();
     sidebar_update_position();
+    setup_permalinks();
 
     // Set up sidebar items to change active state
     sidebar_items.forEach((item) => {
         item.onclick = function(e) {
             set_active_sidebar(e.target);
         }
+    });
+}
+
+function setup_permalinks() {
+    const headings = document.querySelectorAll("h2, h3, h4");
+    headings.forEach((header) => {
+        header.innerHTML = `<a class="permalink" title="Permalink" href="#${header.id}"><img src="/assets/img/link.svg" alt="Link"/></a>` + header.innerHTML;
     });
 }
 

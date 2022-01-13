@@ -2,7 +2,6 @@
 layout: docs
 title: License
 permalink: /license/
-class: docs
 ---
 
 With the exceptions of the libraries below, the Polychromatic project is licensed

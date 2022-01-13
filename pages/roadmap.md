@@ -2,7 +2,6 @@
 layout: roadmap
 title: Roadmap
 permalink: /roadmap/
-class: docs
 
 roadmap:
     - name: v0.7.0 - Design Update

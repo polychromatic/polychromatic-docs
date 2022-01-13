@@ -2,7 +2,6 @@
 layout: docs
 title: Configuration
 permalink: /config/
-class: docs
 ---
 
 Polychromatic's uses JSON to store its data. The location is based on

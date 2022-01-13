@@ -2,7 +2,6 @@
 layout: docs
 title: Effect Internals
 permalink: /config/effects/
-class: docs
 ---
 
 ## The Concept

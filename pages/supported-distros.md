@@ -2,7 +2,6 @@
 layout: docs
 title: Packages for Linux Distributions
 permalink: /distros/
-class: docs
 ---
 
 ## Official Packages

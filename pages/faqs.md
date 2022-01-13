@@ -2,7 +2,6 @@
 layout: docs
 title: FAQs
 permalink: /faqs/
-class: docs
 ---
 
 ### What is Polychromatic?

@@ -2,7 +2,6 @@
 layout: docs
 title: Dependencies
 permalink: /dependencies/
-class: docs
 ---
 
 If you're running the software directly from the repository or have other

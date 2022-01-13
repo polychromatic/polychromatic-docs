@@ -2,7 +2,6 @@
 layout: docs
 title: History
 permalink: /history/
-class: docs
 ---
 
 {:.thumbnail-right}

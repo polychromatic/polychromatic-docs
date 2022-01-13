@@ -2,7 +2,6 @@
 layout: docs
 title: OpenRazer
 permalink: /openrazer/
-class: docs
 ---
 
 ### What is OpenRazer?

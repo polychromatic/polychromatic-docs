@@ -2,7 +2,6 @@
 layout: docs
 title: Command Line Interface
 permalink: /cli/
-class: docs
 ---
 
 Bring the power of controlling your lighting peripherals to scripts or

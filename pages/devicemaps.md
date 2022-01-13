@@ -2,7 +2,6 @@
 layout: docs
 title: Device Maps & Graphics
 permalink: /devicemaps/
-class: docs
 ---
 
 ## Overview

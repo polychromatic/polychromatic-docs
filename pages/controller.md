@@ -2,7 +2,6 @@
 layout: docs
 title: Controller
 permalink: /controller/
-class: docs
 ---
 
 This is the main interface for this application. All of the features are

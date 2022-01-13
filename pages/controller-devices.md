@@ -2,7 +2,6 @@
 layout: docs
 title: Devices tab
 permalink: /controller/devices/
-class: docs
 ---
 
 Options provided by a device's driver or daemon appear here, as well

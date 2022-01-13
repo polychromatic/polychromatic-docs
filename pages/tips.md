@@ -2,7 +2,6 @@
 layout: docs
 title: Tips & Tricks
 permalink: /tips/
-class: docs
 ---
 
 Here's some ideas you might like to try.

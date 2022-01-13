@@ -2,7 +2,6 @@
 layout: docs
 title: Documentation Index
 permalink: /
-class: docs
 ---
 
 ## Welcome!

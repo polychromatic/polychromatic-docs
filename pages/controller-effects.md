@@ -2,7 +2,6 @@
 layout: docs
 title: Effects tab
 permalink: /controller/effects/
-class: docs
 ---
 
 Create your own static or animated effects powered by software!

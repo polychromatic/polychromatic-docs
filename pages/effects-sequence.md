@@ -2,7 +2,6 @@
 layout: docs
 title: Sequence Effects
 permalink: /config/effects/sequence/
-class: docs
 ---
 
 ## The Concept

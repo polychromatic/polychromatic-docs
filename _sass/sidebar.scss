@@ -161,3 +161,9 @@
         }
     }
 }
+
+@media (max-width: $screen-sm) {
+    .sidebar {
+        width: 80vw;
+    }
+}

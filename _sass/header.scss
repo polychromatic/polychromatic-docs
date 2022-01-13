@@ -73,3 +73,9 @@
         }
     }
 }
+
+@media (max-width: $screen-min) {
+    .social-links {
+        display: none;
+    }
+}

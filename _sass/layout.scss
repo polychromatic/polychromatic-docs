@@ -4,6 +4,7 @@ html, body {
     background: $bg-colour;
     color: $text-colour;
     margin: 0;
+    min-width: $screen-min;
 }
 
 body {

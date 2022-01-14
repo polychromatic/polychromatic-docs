@@ -437,7 +437,12 @@ h1, h2, h3, h4 {
 
 @media (max-width: $screen-lg + 400px) {
     .toc-container {
-        display: none;
+        // BUG: swup: Animation fails to finish if this is display:none ("transition-fade")
+        height: 0;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
     }
 }
 

@@ -16,6 +16,7 @@ disable_disk_cache: true
 plugins:
   - jekyll-sitemap
   - jekyll-loading-lazy
+  - jekyll-external-links
 
 # Exclude from processing.
 exclude:
@@ -23,6 +24,11 @@ exclude:
   - scripts/
   - LICENSE
   - README.md
+
+external_links:
+  selector: ".topic a"
+  #ignored_selectors:
+  marker_html: "<img class=\"ext-link\" src=\"/assets/img/external-link-alt.svg\" title=\"External Link\" alt=\"External Link\"/>"
 
 # Common URLs
 openrazer_repo: "https://github.com/openrazer/openrazer/"

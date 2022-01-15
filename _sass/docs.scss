@@ -48,6 +48,12 @@ $roadmap-line: #00FF00;
         padding-top: 145px;
     }
 
+    a:hover {
+        img {
+            filter: brightness(0.5);
+        }
+    }
+
     hr {
         background: linear-gradient(to right, $bg-colour, $bg-secondary, $bg-colour);
         height: 1em;
@@ -413,4 +419,11 @@ h1, h2, h3, h4 {
     .permalink {
         left: -0.9em;
     }
+}
+
+/* External links */
+.ext-link {
+    height: 12px;
+    width: 12px;
+    margin-left: 4px;
 }

@@ -72,12 +72,13 @@
       url: /translations/
       icon: comments
 
-    - name: Device Maps &amp Graphics
+    - name: Device Maps & Graphics
       url: /devicemaps/
       icon: matrix
 
     - name: Backend Integration
       url: /backends/
+      icon: puzzle-piece
       disabled: true
 
     #- name: Sharing Custom Effects

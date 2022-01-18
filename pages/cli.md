@@ -20,7 +20,7 @@ Omitting these arguments selects all devices.
 
 ```
 -d, --device <ID>
-   Select the device(s) by form factor. Comma separated for multiple.
+   Select the device by form factor. If omitted, use all devices.
 
    •   accessory
    •   display

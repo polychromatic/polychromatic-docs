@@ -346,6 +346,16 @@ kbd {
     z-index: 20;
 }
 
+.badge-indev {
+    background: $red;
+    color: white;
+    filter: grayscale(0.5);
+    font-size: 0.7em;
+    padding: 0.25em;
+    margin: auto 0.5em;
+    border-radius: 0.5em;
+}
+
 /* Flash headers via hash */
 h1:target
 h2:target,

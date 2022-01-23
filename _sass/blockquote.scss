@@ -34,4 +34,12 @@ blockquote {
 
         padding: 10px;
     }
+
+    &.alert {
+        border-color: $red;
+
+        strong {
+            color: $red;
+        }
+    }
 }

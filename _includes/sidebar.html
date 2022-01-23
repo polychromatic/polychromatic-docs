@@ -7,16 +7,19 @@
         <a href="{{ item.url | relative_url }}" id="sidebar-{{ item.url | md5 | slice:0,8 }}" class="sidebar-item nav-docs {% if item.indent %}indent-{{ item.indent}}{% endif %} {% if item.url == page.permalink %}active{% endif %} {% if item.disabled == true %}disabled{% endif %}" {% if item.disabled == true %}style="opacity:0.5" disabled{% endif %}>
             {% if item.icon %}{% include icons/{{ item.icon }}.svg %}{% endif %}
             {{ item.name }}
+            {% if item.indev == true %}
+                <div class="badge-indev" title="For an upcoming application version">{{ site.data.version.dev }}</div>
+            {% endif %}
         </a>
         {% endif %}
     {% endfor %}
 
 {% endfor %}
 
-<div class="sidebar-heading">Version</div>
+<div class="sidebar-heading">About</div>
 <div class="sidebar-text">
-    {% include icons/code.svg %}
-    <span>Software: {{ site.data.version.software }}</span>
+    {% include icons/box.svg %}
+    <span>Version: {{ site.data.version.software }}</span>
 </div>
 <div class="sidebar-text">
     {% include icons/clock.svg %}

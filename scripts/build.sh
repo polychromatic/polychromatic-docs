@@ -2,5 +2,8 @@
 
 cd "$(dirname "$0")"/../
 
-export JEKYLL_ENV=production
+if [ -z "$JEKYLL_ENV" ]; then
+    export JEKYLL_ENV=production
+fi
+
 bundle exec jekyll build

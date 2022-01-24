@@ -15,6 +15,12 @@ $roadmap-line: #00FF00;
     padding-bottom: 60px;
 }
 
+@media (max-width: $screen-lg) {
+    .topic-content {
+        max-width: calc(100vw - 60px);
+    }
+}
+
 .topic {
     display: flex;
     flex-direction: column;
@@ -27,7 +33,6 @@ $roadmap-line: #00FF00;
     p > img {
         display: block;
         margin: auto;
-        max-width: 100%;
         max-height: 50vh;
     }
 

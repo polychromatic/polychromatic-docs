@@ -39,3 +39,11 @@ code {
     color: #A9A9A9;
     font-size: 1.1em;
 }
+
+/* Scroll large widths */
+pre,
+blockquote,
+table,
+.topic p > img {
+    max-width: calc(100vw - 60px);
+}

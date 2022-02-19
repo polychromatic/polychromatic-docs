@@ -2,8 +2,8 @@
 
 blockquote {
     background: $bg-secondary;
-    border-left: 4px solid $secondary;
-    color: lighten($bg-secondary, 50%);
+    border-left: 4px solid $warning;
+    color: darken($text-colour, 25%);
     margin: 15px 0;
 
     p {
@@ -22,13 +22,15 @@ blockquote {
     }
 
     strong {
-        color: $secondary;
+        color: $warning;
     }
 
     &.pkg-cmd {
+        border-color: green;
+
         &::before {
             content: "$";
-            color: lime;
+            color: green;
             padding-right: 2px;
         }
 

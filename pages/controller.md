@@ -45,8 +45,10 @@ The menu bar can also be hidden if desired.
 {:.caption}
 Running on KDE Plasma with Breeze Dark theme
 
-> Unfortunately, if you're using a distro based on GTK (e.g. Ubuntu, with GNOME 3 desktop),
-they may not have the necessary configuration to Qt integrate applications (like Polychromatic)
+> **Unfortunately...**
+>
+> If you're using a distro based on GTK (e.g. Ubuntu, with GNOME 3 desktop),
+your distribution may not ship the necessary configuration to Qt integrate applications (like Polychromatic)
 to use your GTK theme. If this impacts you, look up online how to use the system theme for Qt apps
 for your distribution.
 

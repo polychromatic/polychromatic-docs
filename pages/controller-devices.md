@@ -37,20 +37,21 @@ if they have been fully implemented when the device was added to the driver/daem
 Unlike the official driver, OpenRazer writes the effect to the device's firmware,
 meaning that the hardware will retain the state across power cycles and when
 plugged into other computers. The only limitation is
-that it's restricted to what the firmware can do, unless your device has
-individually addressable LEDs in which you could
-[create a software effect](/controller/effects/) (which requires Polychromatic
-installed and running)
-
-Keyboards (as of OpenRazer v3.1.0) write custom frames into device memory, so the last frame
-is saved across power cycles. This is subject to change in a future version
-[(openrazer#1580)](https://github.com/openrazer/openrazer/pull/1580)
-as this potentially wears out the memory controller.
+that it's restricted to what the firmware can do. If your device has
+individually addressable LEDs, you can [create a software effect](/controller/effects/)
+(which requires Polychromatic installed to playback)
 
 If the device defaults to a specific hardware effect (usually Spectrum),
 you'll need the daemon with persistence enabled (introduced in v3.0.0) for your
-last effect to activate. This feature can be turned off within Polychromatic
+last effect to activate. This feature can also be turned off within Polychromatic
 via **Tools → OpenRazer → Configure**.
+
+Keyboards prior to OpenRazer v3.2.0 had custom frames saved into device memory,
+allowing for custom frames to be saved across power cycles.
+This changed in [(openrazer#1580)](https://github.com/openrazer/openrazer/pull/1580)
+as this potentially wears out the memory controller when playing back
+multiple frames in succession.
+
 
 #### Daemon Features
 
@@ -83,14 +84,14 @@ Note that while the firmware version is displayed, none of the projects support
 firmware upgrades. For [OpenRazer], you must use Razer Synapse
 on Windows to upgrade the firmware. There is a chance of bricking
 if you try upgrading firmware inside a virtual machine using passthrough USB,
-so bare metal is recommended.
+so a physical Windows PC is recommended.
 
 ---
 
 ## Inspect Matrix
 
 If your device supports individually addressable LEDs, your device supports
-**software effects**! To test your LEDs or note their positions, use this
+[software effects](/controller/effects/)! To test your LEDs or note their positions, use this
 tool to find out.
 
 ![Screenshot of Device Info dialog](/images/guide/inspect-matrix.webp)

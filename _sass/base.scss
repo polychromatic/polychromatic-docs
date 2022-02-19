@@ -43,7 +43,16 @@ code {
 /* Scroll large widths */
 pre,
 blockquote,
-table,
-.topic p > img {
+table {
     max-width: calc(100vw - 60px);
+}
+
+.topic p > img {
+    max-width: 700px;
+}
+
+@media (max-width: $screen-lg) {
+    .topic p > img {
+        max-width: 90%;
+    }
 }

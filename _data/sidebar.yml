@@ -70,7 +70,7 @@
   items:
     - name: Translations
       url: /translations/
-      icon: comments
+      icon: globe
 
     - name: Device Maps & Graphics
       url: /devicemaps/

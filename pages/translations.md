@@ -4,54 +4,78 @@ title: How to Translate
 permalink: /translations/
 ---
 
+> **Heads up: There's a bug!**
+>
+> Translations are not appearing when the application is
+> installed in v0.7.0, but it works when run from the repository folder.
+>
+> This has been fixed for the next release. Sorry for the inconvenience.
+
+---
+
 ## Overview
 
 Polychromatic uses gettext to localize the application to different languages.
-The source language is **English (UK)** in both the UI and code.
+The source language is **English (United Kingdom)** for both the interface and
+code.
 
-These instructions are aimed for contributors looking to add a new or update
-an existing language.
-
-**Contents**
-
-* [Preparing the repository](#preparing-the-repository)
-* [Performing a new translation](#performing-a-new-translation)
-* [Testing a translation](#testing-a-translation)
-* [Committing your changes](#committing-your-changes)
-* [Updating existing translations](#updating-existing-translations)
+Currently, this application's translation system is decentralised.
+The translation is performed offline using POT and PO files and is then
+added into the project's version control system.
 
 ---
 
-## Requirements
+## Prerequisites
 
-* A PO editor, such as [Poedit]
-* A [GitHub](https://github.com) account
-* A Git client, such as the `git` command
+You'll need to install:
 
-> Before starting, make sure there isn't [any open pull request](https://github.com/polychromatic/polychromatic/pulls)
-for your language already. If so, consider leaving a review.
+* [Poedit] (or other translation editor)
+* The `git` package (or other Git client)
+* The `intltool` and `gettext` package
 
-> This guide will use [Poedit] to write translations and `git` for version control.
+In order to contribute your changes, you'll also need:
+
+* An account on [GitHub](https://github.com)
+
+Before starting, make sure there isn't an [open pull request] for your language already.
+If so, consider leaving a review.
+
+It might be worth checking if there's been any new, unreleased translations [since the last release].
+
+[open pull request]: https://github.com/polychromatic/polychromatic/pulls?q=is%3Apr+is%3Aopen+label%3Ai18n+
+[since the last release]: https://github.com/polychromatic/polychromatic/compare/stable...master
+[Poedit]: https://poedit.net/
+
+> This guide uses [Poedit] for writing translations and the Terminal for
+running the `git` command for version control.
 
 ---
 
-## Preparing the repository
+## Set up the project
 
 1. [Fork the polychromatic repository](https://github.com/polychromatic/polychromatic/fork) on GitHub.
 
-1. Clone the repository to your computer.
+1. Clone this repository to your computer.
 
        git clone https://github.com/<your username>/polychromatic.git
 
-1. Install the packages `intltool` and `gettext` for your distribution.
-
-1. Ensure the translation template is up-to-date from the source code.
+1. Ensure the translation templates are up-to-date.
 
        ./scripts/create-locales.sh
 
+1. **(Optional)** If you've forked this project before, you may need to reset your repository and obtain the latest changes.
+
+       git reset HEAD --hard
+       git pull --rebase https://github.com/polychromatic/polychromatic.git master
+
+1. Check the `locales` folder for your language's locale code:
+
+    [Translate an existing language](#translate-for-an-existing-language){:.btn}
+    [Translate for a new language](#translate-for-a-new-language){:.btn}
+
 ---
 
-## Performing a new translation
+## Translate for a new language
 
 1. Open `locale/polychromatic.pot` and click the **[Create New Translation]** button.
 
@@ -71,15 +95,19 @@ for your language already. If so, consider leaving a review.
 1. When finished, save the file to the `locales` directory.
 
     > Poedit will automatically set the filename to the locale code as appropriate.
-    For example, **"Spanish (Spain)"** is saved as **"es_ES.po"**
+
+    The file name should be the locale code. For example, **"Spanish (Spain)"** would be saved as `es_ES.po`.
 
 1. Open `locale/LINGUAS` in your text editor and add the new locale code.
 
 1. Open `source/launchers/polychromatic.desktop` in your text editor.
 
-    Duplicate the `GenericName` and `Comment` lines, as well as the `Name` line
-    under `[Desktop Actions]` sections. Append the locale before the `=` sign
-    inside square brackets `[]` and translate, like so:
+    Duplicate these lines:
+    * `Comment`
+    * `GenericName`
+    * `Name` (under `Desktop Action`)
+
+    Append the locale code before the `=` sign inside square brackets `[]` and translate the line, like so:
 
     ```ini
     GenericName=Device Manager for RGB Lighting
@@ -91,11 +119,45 @@ for your language already. If so, consider leaving a review.
     [Desktop Action devices]
     Name=Configure Devices
     Name[es]=Configurar dispositivos
-```
+    ```
+
+1. **(Optional)** Test your work to check it looks good for end users.
+
+    [Test translation](#test-a-translation){:.btn}
+
+1. When you're happy with your progress, commit/push your changes.
+
+    [Commit your changes](#commit-your-changes){:.btn}
 
 ---
 
-## Testing a translation
+## Translate for an existing language
+
+> Assumes the [prerequisites](#prerequisites) have been followed and that your
+> copy of the repository is up-to-date.
+
+1. Ensure the translations are up-to-date with the source code.
+
+       ./scripts/create-locales.sh
+
+1. Open [Poedit] and translate!
+
+1. **(Optional)** You may wish to check these files too:
+
+       source/launchers/polychromatic.desktop
+
+1. **(Optional)** Test your work to check it looks good for end users.
+
+    [Test translation](#test-a-translation){:.btn}
+
+1. When you're happy with your progress, commit/push your changes.
+
+    [Commit your changes](#commit-your-changes){:.btn}
+
+
+---
+
+## Test a translation
 
 1. Build the locales:
 
@@ -104,8 +166,8 @@ for your language already. If so, consider leaving a review.
 1. Run the application from the repository, using the `--locale` parameter to
     specify the locale code.
 
-    A package or two might need to be installed in order to build
-    the Controller. A message will let you know if something is missing.
+    In order to run the main application from the repository folder, some [build dependencies]
+    may need to be installed. A message will let you know if something is missing.
 
        ./polychromatic-controller-dev --locale <locale>
        ./polychromatic-tray-applet --locale <locale>
@@ -114,43 +176,33 @@ for your language already. If so, consider leaving a review.
     > **Note:** Only the user interface is translated. Verbose/debugging output in
     the Terminal remains in English.
 
+1. When you're happy with your progress, commit/push your changes.
+
+    [Commit your changes](#commit-your-changes){:.btn}
+
+
+[build dependencies]: /dependencies/
+
 ---
 
-## Committing your changes
+## Commit your changes
 
-1. Inside the root of the repository, commit the files using Git and push to your fork (`origin`)
+1. Open the repository folder in a Terminal. Add the files to Git regarding your locale
+and create a commit.
 
        git add locale/<locale>.po
        git add locale/LINGUAS
        git commit -m "Add translation for <locale>"
+
+    > **Note:** Please do not add the `.pot` or `.po` files for other languages, which
+    are likely to be modified.
+
+1. Push your commit to your fork `(origin)`
+
        git push origin master
 
-    > **Note:** Please do not stage/commit the `.pot` or `.po` files for other languages
-    if they were modified.
+1. Open a pull request on GitHub. Use the URL below, and replace `GITHUB_USERNAME` with your user name.
 
-1. Open a pull request on GitHub.
-
-       https://github.com/YOUR_GITHUB_USERNAME/polychromatic/compare
+       https://github.com/GITHUB_USERNAME/polychromatic/compare
 
 ---
-
-## Updating existing translations
-
-1. Pull the latest source code to your copy of the repository. Note that any
-   uncommitted changes will be lost.
-
-       git reset HEAD --hard
-       git pull --rebase https://github.com/polychromatic/polychromatic.git master
-
-1. Ensure the translation template is up-to-date from the source code.
-
-       ./scripts/create-locales.sh
-
-2. Open [Poedit] and translate! When finished, commit the modified PO file as usual.
-
-    > **Note:** Please do not stage/commit the `.pot` or other `.po` files if they are
-    modified.
-
-
-
-[Poedit]: https://poedit.net/

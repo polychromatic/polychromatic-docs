@@ -43,8 +43,11 @@ Distro                  | Repository                | Maintainer
 [![](/images/distros/solus.svg) Solus](https://polychromatic.app/download/solus/)  | [Solus x86_64] | (Multiple)
 [![](/images/distros/gentoo.svg) Gentoo](https://polychromatic.app/download/gentoo/)  | [vifino/vifino-overlay] | [vifino]
 [![](/images/distros/redhat.svg) Red Hat](https://polychromatic.app/download/redhat/) | [moozhub/yum-repo-mooz] | [moozhub]
+[![](/images/distros/slackware.svg) Slackware](https://polychromatic.app/download/slackware/)  | [SlackBuilds.org] | [mdinslage]
 
 [Solus x86_64]: https://solus.pkgs.org/rolling/solus-unstable-x86_64/polychromatic-0.3.12-16-1-x86_64.eopkg.html
+[SlackBuilds.org]: https://www.slackbuilds.org/repository/15.0/system/polychromatic/
+[mdinslage]: https://github.com/mdinslage
 [vifino]: https://github.com/vifno
 [moozhub]: https://github.com/moozhub
 [vifino/vifino-overlay]: https://github.com/vifino/vifino-overlay/tree/master/app-misc/

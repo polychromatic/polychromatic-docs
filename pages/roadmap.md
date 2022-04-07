@@ -22,8 +22,9 @@ roadmap:
         - Improved device support and inspection
         - Polished and quality assured
 
-    - name: v0.8.0
-      desc:
+    - name: v0.8.0 - Presets & Triggers
+      desc: This release performs some housecleaning and introduces presets and
+            triggers for lighting automation.
       checked: progress
       completed:
         null
@@ -31,50 +32,51 @@ roadmap:
         - Rework backend and internals
       pending:
         - Port tray applet to QSystemTrayIcon
+        - New presets feature
+        - New triggers feature
 
-    - name: v0.9.0
-      desc: This release will expand custom software effects, introduce presets
-            for multiple devices and add events for automating your lighting.
+    - name: v0.9.0 - Software Effects
+      desc: This release will introduce a software effect editor, as well as
+            reorganising device graphics to provide better support for different
+            keyboard layouts.
       checked: false
       completed:
         null
       in_progress:
         null
       pending:
-        - Introduce Presets
-        - Introduce Triggers
-        - New Scripted Effects
-        - New Layered Effects
+        - Rework device mapping
+        - New scripted effects
+        - New layered effects
 
     - name: v1.0.0
-      desc: This release will focus on polish things up, and introduce online
-            functionality. This version could become as v0.10.0, as v1.0.0 is
-            intended to indicate full stability.
+      desc: This release will introduce online functionality.
       checked: false
       completed:
         null
       in_progress:
         null
       pending:
-        - Browse/share effects designed by other Polychromatic users.
-        - Optional hardware survey
-        - Offline help
+        - Browse/share effects designed by other Polychromatic users
+        - Add an optional hardware survey
+        - Add support for offline help
 
     - name: v1.1.0
-      desc: This release will focus on interactive functions.
+      desc: This release will introduce interactive features.
       checked: false
       completed:
         null
       pending:
-        - Key remapping (macro) support.
-        - Interactive effect layers.
+        - Add support for key remapping / macros
+        - Add support for interactive effect layers
 
-    - name: Future Ambitions
+    - name: Undetermined
+      desc: Future ambitions for the distant future.
       checked: false
       completed:
         null
       pending:
-        - Support OpenRGB, phue, ckb-next and libratbag devices.
+        - Support devices via OpenRGB, phue, ckb-next and libratbag.
         - Port application to Windows and macOS.
 
 ---

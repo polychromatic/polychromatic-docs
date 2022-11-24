@@ -81,15 +81,10 @@ that lets us focus on the logic and new features.
 <br>
 
 
-### The Future: v1.0.0
+### The Future
 
-Instead of just being a front-end to [OpenRazer], the project has a new ambition
-to be agnostic and work with any vendor. Writing an application to polish the
-RGB experience for Razer peripherals might as well be compatible with other brands,
-so we avoid the "vendor lock in" problem.
+Up to now, the project continues to have close ties with [OpenRazer]. We'd like to support other
+vendors some day, just in case your next RGB device isn't a Razer one.
 
-Stay tuned as the next generation of the software is on its way. Bring
-on the custom effects, presets and automation!
-
-What about key rebinding and macros? Once the lighting is polished, let's
-get a front-end built for that too!
+Taking inspiration from the [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy):
+"do one thing and one thing well" - one frontend to manage all your RGB.

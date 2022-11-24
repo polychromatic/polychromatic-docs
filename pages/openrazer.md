@@ -6,7 +6,7 @@ permalink: /openrazer/
 
 ### What is OpenRazer?
 
-[OpenRazer] is an open source driver and daemon for Razer USB peripherals.
+[OpenRazer] is an open source driver and daemon for Razer peripherals over USB.
 The project analyses protocols through packet capturing, with the aim to
 support hardware features, like lighting and DPI.
 
@@ -35,7 +35,7 @@ but is still in early development.
 
 There are other projects that use OpenRazer's efforts.
 
-> **Use at your own risk:** These third party projects use code/knowledge from OpenRazer,
+> **Use at your own risk:** The following third party projects use code/knowledge from OpenRazer,
 > but have nothing to do with the project itself. Please do not create issues on the OpenRazer repository
 > for other operating systems or projects.
 
@@ -163,15 +163,15 @@ otherwise please create one [on our repository](https://github.com/polychromatic
 
 ### My device is missing a feature!
 
-> Are you thinking of key mapping, or macros? [It's on our roadmap](/roadmap/).
-> For now, [check out the alternates](/faqs/#can-i-remap-keys).
+These functions are not supported by this application nor OpenRazer:
 
-Devices with Hypershift are not supported in OpenRazer, so we don't have anything
-to present for configuration.
+* Key rebinding
+* Hypershift
+* Firmware upgrades
 
-Apart from Ripple, OpenRazer works with hardware effects. A handful of hardware may
-not have the firmware to playback certain ones like spectrum, wave or breathing.
-Lots of aspects of Razer Synapse 3 are software-based.
+OpenRazer works with hardware effects on the firmware itself (except ripple, provided by OpenRazer's daemon).
+If your device is lacking effects, it's likely because it's a Razer Synapse 3 device
+that was designed to be software-driven by the driver.
 
 For other issues with broken UI or incorrect behaviour for specific devices, please raise
 them [on our repository](https://github.com/polychromatic/polychromatic/issues?q=is%3Aissue).
@@ -196,9 +196,7 @@ A search on GitHub shows some implementations of the server:
 
 ### How can I test imaginary devices?
 
-OpenRazer has the ability to create fake devices that simulate their existence.
-This makes it very useful for testing, for demonstration purposes or to get a
-feel if you had the real hardware sitting in front of you.
+OpenRazer has the ability to create "fake devices" for simulation/testing:
 
 1. [Install OpenRazer](https://openrazer.github.io/#download) as usual.
 
@@ -206,7 +204,7 @@ feel if you had the real hardware sitting in front of you.
 
        openrazer-daemon -s
 
-1. Next, [download a copy of OpenRazer's repository](https://github.com/openrazer/openrazer/archive/refs/heads/master.zip),
+1. [Download a copy of OpenRazer's repository](https://github.com/openrazer/openrazer/archive/refs/heads/master.zip),
 and run this script:
 
        ./scripts/setup_fake_devices.sh
@@ -219,6 +217,9 @@ windows will spawn providing the fake environment. Go ahead and start Polychroma
 Any physical "real" devices currently plugged in will be unavailable
 until the fake environment is stopped and the daemon is restarted.
 
+> **Alternately,** there is a project that emulates the USB device itself:
+>
+> <https://github.com/meeuw/razer-emulator>
 
 [OpenRazer]: https://openrazer.github.io
 [d-feet]: https://wiki.gnome.org/Apps/DFeet

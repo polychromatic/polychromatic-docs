@@ -11,18 +11,20 @@ shortly after a new release.
 
 {:.has-icons}
 
-| Distro                                                                                    | Stable | Testing | Edge | Split?`**` | Provider      |
-| ----------------------------------------------------------------------------------------- | ------ | ------- | ---- | ------ | ------------- |
-[![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) `*`    | Yes    | Yes     | Yes  | Yes    | [Launchpad]
-[![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/)        | Yes    | Yes     | Yes  | Yes    | [Launchpad]
-[![](/images/distros/arch.svg) Arch](https://polychromatic.app/download/arch/)              | Yes    |         | Yes  |        | [AUR]&nbsp;[(-git)]
-[![](/images/distros/fedora.svg) Fedora](https://polychromatic.app/download/fedora/)        | Yes    |         |      |        | [openSUSE Build Service]
-[![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes    |         |      |        | [openSUSE Build Service]
-[![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes    |         |      |        | [openSUSE Build Service]
+| Distro                                                                                    | Release | Testing | Preview | Provider      |
+| ----------------------------------------------------------------------------------------- | ------- | ------- | ------- | ------------- |
+[![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) `*`    | Yes     | Yes     | Yes     | [Launchpad]
+[![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/) `*`    | Yes     | Yes     | Yes     | [Launchpad]
+[![](/images/distros/arch.svg) Arch](https://polychromatic.app/download/arch/)              | Yes     |         | Yes     | [AUR]&nbsp;[(-git)]
+[![](/images/distros/fedora.svg) Fedora](https://polychromatic.app/download/fedora/)        | Yes     |         |         | [openSUSE Build Service]
+[![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes     |         |         | [openSUSE Build Service]
+[![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes     |         |         | [openSUSE Build Service]
 
-> `*` Ubuntu includes flavours and derivatives, like Linux Mint, elementaryOS, Pop!_OS and Zorin OS.
->
-> `**` Split packaging allows installation of specific features.
+> `*` Split packaging allows installation of specific features.
+
+> Ubuntu includes flavours and derivatives, like Linux Mint, elementaryOS, Pop!_OS and Zorin OS.
+
+See the [Download page](https://polychromatic.app/download/) for instructions.
 
 [Launchpad]: https://launchpad.net/~polychromatic
 [AUR]: https://aur.archlinux.org/packages/polychromatic/
@@ -59,7 +61,7 @@ If there's a dependency or packaging problem, raise an issue on their repository
 
 ## Universal Package Formats
 
-Sorry! Polychromatic does **not** offer AppImages, Flatpaks or Snaps at the moment.
+Sorry! Polychromatic does not offer AppImages, Flatpaks or Snaps at the moment.
 
 ---
 

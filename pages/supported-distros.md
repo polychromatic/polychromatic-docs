@@ -11,14 +11,14 @@ shortly after a new release.
 
 {:.has-icons}
 
-| Distro                                                                                    | Release | Testing | Preview | Provider      |
-| ----------------------------------------------------------------------------------------- | ------- | ------- | ------- | ------------- |
-[![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) `*`    | Yes     | Yes     | Yes     | [Launchpad]
-[![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/) `*`    | Yes     | Yes     | Yes     | [Launchpad]
-[![](/images/distros/arch.svg) Arch](https://polychromatic.app/download/arch/)              | Yes     |         | Yes     | [AUR]&nbsp;[(-git)]
-[![](/images/distros/fedora.svg) Fedora](https://polychromatic.app/download/fedora/)        | Yes     |         |         | [openSUSE Build Service]
-[![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes     |         |         | [openSUSE Build Service]
-[![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes     |         |         | [openSUSE Build Service]
+| Distro                                                                                    | Release | Preview | Provider      |
+| ----------------------------------------------------------------------------------------- | ------- | ------- | ------------- |
+[![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) `*`    | Yes     | Yes     | [Launchpad]
+[![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/) `*`    | Yes     | Yes     | [Launchpad]
+[![](/images/distros/arch.svg) Arch](https://polychromatic.app/download/arch/)              | Yes     | Yes     | [AUR]&nbsp;[(-git)]
+[![](/images/distros/fedora.svg) Fedora](https://polychromatic.app/download/fedora/)        | Yes     |         | [openSUSE Build Service]
+[![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes     |         | [openSUSE Build Service]
+[![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes     |         | [openSUSE Build Service]
 
 > `*` Split packaging allows installation of specific features.
 

@@ -76,10 +76,10 @@
       url: /devicemaps/
       icon: matrix
 
-    - name: Backend Integration
-      url: /backends/
-      icon: puzzle-piece
-      disabled: true
+    # - name: Backend Integration
+    #   url: /backends/
+    #   icon: puzzle-piece
+    #   disabled: true
 
     #- name: Sharing Custom Effects
       #url: /create-effects/

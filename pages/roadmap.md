@@ -50,13 +50,12 @@ roadmap:
         - Add support for offline help
 
     - name: Interactivity
-      desc: A release that builds on top of software effects.
+      desc: A release that builds on top of software effects by reacting to input.
       checked: false
       completed:
         null
       pending:
-        - Add support for interactive effect layers
-        - Add support for key remapping (?)
+        - Add support for interactive effects/layers
 
     - name: Vendor Agnostic
       desc: Just in case your next product isn't Razer.

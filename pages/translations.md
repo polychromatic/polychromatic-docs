@@ -1,16 +1,7 @@
 ---
 layout: docs
-title: How to Translate
+title: Translations
 permalink: /translations/
----
-
-> **Heads up: There's a bug!**
->
-> Translations are not appearing when the application is
-> installed in v0.7.0, but it works when run from the repository folder.
->
-> This has been fixed for the next release. Sorry for the inconvenience.
-
 ---
 
 ## Overview

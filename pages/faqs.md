@@ -36,12 +36,12 @@ In the meantime, it'll be grand if these other projects have a working Python li
 
 ### Is Windows or macOS supported?
 
-No, but we're thinking about it.
-The software is currently focused on expanding features before carrying the weight
-of supporting other operating systems.
+No, this project is focused on expanding its features for Linux users before
+carrying the weight of cross-platform support. Maybe we'll be ready in a few years time!
 
-Plus, we need cross-platform backends. For example, [OpenRazer](/openrazer/) is technically tied to the
-Linux kernel.
+Plus, we need cross-platform Python libraries to integrate different vendors.
+The driver for [OpenRazer](/openrazer/), for example, is technically tied
+to the Linux kernel.
 
 ---
 

@@ -8,4 +8,4 @@ permalink: /
 
 {% include suggested.html %}
 
-To return to the main site, click **Discover** in the top-left.
+Or, return to the [main website](https://polychromatic.app).

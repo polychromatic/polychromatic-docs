@@ -5,12 +5,15 @@ permalink: /roadmap/
 
 roadmap:
     - name: Internal Improvements
-      desc: This happens a lot in this project! Better ways discovered to write code.
+      desc: Better tools, better code.
       checked: progress
       completed:
-        - Rework backend class
+        null
+      in_progress:
+        - Port to PyQt6
       pending:
-        - Consider a rewrite with static typing
+        - Rewrite with static typing
+        - Port tray applet to QSystemTrayIcon (drop GTK)
 
     - name: Presets & Triggers
       desc: A release for one-click changes and convenient automation.
@@ -20,7 +23,6 @@ roadmap:
       in_progress:
         null
       pending:
-        - Port tray applet to QSystemTrayIcon (drop GTK)
         - New presets feature
         - New triggers feature
 

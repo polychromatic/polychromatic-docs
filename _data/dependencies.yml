@@ -109,7 +109,7 @@ link_prefix:
     arch: https://www.archlinux.org/packages/?q=
     debian: https://packages.debian.org/search?keywords=
     opensuse: https://software.opensuse.org/package/
-    fedora: https://apps.fedoraproject.org/packages/
+    fedora: https://packages.fedoraproject.org/search?query=
 
 # Command to quickly install
 packagemgr:

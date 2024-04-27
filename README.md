@@ -10,5 +10,8 @@ will have the `indev` key set to `true`.
 
 ## License
 
-All website code and assets are licensed under the **GPLv3**, with the exception
-of some libraries in `/assets/lib/`. See those files for details.
+All website code and assets are licensed under the **GPLv3**, with the exception of:
+
+* `/images/`, `/_includes/icons/` - Contains FontAwesome 6 icons, some modified. Licensed under [CC BY 4.0](https://fontawesome.com/license/free).
+* `/assets/lib/` - Licensed under MIT or OFL.
+* `/images/distros/` - Used under logo guidelines.

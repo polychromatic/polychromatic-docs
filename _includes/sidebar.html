@@ -25,3 +25,12 @@
     {% include icons/clock.svg %}
     <span>Last Updated: {{ site.time | date:'%Y-%m-%d' }}</span>
 </div>
+
+<div class="social-links">
+    <a href="{{ site.polychromatic_org }}" title="Polychromatic on GitHub">
+        {% include icons/social/github.svg %}
+    </a>
+    <a href="{{ site.rss_feed }}" title="RSS Feed for Release Notes">
+        {% include icons/social/rss.svg %}
+    </a>
+</div>

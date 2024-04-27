@@ -180,3 +180,39 @@
         width: 80vw;
     }
 }
+
+.social-links {
+    display: flex;
+    margin: 1em 0 -1em;
+
+    svg {
+        height: 1.5em;
+        width: 1.5em;
+        transition: fill $btn-speed;
+
+        path {
+            fill: $primary;
+        }
+    }
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+        margin: 4px;
+
+        &:hover,
+        &:focus {
+            svg path {
+                fill: $secondary;
+            }
+        }
+
+        &:first-child {
+            margin-left: auto;
+        }
+
+        &:last-child {
+            margin-right: auto;
+        }
+    }
+}

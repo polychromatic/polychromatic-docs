@@ -44,28 +44,6 @@
     }
 }
 
-.social-links {
-    svg {
-        height: 2em;
-        width: 2em;
-        fill: $primary;
-        transition: fill $btn-speed;
-    }
-
-    a {
-        display: inline-block;
-        text-decoration: none;
-        margin: 1.25em 0.1em;
-
-        &:hover,
-        &:focus {
-            svg {
-                fill: $secondary;
-            }
-        }
-    }
-}
-
 @media (max-width: $screen-md) {
     .site-title {
         span {

@@ -28,10 +28,6 @@
       url: /distros/
       icon: tux
 
-    - name: Dependencies
-      url: /dependencies/
-      icon: box
-
 - title: User Guide
   items:
     - name: Controller

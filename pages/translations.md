@@ -172,7 +172,7 @@ running the `git` command for version control.
     [Commit your changes](#commit-your-changes){:.btn}
 
 
-[build dependencies]: /dependencies/
+[build dependencies]: https://github.com/polychromatic/polychromatic/blob/master/DEVELOPMENT.md#Dependencies
 
 ---
 

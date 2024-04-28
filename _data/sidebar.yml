@@ -22,9 +22,9 @@
       url: /openrazer/
       icon: openrazer
 
-- title: Installation
+- title: Linux
   items:
-    - name: Distribution Packages
+    - name: Supported Distros
       url: /distros/
       icon: tux
 

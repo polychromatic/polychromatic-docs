@@ -8,4 +8,4 @@ permalink: /
 
 {% include suggested.html %}
 
-Or, return to the [main website](https://polychromatic.app).
+Or, return to the [main website](https://polychromatic.app)

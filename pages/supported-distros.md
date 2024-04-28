@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Packages for Linux Distributions
+title: Supported Linux Distributions
 permalink: /distros/
 ---
 

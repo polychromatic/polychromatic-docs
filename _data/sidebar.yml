@@ -28,6 +28,10 @@
       url: /distros/
       icon: tux
 
+    - name: Known Quirks
+      url: /quirks/
+      icon: question-circle
+
 - title: User Guide
   items:
     - name: Controller

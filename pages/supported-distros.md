@@ -44,7 +44,7 @@ Distro                  | Repository                | Maintainer
 [![](/images/distros/gentoo.svg) Gentoo](https://polychromatic.app/download/gentoo/)  | [sys-apps/polychromatic] | [xgqt]
 [![](/images/distros/slackware.svg) Slackware](https://polychromatic.app/download/slackware/)  | [SlackBuilds.org] | [mdinslage]
 
-[Solus x86_64]: https://solus.pkgs.org/rolling/solus-unstable-x86_64/polychromatic-0.3.12-16-1-x86_64.eopkg.html
+[Solus x86_64]: https://github.com/getsolus/packages/tree/main/packages/p/polychromatic
 [SlackBuilds.org]: https://www.slackbuilds.org/repository/15.0/system/polychromatic/
 [mdinslage]: https://github.com/mdinslage
 [sys-apps/polychromatic]: https://packages.gentoo.org/packages/sys-apps/polychromatic

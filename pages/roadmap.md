@@ -8,9 +8,9 @@ roadmap:
       desc: Better tools, better code.
       checked: progress
       completed:
-        null
-      in_progress:
         - Port to PyQt6
+      in_progress:
+        null
       pending:
         - Rewrite with static typing
         - Port tray applet to QSystemTrayIcon (drop GTK)

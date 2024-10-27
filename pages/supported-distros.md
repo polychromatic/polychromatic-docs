@@ -23,49 +23,38 @@ v0.8.3 ─┬─> v0.9.0 ──> v0.9.1  (Qt 6)
 
 ## Official Packages
 
-We package officially for the following distros. Updates can be expected
-shortly after a new release.
+We create packages for the following distros. This requires adding our repository,
+or installing a package (`.pkg.tar.zst` or `.deb`) separately from the [release notes].
 
-{:.has-icons}
+Updates can be expected shortly after a new release.
 
-| Distro                                                                                    | Release | Preview | Provider      | Notes         |
-| ----------------------------------------------------------------------------------------- | ------- | ------- | ------------- |
-[![](/images/distros/ubuntu.svg) Ubuntu](https://polychromatic.app/download/ubuntu/) *      | Yes     | Yes     | [Launchpad] | Split packaging
-[![](/images/distros/debian.svg) Debian](https://polychromatic.app/download/debian/)        | Yes     | Yes     | [Launchpad] | Split packaging
-[![](/images/distros/arch.svg) Arch](https://polychromatic.app/download/arch/)              | Yes     | Yes     | [AUR]&nbsp;[(-git)]
-[![](/images/distros/fedora.svg) Fedora](https://polychromatic.app/download/fedora/)        | Yes     |         | [openSUSE Build Service]
-[![](/images/distros/opensuse.svg) openSUSE](https://polychromatic.app/download/opensuse/)  | Yes     |         | [openSUSE Build Service]
-[![](/images/distros/mageia.svg) Mageia](https://polychromatic.app/download/mageia/)        | Yes     |         | [openSUSE Build Service]
+* Debian, Ubuntu (and derivatives) via [Launchpad].
+* Arch Linux (and derivatives) via the [AUR] [(-git)].
+* Fedora, openSUSE and Mageia via [openSUSE Build Service](https://build.opensuse.org/package/show/hardware:razer/polychromatic)
 
-{:.grey}
-_*_ Ubuntu includes flavours and derivatives, like Linux Mint, elementaryOS, Pop!_OS and Zorin OS.
+See the [Download page] for instructions.
 
-See the [Download page](https://polychromatic.app/download/) for instructions.
+[Download page]: https://polychromatic.app/download/
+[and derivatives]: https://polychromatic.app/download/
 
-[Launchpad]: https://launchpad.net/~polychromatic
 [AUR]: https://aur.archlinux.org/packages/polychromatic/
 [(-git)]: https://aur.archlinux.org/packages/polychromatic-git/
+[Launchpad]: https://launchpad.net/~polychromatic
 [openSUSE Build Service]: https://build.opensuse.org/package/show/hardware:razer/polychromatic
+[release notes]: https://github.com/polychromatic/polychromatic/releases
 
 ---
-
 
 ## Community Supported
 
 The wider community looks after these packages. Update times may vary.
 
-{:.has-icons}
-Distro                  | Repository                | Maintainer
-------------------------|---------------------------|-----------------------|
-[![](/images/distros/solus.svg) Solus](https://polychromatic.app/download/solus/)  | [Solus x86_64] | (Multiple)
-[![](/images/distros/gentoo.svg) Gentoo](https://polychromatic.app/download/gentoo/)  | [sys-apps/polychromatic] | [xgqt]
-[![](/images/distros/slackware.svg) Slackware](https://polychromatic.app/download/slackware/)  | [SlackBuilds.org] | [mdinslage]
+* [Gentoo (sys-apps/polychromatic)](https://packages.gentoo.org/packages/sys-apps/polychromatic)
+* [NixOS (nixpkgs)](https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/polychromatic/default.nix)
+* [SlackBuilds.org](https://www.slackbuilds.org/repository/15.0/system/polychromatic/)
+* [Solus packages repository](https://github.com/getsolus/packages/tree/main/packages/p/polychromatic)
 
-[Solus x86_64]: https://github.com/getsolus/packages/tree/main/packages/p/polychromatic
-[SlackBuilds.org]: https://www.slackbuilds.org/repository/15.0/system/polychromatic/
-[mdinslage]: https://github.com/mdinslage
-[sys-apps/polychromatic]: https://packages.gentoo.org/packages/sys-apps/polychromatic
-[xgqt]: https://packages.gentoo.org/maintainer/xgqt@gentoo.org
+See the [Download page] for instructions.
 
 ---
 

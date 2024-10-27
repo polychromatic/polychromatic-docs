@@ -4,9 +4,7 @@ A Jekyll-powered static site containing documentation for the Polychromatic proj
 
 ## Versioning
 
-The documentation follows the latest application branch.
-In event of significant changes, the page's frontmatter and sidebar entry
-will have the `indev` key set to `true`.
+Public facing documentation follows the latest release of the application.
 
 ## License
 

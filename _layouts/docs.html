@@ -4,11 +4,4 @@ layout: default
 
 <h1 class="page-title">{% if page.permalink != "/" %}{{ page.title | escape }}{% endif %}</h1>
 
-{% if page.indev == true %}
-    <blockquote class="alert">
-        <p><strong>In Development: {{ site.data.version.dev }}</strong></p>
-        <p>This page has been written for a future version of the application and may be subject to change.</p>
-    </blockquote>
-{% endif %}
-
 {{ content }}

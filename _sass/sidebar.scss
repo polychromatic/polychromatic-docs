@@ -63,16 +63,25 @@
     }
 }
 
-.sidebar-text {
+.sidebar-footer {
     display: flex;
-    padding: 0.25em 1em;
-    opacity: 0.5;
-    filter: grayscale(1);
+    color: $sidebar-heading;
+    font-size: 0.8em;
+    margin: 1.5em 0 -1em;
+    text-align: center;
+
+    > span {
+        margin: auto;
+    }
 
     svg {
         height: 1em;
         width: 1em;
         margin: auto 0.25em;
+
+        path {
+            fill: $sidebar-heading !important;
+        }
     }
 }
 
@@ -183,7 +192,7 @@
 
 .social-links {
     display: flex;
-    margin: 1em 0 -1em;
+    margin: 2em 0 -1em;
 
     svg {
         height: 1.5em;

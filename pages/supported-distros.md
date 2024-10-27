@@ -11,9 +11,9 @@ will continue to support [v0.8.x] for distributions that require Qt 5 until
 the next big release.
 
 ```
-v0.8.3 ─┬─> v0.9.0 ──> v0.9.1  (Qt 6)
+v0.8.3 ─┬─> v0.9.0 ──> v0.9.1 ──> v0.9.2 ──> v0.9.3   (Qt 6)
         │
-        └─> v0.8.4 ──> v0.8.5  (Qt 5)
+        └─> v0.8.4 ──> v0.8.5 ──> v0.8.6 ──> v0.8.7   (Qt 5)
 ```
 
 [v0.8.x]: https://github.com/polychromatic/polychromatic/tree/v0.8.x-backports
@@ -60,4 +60,14 @@ See the [Download page] for instructions.
 
 ## Universal Package Formats
 
-Sorry! Polychromatic does not offer AppImages, Flatpaks or Snaps at the moment.
+We highly recommend [using native packages](https://polychromatic.app/download/)
+for the best feature experience. We understand there may be
+reasons to use other formats, such as operating systems with an immutable (read only) file system.
+
+We only provide a Flatpak providing the Controller experience only.
+There are limitations, and you still need to install OpenRazer on the host.
+See the [Flatpak download page] for details.
+
+AppImage and Snaps are not available at this time.
+
+[Flatpak download page]: https://polychromatic.app/download/flatpak/

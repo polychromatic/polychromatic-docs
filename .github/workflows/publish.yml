@@ -1,18 +1,12 @@
 name: Publish
 
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+on: [push, pull_request]
 
 jobs:
   build:
+    name: Build & Deploy
     runs-on: ubuntu-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v4
 
     - name: Cache RubyGems
@@ -40,7 +34,7 @@ jobs:
 #        scripts/test.sh
 
     - name: Deploy
-      if: ${{ github.event_name == 'push' && github.repository == 'polychromatic/docs' }}
+      if: ${{ github.event_name == 'push' && github.repository == 'polychromatic/docs' && github.ref == 'refs/heads/master' }}
       env:
         CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
         CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}

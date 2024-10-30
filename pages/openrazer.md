@@ -55,6 +55,15 @@ There is an Electron-based project which ports devices individually from OpenRaz
 
 ---
 
+### How do I set up secure boot?
+
+Secure boot is a UEFI feature to prevent unsigned kernels and drivers from loading.
+This can be a problem for OpenRazer, as the driver is not signed.
+
+See [Secure Boot](https://github.com/openrazer/openrazer/wiki/Secure-Boot) on OpenRazer's wiki.
+
+---
+
 ### Can I use on-the-fly macro recording?
 
 Yes, the OpenRazer daemon supports this for Razer keyboards (like the BlackWidow Chroma)

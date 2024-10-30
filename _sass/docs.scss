@@ -222,38 +222,6 @@ $roadmap-line: #00FF00;
     }
 }
 
-/* JavaScript-assisted classes for table */
-.yes {
-    font-size: 0;
-    text-align: center;
-
-    &::before {
-        background-image: url(/assets/img/checkmark.svg);
-        background-size: 24px;
-        display: block;
-        margin: auto;
-        height: 24px;
-        width: 24px;
-    }
-}
-
-.yes {
-    color: lime;
-
-    &::before {
-        content: "✓ ";
-    }
-}
-
-/* Mini tweaks */
-.dependency-table {
-    margin-bottom: 15px;
-
-    img {
-        height: 24px;
-    }
-}
-
 .caption {
     /* For <p> tags */
     text-align: center;

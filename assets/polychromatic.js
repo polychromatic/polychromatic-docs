@@ -1,13 +1,7 @@
-
 // Smooth loading between pages
-const options = {
-    animateHistoryBrowsing: true,
-    linkSelector: 'a[href^="/"]:not([data-no-swup]), a[href^="../"]:not([data-no-swup])',
-};
-
-const swup = new Swup(options);
-swup.on("transitionStart", page_exit);
-swup.on("contentReplaced", page_enter);
+const swup = new Swup();
+swup.hooks.on("visit:start", pageExit);
+swup.hooks.on("content:replace", pageEnter);
 
 var sidebar_items = document.querySelectorAll(".sidebar-item");
 
@@ -19,7 +13,7 @@ function smooth_scroll_to_top() {
     });
 }
 
-function page_enter() {
+function pageEnter() {
     // When navigation changes to another topic. New content replaced.
     apply_markdown_tweaks();
     sidebar_update_position();
@@ -27,7 +21,7 @@ function page_enter() {
     setup_toc();
 }
 
-function page_exit() {
+function pageExit() {
     // Upon leaving the current topic. Transition starts.
     smooth_scroll_to_top();
 }

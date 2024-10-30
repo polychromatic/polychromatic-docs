@@ -33,7 +33,7 @@ If so, consider leaving a review.
 
 It might be worth checking if there's been any new, unreleased translations [since the last release].
 
-[open pull request]: https://github.com/polychromatic/polychromatic/pulls?q=is%3Apr+is%3Aopen+label%3Ai18n+
+[open pull request]: https://github.com/polychromatic/polychromatic/pulls?q=is%3Apr+is%3Aopen+label%3Ai18n
 [since the last release]: https://github.com/polychromatic/polychromatic/compare/stable...master
 [Poedit]: https://poedit.net/
 

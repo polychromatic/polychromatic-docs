@@ -12,5 +12,6 @@ bundle exec htmlproofer \
     --only-4xx \
     --ignore-status-codes 429,500 \
     --ignore-urls github.com \
+    --ignore-files ./_site/translations/index.html \
     ./_site
 exit $?

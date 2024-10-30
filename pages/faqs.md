@@ -96,7 +96,7 @@ from the preferences.
 ### The tray applet is running, but I don't see it!
 
 It's likely that your desktop environment considers the "system tray" or indicator
-area obsolete. We don't so. [Take a look the "Supported Distros" page](/distros/#tray-applet-vs-desktop-environments)
+area obsolete. We don't so. [Take a look the "Supported Distros" page](/quirks/#missing-tray-applet)
 on how to restore functionality.
 
 Alternately, run the program from a Terminal to see what's up:

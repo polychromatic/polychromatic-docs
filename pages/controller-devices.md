@@ -118,7 +118,7 @@ If your devices show up as "unrecognised", it could mean that:
 - The driver's daemon is not responding. Try restarting the daemon.
 - The device is not supported in that version of the driver.
 
-> For Razer peripherals, see ["My device is not listed, what can I do?"](/openrazer/#my-device-is-not-listed-what-do-i-do)
+> For Razer peripherals, see ["My device is not listed, what can I do?"](/openrazer/#my-device-isnt-listed-as-supported-what-do-i-do)
 > on the [OpenRazer] page.
 
 [OpenRazer]: /openrazer/

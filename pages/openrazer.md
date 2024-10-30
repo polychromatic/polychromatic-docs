@@ -143,8 +143,7 @@ Alternately, restart the daemon in verbose mode and watch for any abnormal behav
 >
 > See <https://github.com/openrazer/openrazer/pull/1673>
 
-First, try the latest development versions of both
-[Polychromatic](https://github.com/polychromatic/polychromatic/#hacking--contributing)
+First, try the latest development packages for both Polychromatic
 and OpenRazer, in case the bug has been fixed already.
 
 The details (traceback) should give a clue on which project has the bug.

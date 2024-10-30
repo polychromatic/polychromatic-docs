@@ -14,9 +14,9 @@ These can also be visually mapped to a crafted graphic as well.
 **Contents**
 
 * [Preparing the repository](#preparing-the-repository)
-* [Add to map index](#mapsjson)
-* [Creating the device SVG](#device-svg)
-* [Creating the scan code JSON](#scan-code-json) (keyboards/keypads only)
+* [Add to map index](#add-to-map-index)
+* [Creating the device SVG](#creating-the-device-svg)
+* [Creating the scan code JSON](#creating-the-scan-code-json) (keyboards/keypads only)
 * [Testing the changes](#testing-the-changes)
 
 ---
@@ -54,11 +54,11 @@ Append your device to the end of this list.
 | Key               | Data Type | Description
 | ----------------- | ----- | ------------------------ |
 | `<root>`          | str | The name of the device. As this isn't translated, use the localized name if applicable.<br>For example, "Razer Blade 2018 (Deutsch)" for a German keyboard layout.
-| `filename`        | str | Base name of the [SVG file to be created](#device-svg)
+| `filename`        | str | Base name of the [SVG file to be created](#creating-the-device-svg)
 | `cols`            | int | 1-based number of columns (X axis)
 | `rows`            | int | 1-based number of rows (Y axis)
 | `locale`          | str / `null` | Only applies to keyboards to indicate key layout. Leave `null` if not applicable.
-| `scancode`        | str / `null` | Points to another [JSON file that maps scan codes to the matrix](#scan-code-json). Leave `null` if not applicable.
+| `scancode`        | str / `null` | Points to another [JSON file that maps scan codes to the matrix](#creating-the-scan-code-json). Leave `null` if not applicable.
 
 > If you don't know the `cols` or `rows` for the device, click **Device Info**
 > from the Controller's [Devices](/controller/devices/) tab.

@@ -66,6 +66,9 @@ See [Secure Boot](https://github.com/openrazer/openrazer/wiki/Secure-Boot) on Op
 
 ### Can I use on-the-fly macro recording?
 
+{:.alert}
+> This feature is [deprecated](https://github.com/openrazer/openrazer/pull/2337) and will be removed in a future OpenRazer release.
+
 Yes, the OpenRazer daemon supports this for Razer keyboards (like the BlackWidow Chroma)
 that have dedicated macro keys (M1-M5). Keystrokes can be recorded and stored in
 the daemon until it is stopped, meaning they are **not saved** across sessions,

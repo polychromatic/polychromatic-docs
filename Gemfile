@@ -2,13 +2,15 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "webrick"
-gem "jekyll-sitemap"
-gem "jekyll-loading-lazy"
-gem "jekyll-external-links"
 
-# bundler: failed to load command: jekyll (/opt/gem/ruby/3.0.0/bin/jekyll)
-# lib/jekyll.rb:29:in `require': cannot load such file -- json (LoadError)
-gem "json", "~> 2.7"
+# Generate XML sitemaps
+gem "jekyll-sitemap"
+
+# Always lazy load images
+gem "jekyll-loading-lazy"
+
+# Always mark external links with rel="external"
+gem "jekyll-external-links"
 
 # HTML proofing (+ dependencies)
 gem "html-proofer"

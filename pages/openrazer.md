@@ -72,7 +72,7 @@ See [Secure Boot](https://github.com/openrazer/openrazer/wiki/Secure-Boot) on Op
 Yes, the OpenRazer daemon supports this for Razer keyboards (like the BlackWidow Chroma)
 that have dedicated macro keys (M1-M5). Keystrokes can be recorded and stored in
 the daemon until it is stopped, meaning they are **not saved** across sessions,
-but it's useful for one-off repetitive tasks!
+but it may be useful for one-off keystrokes!
 
 > **Note:** The key combination is slightly different to Razer's official drivers.
 
@@ -94,8 +94,6 @@ Most applications are OK with this, but some games may not. Time delays are not 
 >
 > Typically, they are supposed to be the FN + [0-9] number row, however the
 > daemon swallows the FN key. Some investigation is needed on that.
->
-> There is a "hack" to [delete these lines](https://github.com/openrazer/openrazer/blob/bd71e769d9239fc4ffac69c04cf3cc88b12d7bda/daemon/openrazer_daemon/misc/key_event_management.py#L488-L493) and bind macros to any key.
 
 ---
 

@@ -1,0 +1,8 @@
+---
+permalink: /_redirects
+---
+# Moved pages
+/dependencies/ https://github.com/polychromatic/polychromatic/blob/master/DEVELOPMENT.md#Dependencies
+
+# Moved to main site
+/device-support/ https://polychromatic.app/devices/

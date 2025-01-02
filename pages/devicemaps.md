@@ -29,8 +29,6 @@ These can also be visually mapped to a crafted graphic as well.
 
        git clone https://github.com/YOUR_GITHUB_USERNAME/polychromatic.git
 
-3. To run the application via the repository later, install `sassc` and `intltool`.
-
 ---
 
 ## Add to map index
@@ -230,7 +228,7 @@ LED matrix.
 
 Once the files have been created/updated, it's time to test the changes!
 
-Run `polychromatic-controller-dev` from the repository and try:
+Run `./polychromatic-controller` from the repository and try:
 
 * Creating a new effect. Your new graphic should be listed here.
 * Changing the colours of all LEDs (turn on "live preview" in Preferences)

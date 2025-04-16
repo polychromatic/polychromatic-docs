@@ -5,18 +5,18 @@ permalink: /roadmap/
 
 roadmap:
     - name: Internal Improvements
-      desc: Better tools, better code.
+      desc: Overhaul of the internals for improved performance and expandability.
       checked: progress
       completed:
         - Port to PyQt6
       in_progress:
-        null
+        - Full rewrite with static typing
       pending:
-        - Rewrite with static typing
         - Port tray applet to QSystemTrayIcon (drop GTK)
+        - Drop CLI interface
 
     - name: Presets & Triggers
-      desc: A release for one-click changes and convenient automation.
+      desc: New feature to enable one-click actions and convenient automation.
       checked: false
       completed:
         null
@@ -27,8 +27,9 @@ roadmap:
         - New triggers feature
 
     - name: Software Effects
-      desc: A release that introduces the software effect editor, as well as
-            improving the internals to provide better support for keyboard layouts, inputs and device graphics.
+      desc: Introduce a new editor to easily customise effects, as well as
+            improving the internals to provide better support for keyboard layouts,
+            and mapping to a device graphic.
       checked: false
       completed:
         null
@@ -40,7 +41,7 @@ roadmap:
         - New layered effects
 
     - name: Online Exchange
-      desc: A release that introduces optional online functionality.
+      desc: Introduce optional online functionality.
       checked: false
       completed:
         null
@@ -52,7 +53,7 @@ roadmap:
         - Add support for offline help
 
     - name: Interactivity
-      desc: A release that builds on top of software effects by reacting to input.
+      desc: Builds on top of software effects by reacting to input.
       checked: false
       completed:
         null
@@ -66,6 +67,16 @@ roadmap:
         null
       pending:
         - Support devices via OpenRGB, phue, ckb-next and libratbag.
+        - Support devices with USB HID LampArray?
+
+    - name: Cross Platform Support
+      desc: By exploring how to bring open source RGB to other platforms.
+      checked: false
+      completed:
+        null
+      pending:
+        - Windows
+        - macOS
 
 ---
 

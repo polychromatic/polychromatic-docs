@@ -4,6 +4,8 @@ title: Command Line Interface
 permalink: /cli/
 ---
 
+> **Deprecated:** The command line interface will be removed in a future release. [More Info.](/faqs/#why-is-the-cli-deprecated)
+
 Bring the power of controlling your lighting peripherals to scripts or
 when you're lurking in the terminal.
 

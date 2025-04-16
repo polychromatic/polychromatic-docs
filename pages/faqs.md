@@ -36,8 +36,8 @@ In the meantime, it'll be grand if these other projects have a working Python li
 
 ### Is Windows or macOS supported?
 
-No, this project is focused on expanding its features for Linux users before
-carrying the weight of cross-platform support. Maybe we'll be ready in a few years time!
+Not right now. This project has some other priorities first before we carry
+the weight of cross-platform support. Maybe we'll be ready in a year or two!
 
 Plus, we need cross-platform Python libraries to integrate different vendors.
 The driver for [OpenRazer](/openrazer/), for example, is technically tied
@@ -47,14 +47,13 @@ to the Linux kernel.
 
 ### Can I remap keys?
 
-Not with this software. We recommend [input-remapper](https://github.com/sezanzeb/input-remapper).
+No. Polychromatic's main strength will be RGB lighting effects.
 
-Key remapping (or "key rebinding") is actually a generic feature.
-Polychromatic intends to use [boppreh/keyboard] and [boppreh/mouse] projects in future for
-handling interactions with RGB software effects, but a full key remapping solution might not be implemented.
+Key remapping (or "key rebinding") is actually a generic operating system feature.
+Some hardware might remap their buttons/keys at a hardware level, but this is
+not supported in OpenRazer.
 
-[boppreh/keyboard]: https://github.com/boppreh/keyboard
-[boppreh/mouse]: https://github.com/boppreh/mouse
+OpenRazer recommends [input-remapper](https://github.com/sezanzeb/input-remapper).
 
 ---
 
@@ -78,7 +77,27 @@ restart playback.
 
 ### Can I create my own profiles?
 
-Not yet, but Polychromatic will introduce profile ("presets") functionality [in a future update](/roadmap/).
+"Profiles" is a bit ambiguous. If you mean the ability to create a "preset" of
+settings/effects for your devices, then that's something we'll work on [in a future update!](/roadmap/)
+
+---
+
+### Why is the CLI deprecated?
+
+We introduced the command line interface (CLI) from a feature request to allow
+users to control devices from the terminal. While this was an interesting feature
+initially, maintaining multiple interfaces creates overhead for development.
+
+In future, we'll be prioritising the graphical user experience. The CLI doesn't
+align with our future plans, and isn't technically efficient if you have multiple
+devices. We're not sure if it's been used for scripting, for human input
+or for automation (e.g. cron).
+
+In the next major version, `polychromatic-cli` will be removed. As an alternate:
+
+* Try [razer-cli](https://github.com/lolei/razer-cli)
+* [Use OpenRazer's Python library directly.](https://github.com/openrazer/openrazer/tree/master/examples)
+* Use `dbus-send` to send D-Bus signals directly to the `org.razer` session bus.
 
 ---
 
@@ -102,26 +121,3 @@ on how to restore functionality.
 Alternately, run the program from a Terminal to see what's up:
 
     polychromatic-tray-applet -v
-
----
-
-### When will the next version be released?
-
-No ETAs. Future releases are out as soon as humanly possible!
-
-The [roadmap](/roadmap/) represents ideas of what we'd like to achieve with this project.
-
-> **"You can't rush art."**
->
-> -- Geri the Cleaner
-
----
-
-### How can I send some ka-ching?
-
-The community has asked.
-While the developer enjoys building this software in his free time, a
-little "thank you" money sparks excitment and humble feelings.
-Be sure to leave a message, and thank you for your generosity!
-
-Currently, only PayPal is available: <https://paypal.me/LukeHorwell>

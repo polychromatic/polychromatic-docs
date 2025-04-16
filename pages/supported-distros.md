@@ -4,23 +4,6 @@ title: Supported Linux Distributions
 permalink: /distros/
 ---
 
-## Dual Releases for Qt 5 & 6
-
-Polychromatic is built using PyQt. Since [v0.9.0], we've migrated to Qt 6, but
-will continue to support [v0.8.x] for distributions that require Qt 5 until
-the next big release.
-
-```
-v0.8.3 ─┬─> v0.9.0 ──> v0.9.1 ──> v0.9.2 ──> v0.9.3   (Qt 6)
-        │
-        └─> v0.8.4 ──> v0.8.5 ──> v0.8.6 ──> v0.8.7   (Qt 5)
-```
-
-[v0.8.x]: https://github.com/polychromatic/polychromatic/tree/v0.8.x-backports
-[v0.9.0]: https://github.com/polychromatic/polychromatic/releases/v0.9.0
-
----
-
 ## Official Packages
 
 We create packages for the following distros. This requires adding our repository,

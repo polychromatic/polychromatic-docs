@@ -219,7 +219,6 @@ SDK is designed for Windows/macOS. Proton/Wine remains unknown.
 A search on GitHub shows some implementations of the server:
 
 * <https://github.com/captin411/python-chroma-rest-server>
-* <https://github.com/jessemillar/razer-chroma-http-wrapper>
 
 ---
 

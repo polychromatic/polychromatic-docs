@@ -187,6 +187,26 @@ them [on our repository](https://github.com/polychromatic/polychromatic/issues?q
 
 ---
 
+### My device stopped working after a Razer update on Windows!
+
+We've seen reports
+<sup>[[1]](https://github.com/openrazer/openrazer/issues/2428)</sup>
+<sup>[[2]](https://github.com/openrazer/openrazer/issues/2507)</sup>
+of devices losing some device functionality after updating to Razer Synapse 4.
+
+Mice, for instance, might lose their ability to middle (wheel) click or
+no longer run the macros that were saved to the device when used outside of Windows.
+
+If this happens, please uninstall Razer Synapse 4, and downgrade to [Razer Synapse 3],
+reset the device, and set it up again. Your device should work better under OpenRazer again.
+
+Optionally, consider [raising an issue on OpenRazer's repository](https://github.com/openrazer/openrazer/issues)
+if there isn't one already for your device if it is affected by Razer Synapse 4.
+
+[Razer Synapse 3]: https://rzr.to/synapse-3-pc-download
+
+---
+
 ### Does this project integrate with Razer Chroma ecosystem?
 
 No. OpenRazer does not integrate with Razer Chroma software, also known as

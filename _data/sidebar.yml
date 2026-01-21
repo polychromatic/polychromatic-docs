@@ -28,9 +28,9 @@
       url: /distros/
       icon: tux
 
-    - name: Known Quirks
+    - name: Tray Applet Quirks
       url: /quirks/
-      icon: question-circle
+      icon: tray
 
 - title: User Guide
   items:

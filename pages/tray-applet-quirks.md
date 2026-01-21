@@ -1,10 +1,8 @@
 ---
 layout: docs
-title: Known Quirks
+title: Tray Applet Quirks
 permalink: /quirks/
 ---
-
-## "Missing" Tray Applet
 
 Some desktop environments consider "system tray" to be obsolete.
 As a result, the tray applet may not work straight out of the box

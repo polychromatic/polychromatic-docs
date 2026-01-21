@@ -107,18 +107,7 @@ addressable LEDs but this button is greyed out, some work is needed in
 For the full list of supported devices, see
 [Supported Devices](httpS://polychromatic.app/devices/) on the main website.
 
----
+If the device appears with a question mark, see:
 
-## Unrecognised Devices
-
-If your devices show up as "unrecognised", it could mean that:
-
-- The driver was not installed properly. Try running the troubleshooter.
-- Device permissions are wrong. Try replugging the device.
-- The driver's daemon is not responding. Try restarting the daemon.
-- The device is not supported in that version of the driver.
-
-> For Razer peripherals, see ["My device is not listed, what can I do?"](/openrazer/#my-device-isnt-listed-as-supported-what-do-i-do)
-> on the [OpenRazer] page.
-
-[OpenRazer]: /openrazer/
+* [My device is showing up as unrecognised!](/openrazer/#my-device-is-showing-up-as-unrecognised)
+* [My device isn’t supported, what do I do?](/openrazer/#my-device-isnt-supported-what-do-i-do)

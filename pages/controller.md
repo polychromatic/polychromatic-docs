@@ -70,14 +70,15 @@ as little memory usage as possible.
 
 ---
 
-## Backend Options
+## OpenRazer Options
 
 ![Screenshot of menu bar](/images/guide/backend-menu.webp)
 
-Each backend has its own menu of options containing their web links, version
+OpenRazer has its own menu of options containing their web links, version
 information and in some cases, a convenient configuration tool to edit
 settings provided by their driver or daemon.
 
 Polychromatic also provides a troubleshooter to identify installation problems.
+(This feature is unavailable for Flatpak installations)
 
 ![Screenshot of OpenRazer troubleshooter](/images/guide/troubleshooter.webp)

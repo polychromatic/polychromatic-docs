@@ -16,7 +16,7 @@
       url: /history/
       icon: clock
 
-- title: Backends
+- title: Drivers
   items:
     - name: OpenRazer
       url: /openrazer/

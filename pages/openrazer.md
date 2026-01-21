@@ -187,6 +187,21 @@ them [on our repository](https://github.com/polychromatic/polychromatic/issues?q
 
 ---
 
+### Some buttons on my mouse don't seem to be working!
+
+Some keys like the DPI button is known to not to emit a keypress. <sup>[[1]](https://github.com/openrazer/openrazer/issues/201)</sup>
+
+In rare cases, side buttons may not work unless mapped in Razer Synapse first. <sup>[[2]](https://github.com/openrazer/openrazer/issues/2664)</sup>. Try configuring the buttons using a Windows machine with Razer Synapse, to explicitly map <kbd>Mouse Button 4</kbd> to <kbd>Mouse Button 4</kbd> (repeat as necessary) and see if it works under Linux / OpenRazer afterwards.
+
+For mapping keys under Linux, use a dedicated remapping tool like [input-remapper](https://github.com/sezanzeb/input-remapper).
+Polychromatic is designed for lighting and doesn't support key remapping.
+
+To test your keys are emitting keystrokes:
+
+    sudo evtest
+
+---
+
 ### My device stopped working after a Razer update on Windows!
 
 We've seen reports

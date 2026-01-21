@@ -15,7 +15,7 @@ and accessible to applications/scripts via D-Bus. The driver handles the
 actual USB payloads and is built using DKMS so it can be recompiled across
 kernel updates.
 
-> This project is NOT supported or created by Razer Inc.
+> OpenRazer is NOT supported or created by Razer Inc.
 
 [OpenRazer]: https://openrazer.github.io
 
@@ -23,7 +23,7 @@ kernel updates.
 
 ### Does OpenRazer support Windows or macOS?
 
-Officially, no. One of the OpenRazer team members has experimented by
+Officially, no. There has been an experiment years ago by
 rewriting OpenRazer to handle everything in userspace, eliminating
 the dependency on DKMS drivers for GNU/Linux. This rewrite uses [hidapi](https://github.com/signal11/hidapi)
 but is still in early development.
@@ -99,18 +99,22 @@ Most applications are OK with this, but some games may not. Time delays are not 
 
 ### My device is showing up as unrecognised!
 
-Try the troubleshooter provided by Polychromatic (via **Tools → OpenRazer** in the Controller).
+This either means:
+
+* OpenRazer isn't properly installed (usually a driver or permissions problem)
+* The USB device ID isn't supported yet.
+
+Try the troubleshooter provided by Polychromatic (via **Tools → OpenRazer**).
 This identities most common problems. Alternately, take a look at [OpenRazer's
 Troubleshooting Guide](https://github.com/openrazer/openrazer/wiki/Troubleshooting).
 
-If your device is not supported in the version of OpenRazer you have installed,
-it is normal for Razer `[1532]` USB devices to appear as unrecognised.
+If the device is connected via Bluetooth, unfortunately, OpenRazer doesn't support this as it doesn't identify as a USB device. <sup>[[See Bluetooth Issues]](https://github.com/openrazer/openrazer/issues?q=state%3Aopen%20label%3ABluetooth)</sup>
 
 ---
 
-### My device isn't listed as supported, what do I do?
+### My device isn't supported, what do I do?
 
-If your device isn't listed on the [Supported Devices](https://polychromatic.app/devices/) page,
+If your device USB ID isn't listed on the [Supported Devices](https://polychromatic.app/devices/) page,
 there's some work to do in OpenRazer.
 
 [Search for an issue on the OpenRazer repository](https://github.com/openrazer/openrazer/issues)
@@ -149,10 +153,6 @@ Alternately, restart the daemon in verbose mode and watch for any abnormal behav
 
 ### I'm getting an error when setting an option!
 
-> **OpenRazer users:** We're aware some devices may have implementation issues.
->
-> See <https://github.com/openrazer/openrazer/pull/1673>
-
 First, try the latest development packages for both Polychromatic
 and OpenRazer, in case the bug has been fixed already.
 
@@ -165,7 +165,7 @@ specific to this software, or OpenRazer.
 * Try the Python library to communicate with the daemon.
 * Try an alternate frontend project.
 
-Does it fail outside of Polychromatic? [It's one to raise on OpenRazer](https://github.com/openrazer/openrazer/issues),
+Does it still fail outside of Polychromatic? [Raise this on OpenRazer](https://github.com/openrazer/openrazer/issues),
 otherwise please create one [on our repository](https://github.com/polychromatic/polychromatic/issues?q=is%3Aissue).
 
 ---
@@ -189,9 +189,9 @@ them [on our repository](https://github.com/polychromatic/polychromatic/issues?q
 
 ### Some buttons on my mouse don't seem to be working!
 
-Some keys like the DPI button is known to not to emit a keypress. <sup>[[1]](https://github.com/openrazer/openrazer/issues/201)</sup>
+Some keys like the DPI button are known to not to emit a keypress. <sup>[[1]](https://github.com/openrazer/openrazer/issues/201)</sup>
 
-In rare cases, side buttons may not work unless mapped in Razer Synapse first. <sup>[[2]](https://github.com/openrazer/openrazer/issues/2664)</sup>. Try configuring the buttons using a Windows machine with Razer Synapse, to explicitly map <kbd>Mouse Button 4</kbd> to <kbd>Mouse Button 4</kbd> (repeat as necessary) and see if it works under Linux / OpenRazer afterwards.
+In rare cases, side buttons on newer mice may not work unless mapped in Razer Synapse first. <sup>[[2]](https://github.com/openrazer/openrazer/issues/2664)</sup>. Try configuring the buttons using a Windows machine with Razer Synapse, to explicitly map <kbd>Mouse Button 4</kbd> to <kbd>Mouse Button 4</kbd> (repeat as necessary) and see if it works under Linux / OpenRazer afterwards.
 
 For mapping keys under Linux, use a dedicated remapping tool like [input-remapper](https://github.com/sezanzeb/input-remapper).
 Polychromatic is designed for lighting and doesn't support key remapping.

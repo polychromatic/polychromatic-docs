@@ -11,8 +11,9 @@ or installing a package (`.pkg.tar.zst` or `.deb`) separately from the [release 
 
 Updates can be expected shortly after a new release.
 
-* Debian, Ubuntu (and derivatives) via [Launchpad].
-* Arch Linux (and derivatives) via the [AUR] [(-git)].
+* Ubuntu (and derivatives) via [Launchpad]
+* Debian via a [self-managed repository](https://debian.polychromatic.app)
+* Arch Linux (and derivatives) via the [AUR] [(-git)]
 * Fedora, openSUSE and Mageia via [openSUSE Build Service](https://build.opensuse.org/package/show/hardware:razer/polychromatic)
 
 See the [Download page] for instructions.

@@ -34,7 +34,7 @@ See the [Download page] for instructions.
 The wider community looks after these packages. Update times may vary.
 
 * [Gentoo (sys-apps/polychromatic)](https://packages.gentoo.org/packages/sys-apps/polychromatic)
-* [NixOS (nixpkgs)](https://github.com/NixOS/nixpkgs/blob/master/pkgs/applications/misc/polychromatic/default.nix)
+* [NixOS (nixpkgs)](https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/po/polychromatic/package.nix)
 * [SlackBuilds.org](https://www.slackbuilds.org/repository/15.0/system/polychromatic/)
 * [Solus packages repository](https://github.com/getsolus/packages/tree/main/packages/p/polychromatic)
 

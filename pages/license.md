@@ -4,7 +4,7 @@ title: License
 permalink: /license/
 ---
 
-With the exceptions of the libraries below, the Polychromatic project is licensed
+With the exceptions of the libraries below, the Polychromatic software is licensed
 and distributed under GPLv3.
 
 A copy of the GPLv3 can be found in the [project's repository] or

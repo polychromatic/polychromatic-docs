@@ -107,9 +107,6 @@ More data is specified depending on the type of effect:
 -->
 * [Sequence (type 3)](sequence/#additional-metadata)
 
-Localisation keys are optional and is intended to be used in [a future update](/roadmap/)
-where a facility will allow you to upload/download effects created by other users.
-
 ---
 
 ## Map Graphics

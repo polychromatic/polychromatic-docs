@@ -4,10 +4,6 @@
       url: /faqs/
       icon: question-circle
 
-    - name: Roadmap
-      url: /roadmap/
-      icon: road
-
     - name: License
       url: /license/
       icon: file-alt

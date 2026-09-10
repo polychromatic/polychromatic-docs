@@ -63,7 +63,7 @@ Yes! Currently this is in the form of frames and pixels.
 
 While the editor makes it possible to hand craft your own wave of colours,
 this is limiting for complex and interactivity requirements.
-[We aim to tidy up the app's internals and then introduce new tools](/roadmap/).
+We aim to tidy up the app's internals and then introduce new tools.
 
 Effects can be created for any device supporting individually addressable LEDs (matrix).
 These effects can light up specific keys for your applications, games
@@ -78,7 +78,7 @@ restart playback.
 ### Can I create my own profiles?
 
 "Profiles" is a bit ambiguous. If you mean the ability to create a "preset" of
-settings/effects for your devices, then that's something we'll work on [in a future update!](/roadmap/)
+settings/effects for your devices, then that's something we'll work on in a future update!
 
 ---
 

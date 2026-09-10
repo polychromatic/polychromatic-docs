@@ -96,6 +96,3 @@ mean you can't share your works of art!
 
 Navigate to `~/.config/polychromatic/effects` and send these files to your
 family & friends. Right now, effects will only run on identical hardware.
-
-For various reasons, Polychromatic isn't ready to have a central repository yet,
-but [keep an eye on the roadmap around v1.1!](/roadmap/)

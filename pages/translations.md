@@ -97,6 +97,7 @@ running the `git` command for version control.
     * `Comment`
     * `GenericName`
     * `Name` (under `Desktop Action`)
+    * `Keywords`
 
     Append the locale code before the `=` sign inside square brackets `[]` and translate the line, like so:
 
@@ -115,6 +116,8 @@ running the `git` command for version control.
 1. **(Optional)** Test your work to check it looks good for end users.
 
     [Test translation](#test-a-translation){:.btn}
+
+1. **(Optional)** Translate the manual when users run `man polychromatic-controller`. This is located in `man/po`. The locale code will need adding to `meson.build` too.
 
 1. When you're happy with your progress, commit/push your changes.
 
